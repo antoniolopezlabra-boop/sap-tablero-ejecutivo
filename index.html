@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SAP — Estabilidad y Transformación · Tablero Ejecutivo DXC</title>
-<meta name="description" content="Tablero ejecutivo de operación SAP gestionada por DXC para Coca-Cola FEMSA — incidentes, MTTR, RFC, transportes y remediación de vulnerabilidades. Corte junio 2026.">
+<meta name="description" content="Tablero ejecutivo de operación SAP gestionada por DXC para Coca-Cola FEMSA — incidentes, MTTR, RFC, transportes y remediación de vulnerabilidades. Corte agosto 2026.">
 <meta property="og:title" content="SAP — Estabilidad y Transformación · DXC">
-<meta property="og:description" content="Tablero ejecutivo de operación SAP gestionada por DXC. Corte junio 2026.">
+<meta property="og:description" content="Tablero ejecutivo de operación SAP gestionada por DXC. Corte agosto 2026.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +50,9 @@ h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.05;letter-spacing
 .brandbar svg{height:20px;width:auto}
 .brandbar span{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#fff;mix-blend-mode:difference}
 
-/* ============ SECTIONS ============ */
+.stale{display:inline-block;margin-left:10px;padding:2px 9px;border-radius:99px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;vertical-align:middle;background:rgba(209,70,0,.12);color:var(--rust);border:1px solid rgba(209,70,0,.32)}
+section.dark .stale{background:rgba(255,174,65,.14);color:var(--amber);border-color:rgba(255,174,65,.34)}
+\1
 section{scroll-snap-align:start;min-height:100svh;position:relative;
   display:flex;flex-direction:column;justify-content:safe center;
   padding:clamp(64px,9vh,84px) clamp(20px,5vw,64px) clamp(52px,7vh,72px);overflow:hidden}
@@ -282,10 +284,10 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
     <h2 class="title reveal">Resumen Ejecutivo</h2>
     <p class="lead reveal">Seis señales que resumen la salud de la plataforma SAP en el periodo.</p>
     <div class="kpigrid">
-      <div class="kpi reveal d1"><span class="tag up">▼ 56%</span><div class="big num c-amber" data-count="468">0</div><div class="lab">Incidentes en May-26</div><div class="sub">vs 1,075 en May-25 — tendencia a la baja</div></div>
-      <div class="kpi reveal d1"><span class="tag up">0 en Jun</span><div class="big num c-amber" data-count="7">0</div><div class="lab">Incidentes P1 &amp; P2 (May-26)</div><div class="sub">Criticidad bajo control</div></div>
+      <div class="kpi reveal d1"><span class="tag up">▼ 3%</span><div class="big num c-amber" data-count="1207">0</div><div class="lab">Alertas en Ago-26</div><div class="sub">vs 1,240 en Ago-25 — volumen estable</div></div>
+      <div class="kpi reveal d1"><span class="tag up">4 en Ago</span><div class="big num c-amber" data-count="7">0</div><div class="lab">Incidentes P1 &amp; P2 (May-26, máx.)</div><div class="sub">Criticidad bajo control</div></div>
       <div class="kpi reveal d2"><span class="tag warn">⚠ 72 min</span><div class="big num c-rust" data-count="19" data-suffix=" min" data-prefix="~">0</div><div class="lab">MTTR de incidentes (típico)</div><div class="sub">Atención al repunte de May-26</div></div>
-      <div class="kpi reveal d2"><span class="tag ok">13 meses</span><div class="big num c-blue" data-count="97.8" data-dec="1" data-suffix="%">0</div><div class="lab">RFC completados con éxito</div><div class="sub">Sin fallos sistémicos</div></div>
+      <div class="kpi reveal d2"><span class="tag ok">13 meses</span><div class="big num c-blue" data-count="98.3" data-dec="1" data-suffix="%">0</div><div class="lab">RFC completados con éxito</div><div class="sub">Sin fallos sistémicos</div></div>
       <div class="kpi reveal d3"><span class="tag warn">130 pend.</span><div class="big num c-rust" data-count="59" data-suffix="%">0</div><div class="lab">Focused Run — remediación</div><div class="sub">Vulnerabilidades CVSS ≤ 9.9</div></div>
       <div class="kpi reveal d3"><span class="tag ok">12 meses</span><div class="big num c-navy" data-count="2427">0</div><div class="lab">Transportes ejecutados</div><div class="sub">RLP, RAP y BCP lideran</div></div>
     </div>
@@ -298,7 +300,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <div class="wrap">
     <div class="eyebrow reveal">Demanda operativa</div>
     <h2 class="title reveal">Alertas, Incidentes y Requerimientos</h2>
-    <p class="insight reveal d1">El volumen de alertas baja desde el pico de 2,030 (Jun-25); incidentes de usuario y requerimientos se mantienen estables y bajos.</p>
+    <p class="insight reveal d1">Las alertas se estabilizan en torno a 1,100–1,300/mes tras el mínimo de Dic-25; los requerimientos repuntan a 410 en Ago-26, el máximo de los 13 meses.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="alertas"></canvas></div></div>
   </div>
 </section>
@@ -308,7 +310,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">04</span>
   <div class="wrap">
     <div class="eyebrow reveal">Causa raíz</div>
-    <h2 class="title reveal">Incidentes — Alertas Top Offender</h2>
+    <h2 class="title reveal"><span class="stale">datos a junio 2026</span></h2>
     <p class="insight reveal d1">Las alertas se concentran en ~14 firmas recurrentes; Oracle tablespace y los recursos batch/diálogo dominan el volumen.</p>
     <div class="chartcard reveal d2" style="padding:8px 8px 4px"><div style="max-height:46vh;overflow:auto"><table class="tbl" id="offtbl"><thead><tr><th>Alerta (Top Offender)</th><th style="text-align:right">2026</th><th style="text-align:right">Histórico</th></tr></thead><tbody></tbody></table></div></div>
   </div>
@@ -331,7 +333,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <div class="wrap">
     <div class="eyebrow reveal">Criticidad</div>
     <h2 class="title reveal">Incidentes P1 &amp; P2</h2>
-    <p class="insight reveal d1">Incidencia crítica baja y controlada (0–7 tickets/mes); Jun-26 cierra en 0.</p>
+    <p class="insight reveal d1">Incidencia crítica baja y controlada (0–7 tickets/mes); Ago-26 cierra en 4, todos P2.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="p1p2"></canvas></div></div>
   </div>
 </section>
@@ -342,7 +344,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <div class="wrap">
     <div class="eyebrow reveal">Velocidad</div>
     <h2 class="title reveal">Incidentes — Tiempo de Resolución</h2>
-    <p class="insight reveal d1">Tiempo de resolución de P1/P2 mayormente por debajo de 2.5 h; pico aislado de 4.1 h en Mar-26.</p>
+    <p class="insight reveal d1">Tiempo de resolución de P1/P2 mayormente por debajo de 2.5 h; los picos de Ene-26 (6.4 h) y Mar-26 (4.1 h) son casos aislados. Ago-26 cierra en 0.7 h.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="res"></canvas></div></div>
   </div>
 </section>
@@ -352,7 +354,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">08</span>
   <div class="wrap">
     <div class="eyebrow reveal">La historia del año</div>
-    <h2 class="title reveal">Incidentes — Volumen y MTTR</h2>
+    <h2 class="title reveal"><span class="stale">datos a junio 2026</span></h2>
     <p class="insight reveal d1">Los incidentes caen <b style="color:var(--amber)">−56% interanual</b> (1,120 → 468); vigilar el repunte de MTTR a 72 min en May-26.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="incmttr"></canvas></div></div>
   </div>
@@ -363,7 +365,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">09</span>
   <div class="wrap">
     <div class="eyebrow reveal">Demanda de servicio</div>
-    <h2 class="title reveal">Requerimientos — Volumen y MTTR</h2>
+    <h2 class="title reveal"><span class="stale">datos a junio 2026</span></h2>
     <p class="insight reveal d1">Volumen de requerimientos estable (~250/mes); MTTR puntualmente alto en Ago-25 (3.1 h) y Abr-26 (1.8 h).</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="reqmttr"></canvas></div></div>
   </div>
@@ -392,7 +394,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">11</span>
   <div class="wrap">
     <div class="eyebrow reveal">Concentración</div>
-    <h2 class="title reveal">Transportes por Sistema — Distribución</h2>
+    <h2 class="title reveal"><span class="stale">datos a junio 2026</span></h2>
     <p class="insight reveal d1">Distribución concentrada: RLP, RAP y BCP acumulan la mayoría de los 2,427 transportes.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="trans"></canvas></div></div>
   </div>
@@ -404,7 +406,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <div class="wrap">
     <div class="eyebrow reveal">Calidad de cambio</div>
     <h2 class="title reveal">RFC — Tasa de Éxito</h2>
-    <p class="insight reveal d1">Tasa de éxito de RFC del 97.8% en 13 meses; sin fallos sistémicos.</p>
+    <p class="insight reveal d1">Tasa de éxito de RFC del 98.3% en 13 meses — 1,339 exitosos de 1,362 cerrados; sin fallos sistémicos.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="rfcok"></canvas></div></div>
   </div>
 </section>
@@ -415,7 +417,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <div class="wrap">
     <div class="eyebrow reveal">¿En qué trabajamos?</div>
     <h2 class="title reveal">RFC — Clasificación por Tipo</h2>
-    <p class="insight reveal d1">El esfuerzo se desplaza a actualización y mantenimiento de SAP y DB; remediación de vulnerabilidades sostenida.</p>
+    <p class="insight reveal d1">La remediación de vulnerabilidades domina el esfuerzo en los cinco trimestres y crece de 153 a 246 RFC; 2026-Q3 va a dos meses de cierre.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="rfcclass"></canvas></div></div>
   </div>
 </section>
@@ -426,7 +428,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <div class="wrap">
     <div class="eyebrow reveal">Gestión de riesgo</div>
     <h2 class="title reveal">RFC — Criticidad y Mitigación de Riesgos</h2>
-    <p class="insight reveal d1">Predominio de cambios de bajo y moderado riesgo; los picos de alto riesgo se gestionan de forma puntual (Mar-26).</p>
+    <p class="insight reveal d1">Predominio de cambios de bajo y moderado riesgo; los picos de alto riesgo se gestionan de forma puntual (Mar-26, Jun-26 y Ago-26, con 5 o 6 cada uno).</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="rfccrit"></canvas></div></div>
   </div>
 </section>
@@ -436,7 +438,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">15</span>
   <div class="wrap">
     <div class="eyebrow reveal">Seguridad</div>
-    <h2 class="title reveal">SAP Focused Run — Estado de Remediación</h2>
+    <h2 class="title reveal"><span class="stale">datos a junio 2026</span></h2>
     <p class="insight reveal d1">Programa de vulnerabilidades al 59% (185/315); restan 130 implementaciones en notas CVSS 9.1–9.9 — prioridad de seguridad.</p>
     <div class="fr-strip reveal d2">
       <div class="c"><div class="n num c-amber" data-count="59" data-suffix="%">0</div><div class="l">Avance global</div></div>
@@ -459,7 +461,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <div class="wrap" style="display:flex;flex-direction:column;align-items:center">
     <svg class="dxc-logo reveal" viewBox="0 0 470 76"><use href="#dxcmark"/></svg>
     <div class="closetag reveal d2">IMPOSSIBLE. DELIVERED.</div>
-    <p class="closemeta reveal d3">SAP · Estabilidad y Transformación · Coca-Cola FEMSA (KOF)<br>Servicios gestionados por DXC Technology · Corte de información: junio 2026</p>
+    <p class="closemeta reveal d3">SAP · Estabilidad y Transformación · Coca-Cola FEMSA (KOF)<br>Servicios gestionados por DXC Technology · Corte de información: agosto 2026</p>
     <p class="closemeta reveal d3" style="opacity:.55;font-size:.78em;margin-top:10px">Versión pública: los nombres de servidor se sustituyeron por identificadores genéricos y el detalle por nota SAP está anonimizado.<br>Las cifras de operación no se alteraron.</p>
   </div>
 </section>
@@ -497,23 +499,23 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
 </script>
 <script>
 /* ===================== DATA ===================== */
-const M13=['May-25','Jun-25','Jul-25','Ago-25','Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26'];
+const M13=['Ago-25','Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26'];
 const DATA={
- alertas:{l:M13,a:[1520,2030,1890,1240,1410,1200,1000,700,1100,1015,1075,985,1380],
-   i:[180,230,440,95,215,75,55,50,190,65,235,110,130],r:[255,275,300,325,310,225,225,160,320,250,290,255,205]},
- p1p2:{l:['Jun-25','Jul-25','Sep-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26'],v:[4,1,7,1,4,2,1,1,3,7,0]},
- res:{l:['Jun-25','Jul-25','Ago-25','Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26'],v:[1.2,2.4,0,0.4,0,1.6,0,0,0.7,4.1,0,2]},
+ alertas:{l:M13,a:[1240,1410,1200,1000,700,1075,1014,1066,977,1341,1338,1078,1207],
+   i:[95,215,75,55,50,207,92,247,124,157,77,71,114],r:[325,313,244,188,175,312,265,301,269,207,195,256,410]},
+ p1p2:{l:M13,v:[0,7,0,1,4,2,1,1,3,7,1,1,4]},
+ res:{l:M13,v:[0,0.4,0,1.6,0,6.4,0.7,4.1,2.7,2.0,0.2,1.3,0.7]},
  incmttr:{l:M13,t:[1075,1075,1120,700,872,708,650,564,722,692,617,512,468],m:[12.4,45.5,28,15.6,13.2,8.7,19.2,21,24.6,19.2,27.7,9.6,72.2]},
  reqmttr:{l:M13,t:[255,276,302,353,308,228,222,160,269,311,247,257,208],m:[15.9,64.3,8.7,187.8,99,39.6,19.4,24.6,15.8,13.6,11.6,110.9,16.1]},
  trans:{l:['RLP','RAP','BCP','S4P','CAP','CLP','ECP','G4P','T4P','UCP','M4P','XCP','GCP'],v:[604,602,445,303,100,82,82,58,46,35,33,28,9]},
- rfcok:{l:['Jun-25','Jul-25','Ago-25','Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26'],v:[100,100,95.5,90.5,96.5,91,100,100,98,100,97,100,100]},
- rfcclass:{l:['2025-Q2','2025-Q3','2025-Q4','2026-Q1','2026-Q2','2026-Q3'],
-   s:[['Remediación de vulnerabilidades',[2,0,24,10,11,0],'#FF7E51'],
-      ['Actualización y mant. SAP',[15,31,23,53,66,1],'#004AAC'],
-      ['Actualización y mant. DB',[11,25,21,18,43,0],'#4995FF'],
-      ['Optimización e innovación',[10,11,16,23,22,0],'#FFAE41']]},
- rfccrit:{l:['Jun-25','Jul-25','Ago-25','Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26'],
-   low:[10,6,10,11,14,18,14,22,39,9,27,43,23,1],mod:[28,13,14,11,17,11,6,7,13,9,10,19,16,1],high:[0,0,0,1,2,0,0,0,0,5,2,1,1,0]},
+ rfcok:{l:M13,v:[97.6,99.2,99.0,98.9,100,100,99.2,100,99.2,100,100,100,100]},
+ rfcclass:{l:['2025-Q3','2025-Q4','2026-Q1','2026-Q2','2026-Q3'],
+   s:[['Remediación de vulnerabilidades',[153,178,239,275,246],'#FF7E51'],
+      ['Actualización y mant. SAP',[33,52,89,123,37],'#004AAC'],
+      ['Parchado y certificados',[15,14,10,16,11],'#4995FF'],
+      ['Upgrade y migración',[22,6,4,14,13],'#FFAE41']]},
+ rfccrit:{l:M13,
+   low:[17,36,26,27,16,36,39,22,40,47,26,33,26],mod:[71,96,82,63,32,80,83,74,85,105,115,116,121],high:[0,1,2,1,0,1,1,5,3,0,6,0,6]},
  donut:{impl:185,pend:130},
  top10:[['Oracle tablespace lleno · SRV-DB-01',165,93],['Memory Utilization · SRV-APP-02',125,32],
    ['Not Enough Batch Resources · SRV-ERP-01',121,38],['File System > umbral · SRV-APP-01',109,47],
