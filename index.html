@@ -52,7 +52,8 @@ h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.05;letter-spacing
 
 .stale{display:inline-block;margin-left:10px;padding:2px 9px;border-radius:99px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;vertical-align:middle;background:rgba(209,70,0,.12);color:var(--rust);border:1px solid rgba(209,70,0,.32)}
 section.dark .stale{background:rgba(255,174,65,.14);color:var(--amber);border-color:rgba(255,174,65,.34)}
-\1
+
+/* ============ SECTIONS ============ */
 section{scroll-snap-align:start;min-height:100svh;position:relative;
   display:flex;flex-direction:column;justify-content:safe center;
   padding:clamp(64px,9vh,84px) clamp(20px,5vw,64px) clamp(52px,7vh,72px);overflow:hidden}
@@ -288,7 +289,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
       <div class="kpi reveal d1"><span class="tag up">4 en Ago</span><div class="big num c-amber" data-count="7">0</div><div class="lab">Incidentes P1 &amp; P2 (May-26, máx.)</div><div class="sub">Criticidad bajo control</div></div>
       <div class="kpi reveal d2"><span class="tag warn">⚠ 72 min</span><div class="big num c-rust" data-count="19" data-suffix=" min" data-prefix="~">0</div><div class="lab">MTTR de incidentes (típico)</div><div class="sub">Atención al repunte de May-26</div></div>
       <div class="kpi reveal d2"><span class="tag ok">13 meses</span><div class="big num c-blue" data-count="98.3" data-dec="1" data-suffix="%">0</div><div class="lab">RFC completados con éxito</div><div class="sub">Sin fallos sistémicos</div></div>
-      <div class="kpi reveal d3"><span class="tag warn">130 pend.</span><div class="big num c-rust" data-count="59" data-suffix="%">0</div><div class="lab">Focused Run — remediación</div><div class="sub">Vulnerabilidades CVSS ≤ 9.9</div></div>
+      <div class="kpi reveal d3"><span class="tag warn">29 en PRD</span><div class="big num c-rust" data-count="55" data-suffix="%">0</div><div class="lab">Notas SAP — cobertura</div><div class="sub">22 notas · 57 sistemas · 16 landscapes</div></div>
       <div class="kpi reveal d3"><span class="tag ok">12 meses</span><div class="big num c-navy" data-count="2427">0</div><div class="lab">Transportes ejecutados</div><div class="sub">RLP, RAP y BCP lideran</div></div>
     </div>
   </div>
@@ -310,7 +311,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">04</span>
   <div class="wrap">
     <div class="eyebrow reveal">Causa raíz</div>
-    <h2 class="title reveal"><span class="stale">datos a junio 2026</span></h2>
+    <h2 class="title reveal">Incidentes — Alertas Top Offender<span class="stale">datos a junio 2026</span></h2>
     <p class="insight reveal d1">Las alertas se concentran en ~14 firmas recurrentes; Oracle tablespace y los recursos batch/diálogo dominan el volumen.</p>
     <div class="chartcard reveal d2" style="padding:8px 8px 4px"><div style="max-height:46vh;overflow:auto"><table class="tbl" id="offtbl"><thead><tr><th>Alerta (Top Offender)</th><th style="text-align:right">2026</th><th style="text-align:right">Histórico</th></tr></thead><tbody></tbody></table></div></div>
   </div>
@@ -354,7 +355,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">08</span>
   <div class="wrap">
     <div class="eyebrow reveal">La historia del año</div>
-    <h2 class="title reveal"><span class="stale">datos a junio 2026</span></h2>
+    <h2 class="title reveal">Incidentes — Volumen y MTTR<span class="stale">datos a junio 2026</span></h2>
     <p class="insight reveal d1">Los incidentes caen <b style="color:var(--amber)">−56% interanual</b> (1,120 → 468); vigilar el repunte de MTTR a 72 min en May-26.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="incmttr"></canvas></div></div>
   </div>
@@ -365,7 +366,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">09</span>
   <div class="wrap">
     <div class="eyebrow reveal">Demanda de servicio</div>
-    <h2 class="title reveal"><span class="stale">datos a junio 2026</span></h2>
+    <h2 class="title reveal">Requerimientos — Volumen y MTTR<span class="stale">datos a junio 2026</span></h2>
     <p class="insight reveal d1">Volumen de requerimientos estable (~250/mes); MTTR puntualmente alto en Ago-25 (3.1 h) y Abr-26 (1.8 h).</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="reqmttr"></canvas></div></div>
   </div>
@@ -394,7 +395,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">11</span>
   <div class="wrap">
     <div class="eyebrow reveal">Concentración</div>
-    <h2 class="title reveal"><span class="stale">datos a junio 2026</span></h2>
+    <h2 class="title reveal">Transportes por Sistema — Distribución<span class="stale">datos a junio 2026</span></h2>
     <p class="insight reveal d1">Distribución concentrada: RLP, RAP y BCP acumulan la mayoría de los 2,427 transportes.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="trans"></canvas></div></div>
   </div>
@@ -438,19 +439,20 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">15</span>
   <div class="wrap">
     <div class="eyebrow reveal">Seguridad</div>
-    <h2 class="title reveal"><span class="stale">datos a junio 2026</span></h2>
-    <p class="insight reveal d1">Programa de vulnerabilidades al 59% (185/315); restan 130 implementaciones en notas CVSS 9.1–9.9 — prioridad de seguridad.</p>
+    <h2 class="title reveal">SAP Notes — Control de Remediación</h2>
+    <p class="insight reveal d1">El control cubre 22 notas de seguridad sobre 57 sistemas en 16 landscapes: 61 de 96 seguimientos ya están cerrados y la cobertura global llega al 55%. Sandbox alcanza 96% y Pre Producción 59%; Producción concentra el foco de los próximos meses.</p>
     <div class="fr-strip reveal d2">
-      <div class="c"><div class="n num c-amber" data-count="59" data-suffix="%">0</div><div class="l">Avance global</div></div>
-      <div class="c"><div class="n num" style="color:#fff" data-count="15">0</div><div class="l">Notas SAP</div></div>
-      <div class="c"><div class="n num" style="color:#fff" data-count="51">0</div><div class="l">Sistemas</div></div>
-      <div class="c"><div class="n num" style="color:#fff" data-count="315">0</div><div class="l">Remediaciones</div></div>
-      <div class="c"><div class="n num" style="color:var(--lblue)" data-count="185">0</div><div class="l">Implementadas</div></div>
-      <div class="c"><div class="n num c-rust" data-count="130">0</div><div class="l">Pendientes</div></div>
+      <div class="c"><div class="n num c-amber" data-count="55" data-suffix="%">0</div><div class="l">Cobertura global</div></div>
+      <div class="c"><div class="n num" style="color:#fff" data-count="22">0</div><div class="l">Notas SAP</div></div>
+      <div class="c"><div class="n num" style="color:#fff" data-count="57">0</div><div class="l">Sistemas</div></div>
+      <div class="c"><div class="n num" style="color:#fff" data-count="16">0</div><div class="l">Landscapes</div></div>
+      <div class="c"><div class="n num" style="color:var(--lblue)" data-count="61">0</div><div class="l">Seguimientos cerrados</div></div>
+      <div class="c"><div class="n num c-rust" data-count="29">0</div><div class="l">Pendientes en Producción</div></div>
     </div>
     <div class="two rev" style="margin-top:14px">
-      <div class="chartcard reveal d3" style="padding:8px 8px 4px"><div style="max-height:38vh;overflow:auto"><table class="tbl" id="frtbl"><thead><tr><th>Nota SAP</th><th style="text-align:right">Sist.</th><th style="text-align:right">Impl.</th><th style="text-align:right">Avance</th></tr></thead><tbody></tbody></table></div></div>
-      <div class="chartcard reveal d3"><div class="chartbox" style="height:clamp(240px,34vh,320px)"><canvas data-chart="donut"></canvas></div></div>
+      <div class="chartcard reveal d3" style="padding:8px 8px 4px"><div style="max-height:38vh;overflow:auto"><table class="tbl" id="frtbl"><thead><tr><th>Ambiente</th><th style="text-align:right">Impl.</th><th style="text-align:right">Pend.</th><th style="text-align:right">No aplica</th><th style="text-align:right">Cobertura</th></tr></thead><tbody></tbody></table></div></div>
+      <div class="chartcard reveal d3"><div class="chartbox" style="height:clamp(240px,34vh,320px)"><canvas data-chart="donut"></canvas></div>
+      <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Fuente: SAP Notes Control Center · corte 10 de septiembre de 2026 · 96 seguimientos registrados por 9 administradores.</p></div>
     </div>
   </div>
 </section>
@@ -462,7 +464,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
     <svg class="dxc-logo reveal" viewBox="0 0 470 76"><use href="#dxcmark"/></svg>
     <div class="closetag reveal d2">IMPOSSIBLE. DELIVERED.</div>
     <p class="closemeta reveal d3">SAP · Estabilidad y Transformación · Coca-Cola FEMSA (KOF)<br>Servicios gestionados por DXC Technology · Corte de información: agosto 2026</p>
-    <p class="closemeta reveal d3" style="opacity:.55;font-size:.78em;margin-top:10px">Versión pública: los nombres de servidor se sustituyeron por identificadores genéricos y el detalle por nota SAP está anonimizado.<br>Las cifras de operación no se alteraron.</p>
+    <p class="closemeta reveal d3" style="opacity:.55;font-size:.78em;margin-top:10px">Versión pública: los nombres de servidor se sustituyeron por identificadores genéricos.<br>Las cifras de operación no se alteraron.</p>
   </div>
 </section>
 
@@ -516,7 +518,7 @@ const DATA={
       ['Upgrade y migración',[22,6,4,14,13],'#FFAE41']]},
  rfccrit:{l:M13,
    low:[17,36,26,27,16,36,39,22,40,47,26,33,26],mod:[71,96,82,63,32,80,83,74,85,105,115,116,121],high:[0,1,2,1,0,1,1,5,3,0,6,0,6]},
- donut:{impl:185,pend:130},
+ donut:{impl:117,pend:97},
  top10:[['Oracle tablespace lleno · SRV-DB-01',165,93],['Memory Utilization · SRV-APP-02',125,32],
    ['Not Enough Batch Resources · SRV-ERP-01',121,38],['File System > umbral · SRV-APP-01',109,47],
    ['ABAP Instance not available · SRV-ERP-01',83,33],['Not Enough Update Resources · SRV-ERP-01',83,42],
@@ -530,9 +532,9 @@ const DATA={
    ['High CPU Utilization · SRV-APP-03',36,56],['CA Introscope EM Capacity · SRV-SOLMAN-01',35,48],
    ['ABAP Instance not available · SRV-ERP-01',33,83],['Agentless Unix Memory · SRV-APP-02',32,125]],
  transrows:[['RLP',604],['RAP',602],['BCP',445],['S4P',303],['CAP',100],['CLP',82],['ECP',82],['G4P',58],['T4P',46],['UCP',35],['M4P',33],['XCP',28],['GCP',9]],
- frrows:[['Nota 01',44,6,13.6],['Nota 02',46,30,65.2],['Nota 03',26,16,61.5],['Nota 04',31,26,83.9],
-   ['Nota 05',17,14,82.4],['Nota 06',17,13,76.5],['Nota 07',16,12,75.0],['Nota 08',33,24,72.7],
-   ['Nota 09',30,16,53.3],['Nota 10',8,8,100],['Nota 11',1,1,100],['Nota 12',1,1,100]]
+ covrows:[['Desarrollo',30,32,48,48],['Calidad',21,23,35,48],
+   ['Pre Producción',17,12,23,59],['Sandbox',23,1,27,96],
+   ['Producción',26,29,57,47]]
 };
 const C={navy:'#0E1020',amber:'#FFAE41',peach:'#FFC982',coral:'#FF7E51',rust:'#D14600',blue:'#004AAC',lblue:'#4995FF',cyan:'#A1E6FF',muted:'#6B6F7B',line:'#E7E7EC',navyln:'rgba(255,255,255,.10)'};
 const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
@@ -623,7 +625,7 @@ const BUILD={
    options:{maintainAspectRatio:false,cutout:'70%',plugins:{legend:{position:'bottom',labels:{color:'#cfd2dd'}},
    datalabels:{display:true,color:'#fff',font:{weight:'700',size:13},formatter:(v,c)=>Math.round(v/(d.impl+d.pend)*100)+'%'}}},
    plugins:[{id:'ctr',afterDraw(ch){const{ctx,chartArea:{left,right,top,bottom}}=ch;const x=(left+right)/2,y=(top+bottom)/2;
-     ctx.save();ctx.textAlign='center';ctx.fillStyle='#fff';ctx.font='700 38px Space Grotesk, sans-serif';ctx.fillText('59%',x,y-2);
+     ctx.save();ctx.textAlign='center';ctx.fillStyle='#fff';ctx.font='700 38px Space Grotesk, sans-serif';ctx.fillText('55%',x,y-2);
      ctx.fillStyle='#9DA1B2';ctx.font='400 13px Inter, sans-serif';ctx.fillText('avance',x,y+22);ctx.restore();}}]});}
 };
 
@@ -635,8 +637,9 @@ function fillTables(){
   h='';DATA.transrows.forEach(r=>{const p=(r[1]/tot*100);h+=`<tr><td><b>${r[0]}</b></td><td class="r">${r[1].toLocaleString()}</td><td class="r"><span class="bar" style="width:${Math.max(4,p*2.2)}px"></span>${p.toFixed(1)}%</td></tr>`;});
   h+=`<tr class="tot"><td>TOTAL</td><td class="r">${tot.toLocaleString()}</td><td class="r">100%</td></tr>`;
   document.querySelector('#transtbl tbody').innerHTML=h;
-  h='';DATA.frrows.forEach(r=>{const ok=r[3]>=100;h+=`<tr><td>${r[0]}</td><td class="r">${r[1]}</td><td class="r">${r[2]}</td><td class="r" style="color:${ok?'#4FD18B':'#FF8A51'}">${r[3]}%</td></tr>`;});
-  h+=`<tr class="tot"><td>Total</td><td class="r">315</td><td class="r">185</td><td class="r">58.7%</td></tr>`;
+  h='';DATA.covrows.forEach(r=>{const alto=r[4]>=59;
+    h+=`<tr><td><b>${r[0]}</b></td><td class="r">${r[1]}</td><td class="r">${r[2]}</td><td class="r" style="color:var(--soft)">${r[3]}</td><td class="r" style="color:${alto?'#4FD18B':'#FFC982'}">${r[4]}%</td></tr>`;});
+  h+=`<tr class="tot"><td>TOTAL</td><td class="r">117</td><td class="r">97</td><td class="r">190</td><td class="r">55%</td></tr>`;
   document.querySelector('#frtbl tbody').innerHTML=h;
 }
 
