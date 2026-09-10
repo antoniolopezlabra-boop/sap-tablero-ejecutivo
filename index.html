@@ -355,7 +355,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">08</span>
   <div class="wrap">
     <div class="eyebrow reveal">La historia del año</div>
-    <h2 class="title reveal">Incidentes — Volumen y MTTR<span class="stale">datos a junio 2026</span></h2>
+    <h2 class="title reveal">Incidentes — Volumen y MTTR<span class="stale">serie a may-26</span></h2>
     <p class="insight reveal d1">Los incidentes caen <b style="color:var(--amber)">−56% interanual</b> (1,120 → 468); vigilar el repunte de MTTR a 72 min en May-26.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="incmttr"></canvas></div></div>
   </div>
@@ -366,7 +366,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">09</span>
   <div class="wrap">
     <div class="eyebrow reveal">Demanda de servicio</div>
-    <h2 class="title reveal">Requerimientos — Volumen y MTTR<span class="stale">datos a junio 2026</span></h2>
+    <h2 class="title reveal">Requerimientos — Volumen y MTTR<span class="stale">serie a may-26</span></h2>
     <p class="insight reveal d1">Volumen de requerimientos estable (~250/mes); MTTR puntualmente alto en Ago-25 (3.1 h) y Abr-26 (1.8 h).</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="reqmttr"></canvas></div></div>
   </div>
@@ -502,13 +502,16 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
 <script>
 /* ===================== DATA ===================== */
 const M13=['Ago-25','Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26'];
+// Ventana de las dos series que aún no se han podido actualizar: sus datos
+// cubren May-25…May-26 y no deben tomar las etiquetas de M13.
+const M13_PREV=['May-25','Jun-25','Jul-25','Ago-25','Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26'];
 const DATA={
  alertas:{l:M13,a:[1240,1410,1200,1000,700,1075,1014,1066,977,1341,1338,1078,1207],
    i:[95,215,75,55,50,207,92,247,124,157,77,71,114],r:[325,313,244,188,175,312,265,301,269,207,195,256,410]},
  p1p2:{l:M13,v:[0,7,0,1,4,2,1,1,3,7,1,1,4]},
  res:{l:M13,v:[0,0.4,0,1.6,0,6.4,0.7,4.1,2.7,2.0,0.2,1.3,0.7]},
- incmttr:{l:M13,t:[1075,1075,1120,700,872,708,650,564,722,692,617,512,468],m:[12.4,45.5,28,15.6,13.2,8.7,19.2,21,24.6,19.2,27.7,9.6,72.2]},
- reqmttr:{l:M13,t:[255,276,302,353,308,228,222,160,269,311,247,257,208],m:[15.9,64.3,8.7,187.8,99,39.6,19.4,24.6,15.8,13.6,11.6,110.9,16.1]},
+ incmttr:{l:M13_PREV,t:[1075,1075,1120,700,872,708,650,564,722,692,617,512,468],m:[12.4,45.5,28,15.6,13.2,8.7,19.2,21,24.6,19.2,27.7,9.6,72.2]},
+ reqmttr:{l:M13_PREV,t:[255,276,302,353,308,228,222,160,269,311,247,257,208],m:[15.9,64.3,8.7,187.8,99,39.6,19.4,24.6,15.8,13.6,11.6,110.9,16.1]},
  trans:{l:['RLP','RAP','BCP','S4P','CAP','CLP','ECP','G4P','T4P','UCP','M4P','XCP','GCP'],v:[604,602,445,303,100,82,82,58,46,35,33,28,9]},
  rfcok:{l:M13,v:[97.6,99.2,99.0,98.9,100,100,99.2,100,99.2,100,100,100,100]},
  rfcclass:{l:['2025-Q3','2025-Q4','2026-Q1','2026-Q2','2026-Q3'],
