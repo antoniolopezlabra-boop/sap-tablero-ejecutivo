@@ -53,6 +53,20 @@ h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.05;letter-spacing
 .stale{display:inline-block;margin-left:10px;padding:2px 9px;border-radius:99px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;vertical-align:middle;background:rgba(209,70,0,.12);color:var(--rust);border:1px solid rgba(209,70,0,.32)}
 section.dark .stale{background:rgba(255,174,65,.14);color:var(--amber);border-color:rgba(255,174,65,.34)}
 
+.value{margin-top:20px;padding:15px 20px;border-radius:12px;max-width:96ch;
+  background:linear-gradient(90deg,rgba(255,174,65,.11),rgba(255,174,65,0) 78%);
+  border:1px solid rgba(255,174,65,.30);border-left:3px solid var(--amber)}
+.value b{display:block;font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--rust);font-weight:800;margin-bottom:6px}
+.value span{display:block;font-size:clamp(13px,1.22vw,15.5px);font-weight:500;
+  color:var(--muted);line-height:1.55}
+.value em{font-style:normal;font-weight:700;color:var(--ink)}
+section.dark .value{background:linear-gradient(90deg,rgba(255,174,65,.10),rgba(255,174,65,0) 78%);
+  border-color:rgba(255,174,65,.24)}
+section.dark .value b{color:var(--amber)}
+section.dark .value span{color:#B9BCC9}
+section.dark .value em{color:#fff}
+
 /* ============ SECTIONS ============ */
 section{scroll-snap-align:start;min-height:100svh;position:relative;
   display:flex;flex-direction:column;justify-content:safe center;
@@ -292,6 +306,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
       <div class="kpi reveal d3"><span class="tag warn">29 en PRD</span><div class="big num c-rust" data-count="55" data-suffix="%">0</div><div class="lab">Notas SAP — cobertura</div><div class="sub">22 notas · 57 sistemas · 16 landscapes</div></div>
       <div class="kpi reveal d3"><span class="tag ok">12 meses</span><div class="big num c-navy" data-count="2427">0</div><div class="lab">Transportes ejecutados</div><div class="sub">RLP, RAP y BCP lideran</div></div>
     </div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>Detrás de cada indicador hay una misma promesa: que la producción, la distribución y la venta de KOF <em>no se detengan por un motivo técnico</em>. Lo que sigue son las evidencias de trece meses de operación continua.</span></div>
   </div>
 </section>
 
@@ -303,6 +318,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
     <h2 class="title reveal">Alertas, Incidentes y Requerimientos</h2>
     <p class="insight reveal d1">Las alertas se estabilizan en torno a 1,100–1,300/mes tras el mínimo de Dic-25; los requerimientos repuntan a 410 en Ago-26, el máximo de los 13 meses.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="alertas"></canvas></div></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>El monitoreo procesa cerca de <em>1,200 señales cada mes</em> para que apenas un centenar llegue a convertirse en un incidente de usuario. La operación de KOF no percibe la mayor parte de lo que ocurre bajo la superficie: ése es exactamente el propósito del servicio.</span></div>
   </div>
 </section>
 
@@ -314,6 +330,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
     <h2 class="title reveal">Incidentes — Alertas Top Offender<span class="stale">datos a junio 2026</span></h2>
     <p class="insight reveal d1">Las alertas se concentran en ~14 firmas recurrentes; Oracle tablespace y los recursos batch/diálogo dominan el volumen.</p>
     <div class="chartcard reveal d2" style="padding:8px 8px 4px"><div style="max-height:46vh;overflow:auto"><table class="tbl" id="offtbl"><thead><tr><th>Alerta (Top Offender)</th><th style="text-align:right">2026</th><th style="text-align:right">Histórico</th></tr></thead><tbody></tbody></table></div></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>Que el volumen se concentre en <em>catorce firmas recurrentes</em> convierte un problema inabarcable en una lista finita de automatizaciones. Es la diferencia entre apagar fuegos y eliminar la causa que los enciende.</span></div>
   </div>
 </section>
 
@@ -325,6 +342,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
     <h2 class="title reveal">Top 10 Alertas — Histórico vs 2026</h2>
     <p class="insight reveal d1">Frente al acumulado histórico, 2026 concentra buena parte de las alertas de tablespace y recursos: foco de automatización.</p>
     <div class="chartcard reveal d2"><div class="chartbox tall"><canvas data-chart="top10"></canvas></div></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>El contraste con el histórico indica dónde colocar el siguiente esfuerzo de automatización: no donde más duele hoy, sino <em>donde el patrón se repite año con año</em>. Priorizar con evidencia es lo que evita invertir en el síntoma equivocado.</span></div>
   </div>
 </section>
 
@@ -336,6 +354,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
     <h2 class="title reveal">Incidentes P1 &amp; P2</h2>
     <p class="insight reveal d1">Incidencia crítica baja y controlada (0–7 tickets/mes); Ago-26 cierra en 4, todos P2.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="p1p2"></canvas></div></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>En trece meses la incidencia crítica <em>nunca superó los siete casos al mes</em>, y Ago-26 cerró sin un solo P1. Para KOF significa que en ningún mes hubo una caída capaz de detener la operación comercial.</span></div>
   </div>
 </section>
 
@@ -347,6 +366,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
     <h2 class="title reveal">Incidentes — Tiempo de Resolución</h2>
     <p class="insight reveal d1">Tiempo de resolución de P1/P2 mayormente por debajo de 2.5 h; los picos de Ene-26 (6.4 h) y Mar-26 (4.1 h) son casos aislados. Ago-26 cierra en 0.7 h.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="res"></canvas></div></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>Cuando algo crítico ocurre, se resuelve en promedio <em>en menos de una hora</em>: Ago-26 cerró en 42 minutos. La medida real de un servicio gestionado no es que nunca falle nada, sino cuánto dura la falla cuando llega.</span></div>
   </div>
 </section>
 
@@ -358,6 +378,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
     <h2 class="title reveal">Incidentes — Volumen y MTTR<span class="stale">serie a may-26</span></h2>
     <p class="insight reveal d1">Los incidentes caen <b style="color:var(--amber)">−56% interanual</b> (1,120 → 468); vigilar el repunte de MTTR a 72 min en May-26.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="incmttr"></canvas></div></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>Los incidentes se redujeron a menos de la mitad en un año: <em>652 interrupciones menos al mes</em> que dejaron de escalar a los equipos de KOF. Esa curva descendente es el resultado acumulado de atacar la causa raíz en lugar del síntoma.</span></div>
   </div>
 </section>
 
@@ -369,6 +390,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
     <h2 class="title reveal">Requerimientos — Volumen y MTTR<span class="stale">serie a may-26</span></h2>
     <p class="insight reveal d1">Volumen de requerimientos estable (~250/mes); MTTR puntualmente alto en Ago-25 (3.1 h) y Abr-26 (1.8 h).</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="reqmttr"></canvas></div></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>Un flujo sostenido de alrededor de <em>250 solicitudes al mes</em> atendidas sin acumular rezago: accesos, transportes y ajustes que los equipos de KOF necesitan resueltos para poder trabajar cada día.</span></div>
   </div>
 </section>
 
@@ -387,6 +409,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
         <div class="chip"><span class="n num">445</span><span class="t">BCP<small>18.3%</small></span></div>
       </div>
     </div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span><em>2,427 transportes</em> son 2,427 ocasiones en que una mejora llegó a producción sin detener la operación. Es, literalmente, el pulso de evolución del ecosistema SAP de KOF a lo largo del periodo.</span></div>
   </div>
 </section>
 
@@ -398,6 +421,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
     <h2 class="title reveal">Transportes por Sistema — Distribución<span class="stale">datos a junio 2026</span></h2>
     <p class="insight reveal d1">Distribución concentrada: RLP, RAP y BCP acumulan la mayoría de los 2,427 transportes.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="trans"></canvas></div></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>La concentración en tres sistemas revela <em>dónde está evolucionando el negocio</em>. El servicio dimensiona su capacidad en función de eso y no de forma uniforme: atención proporcional al valor que cada sistema mueve.</span></div>
   </div>
 </section>
 
@@ -409,6 +433,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
     <h2 class="title reveal">RFC — Tasa de Éxito</h2>
     <p class="insight reveal d1">Tasa de éxito de RFC del 98.3% en 13 meses — 1,339 exitosos de 1,362 cerrados; sin fallos sistémicos.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="rfcok"></canvas></div></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span><em>1,339 cambios entraron a producción con resultado exitoso</em>; en trece meses sólo veintitrés no lo lograron. Para KOF eso significa que el ecosistema puede seguir evolucionando sin pagar el precio en disponibilidad.</span></div>
   </div>
 </section>
 
@@ -420,6 +445,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
     <h2 class="title reveal">RFC — Clasificación por Tipo</h2>
     <p class="insight reveal d1">La remediación de vulnerabilidades domina el esfuerzo en los cinco trimestres y crece de 153 a 246 RFC; 2026-Q3 va a dos meses de cierre.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="rfcclass"></canvas></div></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>El grueso del esfuerzo no se va en mantener las luces encendidas, sino en cerrar vulnerabilidades: <em>de 153 a 246 RFC por trimestre</em>. KOF no está comprando sólo continuidad, está comprando prevención.</span></div>
   </div>
 </section>
 
@@ -431,6 +457,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
     <h2 class="title reveal">RFC — Criticidad y Mitigación de Riesgos</h2>
     <p class="insight reveal d1">Predominio de cambios de bajo y moderado riesgo; los picos de alto riesgo se gestionan de forma puntual (Mar-26, Jun-26 y Ago-26, con 5 o 6 cada uno).</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="rfccrit"></canvas></div></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>El riesgo se administra <em>antes</em> de tocar producción: la mayoría de los cambios llega clasificada como bajo o moderado, y los pocos de alto riesgo se ejecutan de forma puntual y acompañada. <em>No es suerte, es diseño del proceso de cambio.</em></span></div>
   </div>
 </section>
 
@@ -454,6 +481,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
       <div class="chartcard reveal d3"><div class="chartbox" style="height:clamp(240px,34vh,320px)"><canvas data-chart="donut"></canvas></div>
       <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Fuente: SAP Notes Control Center · corte 10 de septiembre de 2026 · 96 seguimientos registrados por 9 administradores.</p></div>
     </div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>Antes de este control, la pregunta «¿qué vulnerabilidades siguen abiertas y en qué sistema?» no tenía respuesta verificable. Hoy la tiene <em>nota por nota y ambiente por ambiente</em>, sobre 57 sistemas en 16 landscapes. Medir es la condición para poder cerrar.</span></div>
   </div>
 </section>
 
