@@ -327,10 +327,10 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">04</span>
   <div class="wrap">
     <div class="eyebrow reveal">Causa raíz</div>
-    <h2 class="title reveal">Incidentes — Alertas Top Offender<span class="stale">datos a junio 2026</span></h2>
-    <p class="insight reveal d1">Las alertas se concentran en ~14 firmas recurrentes; Oracle tablespace y los recursos batch/diálogo dominan el volumen.</p>
-    <div class="chartcard reveal d2" style="padding:8px 8px 4px"><div style="max-height:46vh;overflow:auto"><table class="tbl" id="offtbl"><thead><tr><th>Alerta (Top Offender)</th><th style="text-align:right">2026</th><th style="text-align:right">Histórico</th></tr></thead><tbody></tbody></table></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>La concentración del volumen en <em>catorce firmas recurrentes</em> acota el universo de automatización a un conjunto finito y priorizable. El análisis de causa raíz sustituye la atención reactiva por la eliminación estructural del origen.</span></div>
+    <h2 class="title reveal">Incidentes — Alertas Recurrentes</h2>
+    <p class="insight reveal d1">Catorce firmas recurrentes concentran 1,099 incidentes entre enero y agosto de 2026. El 47% de ese volumen se resolvió de forma automática, sin intervención humana.</p>
+    <div class="chartcard reveal d2" style="padding:8px 8px 4px"><div style="max-height:46vh;overflow:auto"><table class="tbl" id="offtbl"><thead><tr><th>Alerta recurrente</th><th style="text-align:right">Incidentes</th><th style="text-align:right">Auto-resueltos</th></tr></thead><tbody></tbody></table></div></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>De los 1,099 incidentes generados por las catorce firmas principales, <em>522 se resolvieron sin intervención humana</em>. La automatización convierte el volumen recurrente en capacidad liberada para actividades de mayor valor.</span></div>
   </div>
 </section>
 
@@ -338,11 +338,11 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
 <section class="alt" data-idx="4">
   <span class="idx">05</span>
   <div class="wrap">
-    <div class="eyebrow reveal">Histórico vs 2026</div>
-    <h2 class="title reveal">Top 10 Alertas — Histórico vs 2026</h2>
-    <p class="insight reveal d1">Frente al acumulado histórico, 2026 concentra buena parte de las alertas de tablespace y recursos: foco de automatización.</p>
+    <div class="eyebrow reveal">Automatización</div>
+    <h2 class="title reveal">Top 10 Alertas — Volumen y Automatización</h2>
+    <p class="insight reveal d1">En las tres firmas de mayor volumen, dos de cada tres incidentes se cierran sin intervención humana. Las firmas con automatización nula señalan la siguiente oportunidad de reducción de carga.</p>
     <div class="chartcard reveal d2"><div class="chartbox tall"><canvas data-chart="top10"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>El contraste con el acumulado histórico distingue los <em>patrones persistentes</em> de los episodios coyunturales, y orienta la inversión en automatización hacia las causas de recurrencia comprobada.</span></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>La tasa de automatización por firma identifica <em>dónde la inversión ya rinde y dónde queda margen</em>. Las firmas que aún requieren atención manual en su totalidad constituyen el siguiente objetivo de reducción de carga operativa.</span></div>
   </div>
 </section>
 
@@ -374,11 +374,11 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
 <section class="dark" data-idx="7">
   <span class="idx">08</span>
   <div class="wrap">
-    <div class="eyebrow reveal">Evolución interanual</div>
-    <h2 class="title reveal">Incidentes — Volumen y MTTR<span class="stale">serie a may-26</span></h2>
-    <p class="insight reveal d1">Los incidentes caen <b style="color:var(--amber)">−56% interanual</b> (1,120 → 468); vigilar el repunte de MTTR a 72 min en May-26.</p>
+    <div class="eyebrow reveal">Desempeño 2026</div>
+    <h2 class="title reveal">Incidentes — Volumen y Tiempo de Resolución</h2>
+    <p class="insight reveal d1">9,096 incidentes SAP monitoreados entre enero y agosto de 2026. El tiempo mediano de resolución baja de <b style="color:var(--amber)">88 a 54 minutos</b>, una mejora de 39% con 12% más volumen.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="incmttr"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>La reducción interanual del 56% equivale a <em>652 incidentes mensuales menos</em> que no requirieron intervención de las áreas usuarias de KOF. El descenso es consistente con la resolución de causas raíz documentada en las secciones precedentes.</span></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>El tiempo mediano de resolución descendió <em>39% entre enero y agosto de 2026</em>, de 88 a 54 minutos, mientras el volumen mensual creció 12%. La capacidad de restablecimiento mejoró con una carga mayor, no menor.</span></div>
   </div>
 </section>
 
@@ -387,10 +387,10 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">09</span>
   <div class="wrap">
     <div class="eyebrow reveal">Demanda de servicio</div>
-    <h2 class="title reveal">Requerimientos — Volumen y MTTR<span class="stale">serie a may-26</span></h2>
-    <p class="insight reveal d1">Volumen de requerimientos estable (~250/mes); MTTR puntualmente alto en Ago-25 (3.1 h) y Abr-26 (1.8 h).</p>
+    <h2 class="title reveal">Requerimientos — Volumen y Atención</h2>
+    <p class="insight reveal d1">3,460 requerimientos atendidos en trece meses, con un máximo de 410 en Ago-26 —60% sobre julio—. La duración de atención sigue al volumen: los meses de mayor demanda concentran los tiempos más altos.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="reqmttr"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>El servicio atiende un flujo sostenido de <em>aproximadamente 250 solicitudes mensuales</em> —altas de acceso, pases de transporte y ajustes de configuración— sin acumulación de rezago, condición necesaria para la operación diaria de los equipos de KOF.</span></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>El servicio absorbió <em>3,460 solicitudes en trece meses</em> —altas de acceso, pases de transporte y ajustes de configuración—, incluido el máximo de 410 en agosto de 2026 sin interrupción del flujo de atención.</span></div>
   </div>
 </section>
 
@@ -413,21 +413,10 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   </div>
 </section>
 
-<!-- ============ 11 TRANSPORTES DISTRIBUCION ============ -->
-<section class="light" data-idx="10">
-  <span class="idx">11</span>
-  <div class="wrap">
-    <div class="eyebrow reveal">Concentración</div>
-    <h2 class="title reveal">Transportes por Sistema — Distribución<span class="stale">datos a junio 2026</span></h2>
-    <p class="insight reveal d1">Distribución concentrada: RLP, RAP y BCP acumulan la mayoría de los 2,427 transportes.</p>
-    <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="trans"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>La concentración de la actividad en tres sistemas refleja <em>la distribución real de la demanda de cambio del negocio</em>. El dimensionamiento de capacidad del servicio responde a esa distribución y no a un criterio uniforme.</span></div>
-  </div>
-</section>
 
 <!-- ============ 12 RFC EXITO ============ -->
-<section class="alt" data-idx="11">
-  <span class="idx">12</span>
+<section class="alt" data-idx="10">
+  <span class="idx">11</span>
   <div class="wrap">
     <div class="eyebrow reveal">Calidad de cambio</div>
     <h2 class="title reveal">RFC — Tasa de Éxito</h2>
@@ -438,8 +427,8 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
 </section>
 
 <!-- ============ 13 RFC CLASIFICACION ============ -->
-<section class="light" data-idx="12">
-  <span class="idx">13</span>
+<section class="light" data-idx="11">
+  <span class="idx">12</span>
   <div class="wrap">
     <div class="eyebrow reveal">Composición del esfuerzo</div>
     <h2 class="title reveal">RFC — Clasificación por Tipo</h2>
@@ -450,8 +439,8 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
 </section>
 
 <!-- ============ 14 RFC CRITICIDAD ============ -->
-<section class="alt" data-idx="13">
-  <span class="idx">14</span>
+<section class="alt" data-idx="12">
+  <span class="idx">13</span>
   <div class="wrap">
     <div class="eyebrow reveal">Gestión de riesgo</div>
     <h2 class="title reveal">RFC — Criticidad y Mitigación de Riesgos</h2>
@@ -462,8 +451,8 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
 </section>
 
 <!-- ============ 15 FOCUSED RUN (DARK) ============ -->
-<section class="dark" data-idx="14">
-  <span class="idx">15</span>
+<section class="dark" data-idx="13">
+  <span class="idx">14</span>
   <div class="wrap">
     <div class="eyebrow reveal">Seguridad</div>
     <h2 class="title reveal">Remediación de Vulnerabilidades en Focus Run</h2>
@@ -486,7 +475,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
 </section>
 
 <!-- ============ 16 CLOSING ============ -->
-<section id="closing" data-idx="15">
+<section id="closing" data-idx="14">
   <div class="heroglow"><div class="blob a" style="opacity:.4"></div><div class="blob b" style="opacity:.4"></div></div>
   <div class="wrap" style="display:flex;flex-direction:column;align-items:center">
     <svg class="dxc-logo reveal" viewBox="0 0 470 76"><use href="#dxcmark"/></svg>
@@ -532,15 +521,15 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
 const M13=['Ago-25','Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26'];
 // Ventana de las dos series que aún no se han podido actualizar: sus datos
 // cubren May-25…May-26 y no deben tomar las etiquetas de M13.
-const M13_PREV=['May-25','Jun-25','Jul-25','Ago-25','Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26'];
+// ZOOM arranca en enero de 2026: ocho meses es toda su cobertura.
+const M8=['Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26'];
 const DATA={
  alertas:{l:M13,a:[1240,1410,1200,1000,700,1075,1014,1066,977,1341,1338,1078,1207],
    i:[95,215,75,55,50,207,92,247,124,157,77,71,114],r:[325,313,244,188,175,312,265,301,269,207,195,256,410]},
  p1p2:{l:M13,v:[0,7,0,1,4,2,1,1,3,7,1,1,4]},
  res:{l:M13,v:[0,0.4,0,1.6,0,6.4,0.7,4.1,2.7,2.0,0.2,1.3,0.7]},
- incmttr:{l:M13_PREV,t:[1075,1075,1120,700,872,708,650,564,722,692,617,512,468],m:[12.4,45.5,28,15.6,13.2,8.7,19.2,21,24.6,19.2,27.7,9.6,72.2]},
- reqmttr:{l:M13_PREV,t:[255,276,302,353,308,228,222,160,269,311,247,257,208],m:[15.9,64.3,8.7,187.8,99,39.6,19.4,24.6,15.8,13.6,11.6,110.9,16.1]},
- trans:{l:['RLP','RAP','BCP','S4P','CAP','CLP','ECP','G4P','T4P','UCP','M4P','XCP','GCP'],v:[604,602,445,303,100,82,82,58,46,35,33,28,9]},
+ incmttr:{l:M8,t:[1075,1014,1066,977,1341,1338,1078,1207],m:[88,42,69,98,51,65,35,54]},
+ reqmttr:{l:M13,t:[325,313,244,188,175,312,265,301,269,207,195,256,410],m:[1053,306,63,105,88,129,191,277,178,418,332,490,1155]},
  rfcok:{l:M13,v:[97.6,99.2,99.0,98.9,100,100,99.2,100,99.2,100,100,100,100]},
  rfcclass:{l:['2025-Q3','2025-Q4','2026-Q1','2026-Q2','2026-Q3'],
    s:[['Remediación de vulnerabilidades',[153,178,239,275,246],'#FF7E51'],
@@ -550,18 +539,30 @@ const DATA={
  rfccrit:{l:M13,
    low:[17,36,26,27,16,36,39,22,40,47,26,33,26],mod:[71,96,82,63,32,80,83,74,85,105,115,116,121],high:[0,1,2,1,0,1,1,5,3,0,6,0,6]},
  donut:{impl:312,pend:114},
- top10:[['Oracle tablespace lleno · SRV-DB-01',165,93],['Memory Utilization · SRV-APP-02',125,32],
-   ['Not Enough Batch Resources · SRV-ERP-01',121,38],['File System > umbral · SRV-APP-01',109,47],
-   ['ABAP Instance not available · SRV-ERP-01',83,33],['Not Enough Update Resources · SRV-ERP-01',83,42],
-   ['Not Enough Dialog Resources · SRV-ERP-01',70,44],['Catalina/localhost failure rate',67,38],
-   ['High CPU · SRV-ERP-02',58,57],['High CPU · SRV-APP-03',56,36]],
- offenders:[['Oracle tablespace $SID$ lleno · SRV-DB-01',93,165],['High CPU Utilization · SRV-ERP-02',57,58],
-   ['File System /usr/sap > umbral · SRV-APP-01',47,109],['Not Enough Dialog Resources · SRV-ERP-01',44,70],
-   ['Not Enough Update Resources · SRV-ERP-01',42,83],['Agentless Unix Swap · SRV-APP-04',41,55],
-   ['Errors in ABAP System Log · SRV-ABAP-01',41,54],['Not Enough Batch Resources · SRV-ERP-01',38,121],
-   ['Failure rate · Catalina/localhost',38,67],['Not Enough ICM Resources · SRV-ERP-03',37,51],
-   ['High CPU Utilization · SRV-APP-03',36,56],['CA Introscope EM Capacity · SRV-SOLMAN-01',35,48],
-   ['ABAP Instance not available · SRV-ERP-01',33,83],['Agentless Unix Memory · SRV-APP-02',32,125]],
+ top10:[['High CPU Utilization · SRV-MISC-01',200,134],
+   ['High CPU Utilization · SRV-MISC-03',174,110],
+   ['High CPU Utilization · SRV-MISC-02',139,94],
+   ['Oracle tablespace lleno · SRV-DB-01',90,34],
+   ['High CPU Utilization · SRV-ERP-02',81,18],
+   ['Not Enough Dialog Resources · SRV-ERP-04',53,34],
+   ['Enqueue Processing · SRV-ERP-05',51,24],
+   ['File System sin SID lleno · SRV-SOLMAN-01',49,14],
+   ['UX_FCSWITCH MAJOR · SRV-INFRA-01',48,0],
+   ['Not Enough Dialog Resources · SRV-ERP-01',45,13]],
+ offenders:[['High CPU Utilization · SRV-MISC-01',200,134],
+   ['High CPU Utilization · SRV-MISC-03',174,110],
+   ['High CPU Utilization · SRV-MISC-02',139,94],
+   ['Oracle tablespace lleno · SRV-DB-01',90,34],
+   ['High CPU Utilization · SRV-ERP-02',81,18],
+   ['Not Enough Dialog Resources · SRV-ERP-04',53,34],
+   ['Enqueue Processing · SRV-ERP-05',51,24],
+   ['File System sin SID lleno · SRV-SOLMAN-01',49,14],
+   ['UX_FCSWITCH MAJOR · SRV-INFRA-01',48,0],
+   ['Not Enough Dialog Resources · SRV-ERP-01',45,13],
+   ['Not Enough Update Resources · SRV-ERP-01',44,22],
+   ['UX_FCSWITCH MAJOR · SRV-INFRA-02',43,0],
+   ['File System /usr/sap > umbral · SRV-APP-01',42,8],
+   ['File System /oracle/oraarch lleno · SRV-ERP-02',40,17]],
  transrows:[['RLP',604],['RAP',602],['BCP',445],['S4P',303],['CAP',100],['CLP',82],['ECP',82],['G4P',58],['T4P',46],['UCP',35],['M4P',33],['XCP',28],['GCP',9]],
  avarows:[['Concluidas',9,129,129,100],['Fase final · 90% o más',3,104,95,91],
    ['En ejecución · 50–89%',4,96,54,56],['Fase inicial · menos de 50%',3,97,34,35]]
@@ -595,8 +596,8 @@ const BUILD={
    plugins:{legend:{position:'top',align:'end'}},scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,suggestedMax:2300})}}});},
 
  top10(ctx,dark){const r=DATA.top10;return new Chart(ctx,{type:'bar',data:{labels:r.map(x=>x[0]),datasets:[
-   {label:'Total histórico',data:r.map(x=>x[1]),backgroundColor:dark?'#3A3F5C':C.navy,borderRadius:5,barPercentage:.86,categoryPercentage:.8},
-   {label:'2026',data:r.map(x=>x[2]),backgroundColor:C.amber,borderRadius:5,barPercentage:.86,categoryPercentage:.8}]},
+   {label:'Incidentes',data:r.map(x=>x[1]),backgroundColor:dark?'#3A3F5C':C.navy,borderRadius:5,barPercentage:.86,categoryPercentage:.8},
+   {label:'Resueltos automáticamente',data:r.map(x=>x[2]),backgroundColor:C.amber,borderRadius:5,barPercentage:.86,categoryPercentage:.8}]},
    options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{position:'top',align:'end'}},
    scales:{x:ax(dark,{beginAtZero:true,stacked:false}),y:Object.assign(ax(dark),{ticks:{color:dark?'#cfd2dd':C.muted,font:{size:11.5},autoSkip:false}})}}});},
 
@@ -614,24 +615,17 @@ const BUILD={
 
  incmttr(ctx,dark){const d=DATA.incmttr;return new Chart(ctx,{data:{labels:d.l,datasets:[
    {type:'bar',label:'Total incidentes',data:d.t,backgroundColor:C.amber,borderRadius:5,yAxisID:'y',order:2},
-   {type:'line',label:'MTTR (min)',data:d.m,borderColor:C.rust,backgroundColor:C.rust,yAxisID:'y1',tension:.35,borderWidth:3,pointRadius:3,pointHoverRadius:6,order:1}]},
+   {type:'line',label:'Resolución mediana (min)',data:d.m,borderColor:C.rust,backgroundColor:C.rust,yAxisID:'y1',tension:.35,borderWidth:3,pointRadius:3,pointHoverRadius:6,order:1}]},
    options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'top',align:'end'}},
    scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,position:'left',title:{display:true,text:'Incidentes',color:dark?'#B9BCC9':C.muted}}),
-   y1:{position:'right',beginAtZero:true,grid:{drawOnChartArea:false},border:{display:false},ticks:{color:C.rust},title:{display:true,text:'MTTR (min)',color:C.rust}}}}});},
+   y1:{position:'right',beginAtZero:true,grid:{drawOnChartArea:false},border:{display:false},ticks:{color:C.rust},title:{display:true,text:'Mediana (min)',color:C.rust}}}}});},
 
  reqmttr(ctx,dark){const d=DATA.reqmttr;return new Chart(ctx,{data:{labels:d.l,datasets:[
    {type:'bar',label:'Total requerimientos',data:d.t,backgroundColor:C.peach,borderRadius:5,yAxisID:'y',order:2},
-   {type:'line',label:'MTTR (min)',data:d.m,borderColor:C.rust,backgroundColor:C.rust,yAxisID:'y1',tension:.35,borderWidth:3,pointRadius:3,pointHoverRadius:6,order:1}]},
+   {type:'line',label:'Duración mediana (min)',data:d.m,borderColor:C.rust,backgroundColor:C.rust,yAxisID:'y1',tension:.35,borderWidth:3,pointRadius:3,pointHoverRadius:6,order:1}]},
    options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'top',align:'end'}},
    scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,position:'left',title:{display:true,text:'Requerimientos',color:dark?'#B9BCC9':C.muted}}),
-   y1:{position:'right',beginAtZero:true,grid:{drawOnChartArea:false},border:{display:false},ticks:{color:C.rust},title:{display:true,text:'MTTR (min)',color:C.rust}}}}});},
-
- trans(ctx,dark){const d=DATA.trans;const top3=[...d.v].sort((a,b)=>b-a).slice(0,3);
-   return new Chart(ctx,{type:'bar',data:{labels:d.l,datasets:[
-   {data:d.v,backgroundColor:d.v.map(v=>top3.includes(v)?C.amber:(dark?'#3A3F5C':C.navy)),borderRadius:6,
-    datalabels:lbl(dark?'#fff':C.navy,dark)}]},
-   options:{maintainAspectRatio:false,plugins:{legend:{display:false}},
-   scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,suggestedMax:700})}}});},
+   y1:{position:'right',beginAtZero:true,grid:{drawOnChartArea:false},border:{display:false},ticks:{color:C.rust},title:{display:true,text:'Mediana (min)',color:C.rust}}}}});},
 
  rfcok(ctx,dark){const d=DATA.rfcok;return new Chart(ctx,{type:'bar',data:{labels:d.l,datasets:[
    {data:d.v,backgroundColor:C.amber,borderRadius:6,datalabels:lbl(dark?'#fff':C.navy,dark,v=>v+'%')}]},
