@@ -451,8 +451,31 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
 </section>
 
 <!-- ============ 15 FOCUSED RUN (DARK) ============ -->
-<section class="dark" data-idx="13">
+<section class="light" data-idx="13">
   <span class="idx">14</span>
+  <div class="wrap">
+    <div class="eyebrow reveal">Continuidad</div>
+    <h2 class="title reveal">Plan de Recuperación ante Desastres</h2>
+    <p class="insight reveal d1">Los tres frentes de recuperación operaron dentro de parámetros durante agosto de 2026, con 99.1% de disponibilidad promedio de réplica sobre 1,890 checkpoints de monitoreo.</p>
+    <div class="fr-strip reveal d2">
+      <div class="c"><div class="n num c-amber" data-count="99.1" data-dec="1" data-suffix="%">0</div><div class="l">Disponibilidad de réplica</div></div>
+      <div class="c"><div class="n num" style="color:#4FD18B" data-count="3">0</div><div class="l">Sistemas HANA replicados</div></div>
+      <div class="c"><div class="n num" style="color:var(--ink)" data-count="1890">0</div><div class="l">Checkpoints de monitoreo</div></div>
+      <div class="c"><div class="n num" style="color:var(--ink)" data-count="258">0</div><div class="l">Alertas del periodo</div></div>
+      <div class="c"><div class="n num" style="color:var(--ink)" data-count="16">0</div><div class="l">Incidentes registrados</div></div>
+      <div class="c"><div class="n num c-rust" data-count="2">0</div><div class="l">Ventanas fuera de RPO</div></div>
+    </div>
+    <div class="two rev" style="margin-top:14px">
+      <div class="chartcard reveal d3" style="padding:8px 8px 4px"><table class="tbl" id="drptbl"><thead><tr><th>Frente de recuperación</th><th>Alcance</th><th style="text-align:right">Alertas</th></tr></thead><tbody></tbody></table></div>
+      <div class="chartcard reveal d3"><div class="chartbox" style="height:clamp(240px,34vh,320px)"><canvas data-chart="drp"></canvas></div>
+      <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Fuente: Azure Monitor y checkpoints de monitoreo SAP HANA · agosto 2026 · zona horaria CDMX.</p></div>
+    </div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>Los tres frentes de recuperación —replicación HANA entre sitios, conmutación de máquinas virtuales en Azure Site Recovery y el Availability Group de SQL Server— sostuvieron <em>99.1% de disponibilidad de réplica</em>. La capacidad de recuperación ante un desastre está verificada y medida de forma continua, no supuesta.</span></div>
+  </div>
+</section>
+
+<section class="dark" data-idx="14">
+  <span class="idx">15</span>
   <div class="wrap">
     <div class="eyebrow reveal">Seguridad</div>
     <h2 class="title reveal">Remediación de Vulnerabilidades en Focus Run</h2>
@@ -474,8 +497,31 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   </div>
 </section>
 
+<section class="alt" data-idx="15">
+  <span class="idx">16</span>
+  <div class="wrap">
+    <div class="eyebrow reveal">Seguridad · Infraestructura</div>
+    <h2 class="title reveal">Vulnerabilidades de Infraestructura — Qualys</h2>
+    <p class="insight reveal d1">12,736 vulnerabilidades remediadas entre marzo y agosto de 2026. Julio marcó el punto de inflexión: por primera vez las remediaciones superaron a los hallazgos, con un saldo de 1,130 a favor.</p>
+    <div class="fr-strip reveal d2">
+      <div class="c"><div class="n num c-amber" data-count="12736">0</div><div class="l">Remediadas · Mar–Ago</div></div>
+      <div class="c"><div class="n num" style="color:var(--ink)" data-count="1343">0</div><div class="l">Abiertas al corte</div></div>
+      <div class="c"><div class="n num" style="color:var(--ink)" data-count="333">0</div><div class="l">Servidores en alcance</div></div>
+      <div class="c"><div class="n num" style="color:#4FD18B" data-count="38">0</div><div class="l">Servidores al 100%</div></div>
+      <div class="c"><div class="n num" style="color:var(--ink)" data-count="4" data-dec="1">0</div><div class="l">Promedio por servidor</div></div>
+      <div class="c"><div class="n num c-rust" data-count="11">0</div><div class="l">Críticas abiertas</div></div>
+    </div>
+    <div class="two rev" style="margin-top:14px">
+      <div class="chartcard reveal d3" style="padding:8px 8px 4px"><table class="tbl" id="qtbl"><thead><tr><th>Criticidad</th><th style="text-align:right">Abiertas</th><th style="text-align:right">Del total</th></tr></thead><tbody></tbody></table></div>
+      <div class="chartcard reveal d3"><div class="chartbox" style="height:clamp(240px,34vh,320px)"><canvas data-chart="qualys"></canvas></div>
+      <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Fuente: Qualys · 333 servidores · ventanas de parcheo por ambiente desde junio de 2026.</p></div>
+    </div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>El establecimiento de ventanas de parcheo por ambiente convirtió la remediación en un proceso rutinario: <em>12,736 vulnerabilidades cerradas en seis meses</em> y 38 servidores llevados a cero. Las vulnerabilidades críticas representan hoy el 0.8% del inventario abierto.</span></div>
+  </div>
+</section>
+
 <!-- ============ 16 CLOSING ============ -->
-<section id="closing" data-idx="14">
+<section id="closing" data-idx="16">
   <div class="heroglow"><div class="blob a" style="opacity:.4"></div><div class="blob b" style="opacity:.4"></div></div>
   <div class="wrap" style="display:flex;flex-direction:column;align-items:center">
     <svg class="dxc-logo reveal" viewBox="0 0 470 76"><use href="#dxcmark"/></svg>
@@ -564,6 +610,13 @@ const DATA={
    ['File System /usr/sap > umbral · SRV-APP-01',42,8],
    ['File System /oracle/oraarch lleno · SRV-ERP-02',40,17]],
  transrows:[['RLP',604],['RAP',602],['BCP',445],['S4P',303],['CAP',100],['CLP',82],['ECP',82],['G4P',58],['T4P',46],['UCP',35],['M4P',33],['XCP',28],['GCP',9]],
+ drp:{l:['SHP','MHP','THP'],v:[98.7,99.3,99.3]},
+ drprows:[['HANA · HSR','3 sistemas · SHP/MHP/THP',52],
+   ['Azure Site Recovery','3 VMs de S/4HANA',5],
+   ['SQL AlwaysOn','6 bases · AG MII',201]],
+ qualys:{l:['Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26'],
+   nuevas:[1369,1842,3485,2394,3155,2568],cerradas:[1081,1685,2053,1791,4285,1841]},
+ qrows:[['Crítica',11,0.8],['Alta',157,11.7],['Media',342,25.5],['Baja',833,62.0]],
  avarows:[['Concluidas',9,129,129,100],['Fase final · 90% o más',3,104,95,91],
    ['En ejecución · 50–89%',4,96,54,56],['Fase inicial · menos de 50%',3,97,34,35]]
 };
@@ -627,6 +680,17 @@ const BUILD={
    scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,position:'left',title:{display:true,text:'Requerimientos',color:dark?'#B9BCC9':C.muted}}),
    y1:{position:'right',beginAtZero:true,grid:{drawOnChartArea:false},border:{display:false},ticks:{color:C.rust},title:{display:true,text:'Mediana (min)',color:C.rust}}}}});},
 
+ drp(ctx,dark){const d=DATA.drp;return new Chart(ctx,{type:'bar',data:{labels:d.l,datasets:[
+   {data:d.v,backgroundColor:C.amber,borderRadius:6,barPercentage:.62,datalabels:lbl(dark?'#fff':C.navy,dark,v=>v+'%')}]},
+   options:{maintainAspectRatio:false,plugins:{legend:{display:false}},
+   scales:{x:ax(dark),y:ax(dark,{min:95,max:100,ticks:{color:dark?'#B9BCC9':C.muted,padding:8,callback:v=>v+'%'},title:{display:true,text:'Disponibilidad de réplica',color:dark?'#B9BCC9':C.muted}})}}});},
+
+ qualys(ctx,dark){const d=DATA.qualys;return new Chart(ctx,{type:'bar',data:{labels:d.l,datasets:[
+   {label:'Nuevas',data:d.nuevas,backgroundColor:dark?'#3A3F5C':C.navy,borderRadius:5},
+   {label:'Remediadas',data:d.cerradas,backgroundColor:C.amber,borderRadius:5}]},
+   options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+   plugins:{legend:{position:'top',align:'end'}},
+   scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,title:{display:true,text:'Vulnerabilidades',color:dark?'#B9BCC9':C.muted}})}}});},
  rfcok(ctx,dark){const d=DATA.rfcok;return new Chart(ctx,{type:'bar',data:{labels:d.l,datasets:[
    {data:d.v,backgroundColor:C.amber,borderRadius:6,datalabels:lbl(dark?'#fff':C.navy,dark,v=>v+'%')}]},
    options:{maintainAspectRatio:false,plugins:{legend:{display:false},
@@ -665,6 +729,13 @@ function fillTables(){
     h+=`<tr><td><b>${r[0]}</b></td><td class="r">${r[1]}</td><td class="r">${r[2]}</td><td class="r">${r[3]}</td><td class="r" style="color:${pleno?'#4FD18B':'#FFC982'}">${r[4]}%</td></tr>`;});
   h+=`<tr class="tot"><td>TOTAL</td><td class="r">19</td><td class="r">426</td><td class="r">312</td><td class="r">73%</td></tr>`;
   document.querySelector('#frtbl tbody').innerHTML=h;
+  h='';DATA.drprows.forEach(r=>{h+=`<tr><td><b>${r[0]}</b></td><td style="color:var(--soft)">${r[1]}</td><td class="r">${r[2]}</td></tr>`;});
+  h+=`<tr class="tot"><td>TOTAL</td><td></td><td class="r">258</td></tr>`;
+  document.querySelector('#drptbl tbody').innerHTML=h;
+  h='';DATA.qrows.forEach(r=>{const alta=r[0]==='Crítica'||r[0]==='Alta';
+    h+=`<tr><td><b>${r[0]}</b></td><td class="r">${r[1]}</td><td class="r" style="color:${alta?'#FF8A51':'var(--soft)'}">${r[2]}%</td></tr>`;});
+  h+=`<tr class="tot"><td>TOTAL</td><td class="r">1,343</td><td class="r">100%</td></tr>`;
+  document.querySelector('#qtbl tbody').innerHTML=h;
 }
 
 /* ===================== COUNT-UP ===================== */
