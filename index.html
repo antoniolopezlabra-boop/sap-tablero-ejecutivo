@@ -697,7 +697,7 @@ const BUILD={
    options:{maintainAspectRatio:false,cutout:'70%',plugins:{legend:{position:'bottom',labels:{color:'#cfd2dd'}},
    datalabels:{display:true,color:'#fff',font:{weight:'700',size:13},formatter:(v,c)=>Math.round(v/(d.impl+d.pend)*100)+'%'}}},
    plugins:[{id:'ctr',afterDraw(ch){const{ctx,chartArea:{left,right,top,bottom}}=ch;const x=(left+right)/2,y=(top+bottom)/2;
-     ctx.save();ctx.textAlign='center';ctx.fillStyle='#fff';ctx.font='700 38px Space Grotesk, sans-serif';ctx.fillText('77%',x,y-2);
+     ctx.save();ctx.textAlign='center';ctx.fillStyle='#fff';ctx.font='700 38px Space Grotesk, sans-serif';ctx.fillText(Math.round(d.impl/(d.impl+d.pend)*100)+'%',x,y-2);
      ctx.fillStyle='#9DA1B2';ctx.font='400 13px Inter, sans-serif';ctx.fillText('avance',x,y+22);ctx.restore();}}]});}
 };
 
@@ -707,7 +707,8 @@ function fillTables(){
   document.querySelector('#offtbl tbody').innerHTML=h;
   h='';DATA.avarows.forEach(r=>{const pleno=r[4]>=100;
     h+=`<tr><td><b>${r[0]}</b></td><td class="r">${r[1]}</td><td class="r">${r[2]}</td><td class="r">${r[3]}</td><td class="r" style="color:${pleno?'#4FD18B':'#FFC982'}">${r[4]}%</td></tr>`;});
-  h+=`<tr class="tot"><td>TOTAL</td><td class="r">22</td><td class="r">348</td><td class="r">208</td><td class="r">60%</td></tr>`;
+  const t=DATA.avarows.reduce((a,r)=>[a[0]+r[1],a[1]+r[2],a[2]+r[3]],[0,0,0]);
+  h+=`<tr class="tot"><td>TOTAL</td><td class="r">${t[0]}</td><td class="r">${t[1]}</td><td class="r">${t[2]}</td><td class="r">${Math.round(t[2]/t[1]*100)}%</td></tr>`;
   document.querySelector('#frtbl tbody').innerHTML=h;
   h='';DATA.drprows.forEach(r=>{h+=`<tr><td><b>${r[0]}</b></td><td style="color:var(--soft)">${r[1]}</td><td class="r">${r[2]}</td></tr>`;});
   h+=`<tr class="tot"><td>TOTAL</td><td></td><td class="r">55</td></tr>`;
