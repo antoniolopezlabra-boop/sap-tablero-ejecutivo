@@ -300,10 +300,10 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
     <h2 class="title reveal">Resumen Ejecutivo</h2>
     <p class="lead reveal">Seis señales que resumen la salud de la plataforma SAP en el periodo.</p>
     <div class="kpigrid">
-      <div class="kpi reveal d1"><span class="tag warn">▲ 35%</span><div class="big num c-amber" data-count="1633">0</div><div class="lab">Alertas en Sep-26</div><div class="sub">máximo del periodo · 602 agrupadas</div></div>
-      <div class="kpi reveal d1"><span class="tag up">5 en Sep</span><div class="big num c-amber" data-count="5">0</div><div class="lab">Incidentes P1 &amp; P2 (Sep-26)</div><div class="sub">Criticidad bajo control</div></div>
+      <div class="kpi reveal d1"><span class="tag warn">▲ 23%</span><div class="big num c-amber" data-count="1605">0</div><div class="lab">Alertas en Sep-26</div><div class="sub">máximo del periodo · vs 1,301 en Ago-26</div></div>
+      <div class="kpi reveal d1"><span class="tag up">4 en Sep</span><div class="big num c-amber" data-count="4">0</div><div class="lab">Incidentes P1 &amp; P2 (Sep-26)</div><div class="sub">Criticidad bajo control</div></div>
       <div class="kpi reveal d2"><span class="tag warn">⚠ 72 min</span><div class="big num c-rust" data-count="19" data-suffix=" min" data-prefix="~">0</div><div class="lab">MTTR de incidentes (típico)</div><div class="sub">Atención al repunte de May-26</div></div>
-      <div class="kpi reveal d2"><span class="tag ok">13 meses</span><div class="big num c-blue" data-count="99.6" data-dec="1" data-suffix="%">0</div><div class="lab">RFC completados con éxito</div><div class="sub">Sin fallos sistémicos</div></div>
+      <div class="kpi reveal d2"><span class="tag ok">13 meses</span><div class="big num c-blue" data-count="99.7" data-dec="1" data-suffix="%">0</div><div class="lab">RFC completados con éxito</div><div class="sub">Sin fallos sistémicos</div></div>
       <div class="kpi reveal d3"><span class="tag ok">9 concluidas</span><div class="big num c-rust" data-count="77" data-suffix="%">0</div><div class="lab">Focus Run — avance</div><div class="sub">19 notas · 51 sistemas · 423 remediaciones</div></div>
       <div class="kpi reveal d3"><span class="tag ok">12 meses</span><div class="big num c-navy" data-count="2427">0</div><div class="lab">Transportes ejecutados</div><div class="sub">RLP, RAP y BCP lideran</div></div>
     </div>
@@ -317,9 +317,9 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <div class="wrap">
     <div class="eyebrow reveal">Demanda operativa</div>
     <h2 class="title reveal">Alertas, Incidentes y Requerimientos</h2>
-    <p class="insight reveal d1">Septiembre registra 1,633 alertas, el máximo de los trece meses, de las cuales 602 se agruparon bajo un incidente padre. Los requerimientos bajan a 198 y los incidentes de usuario a 51, el mínimo del periodo.</p>
+    <p class="insight reveal d1">Septiembre registra 1,605 alertas, el máximo de los trece meses. Los requerimientos bajan a 203 tras el pico de agosto y los incidentes de usuario se mantienen en 79.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="alertas"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>La capa de monitoreo procesó <em>1,633 eventos en septiembre</em>, de los cuales sólo 51 escalaron como incidente de usuario. La contención en el nivel automatizado evita la transferencia de carga operativa a las áreas usuarias de KOF.</span></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>La capa de monitoreo procesó <em>1,605 eventos en septiembre</em>, de los cuales sólo 79 escalaron como incidente de usuario. La contención en el nivel automatizado evita la transferencia de carga operativa a las áreas usuarias de KOF.</span></div>
   </div>
 </section>
 
@@ -353,7 +353,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <div class="wrap">
     <div class="eyebrow reveal">Criticidad</div>
     <h2 class="title reveal">Incidentes P1 &amp; P2</h2>
-    <p class="insight reveal d1">Cinco incidentes críticos en septiembre, todos de prioridad 2 y ninguno de prioridad 1. La serie cuenta eventos y no tickets: los veinte avisos de una misma alerta de disco del día 10 se consolidan en uno.</p>
+    <p class="insight reveal d1">Cuatro incidentes críticos en septiembre, todos de prioridad 2 y ninguno de prioridad 1. La serie cuenta eventos y no tickets: los veinte avisos de una misma alerta de disco del día 10 se consolidan en uno.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="p1p2"></canvas></div></div>
     <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Criterio de conteo: los tickets que reportan una misma alerta sobre un mismo recurso dentro del mismo día se consolidan en un solo evento.</p>
     <div class="value reveal d3"><b>Valor para KOF</b><span>La incidencia crítica se mantuvo <em>por debajo de siete casos mensuales</em> durante los trece meses, y en ningún mes del periodo se registró un incidente de prioridad 1 sobre la plataforma. No hubo eventos con capacidad de interrumpir la operación comercial.</span></div>
@@ -366,9 +366,9 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <div class="wrap">
     <div class="eyebrow reveal">Capacidad de respuesta</div>
     <h2 class="title reveal">Incidentes — Tiempo de Resolución</h2>
-    <p class="insight reveal d1">El tiempo de resolución de P1/P2 se mantiene mayormente por debajo de 4.5 h. Septiembre promedia 15.7 h por dos casos aislados —una instancia ADS de 46 h y un ticket de usuario de 25 h—; la mediana del mes es de 5.6 h.</p>
+    <p class="insight reveal d1">El tiempo de resolución de P1/P2 se mantiene mayormente por debajo de 4.5 h. Septiembre promedia 9.1 h sobre cuatro eventos, elevado por un ticket de acceso de 25 h; la mediana del mes es de 5.0 h.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="res"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>La mediana de resolución de incidentes críticos se sitúa en <em>5.6 horas en septiembre</em> y por debajo de 4.5 horas en la mayoría del periodo. El indicador mide la capacidad de restablecimiento del servicio, determinante del impacto efectivo sobre el negocio.</span></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>La mediana de resolución de incidentes críticos se sitúa en <em>5.0 horas en septiembre</em> y por debajo de 4.5 horas en la mayoría del periodo. El indicador mide la capacidad de restablecimiento del servicio, determinante del impacto efectivo sobre el negocio.</span></div>
   </div>
 </section>
 
@@ -378,9 +378,9 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <div class="wrap">
     <div class="eyebrow reveal">Desempeño 2026</div>
     <h2 class="title reveal">Incidentes — Volumen y Tiempo de Resolución</h2>
-    <p class="insight reveal d1">10,729 incidentes SAP monitoreados entre enero y septiembre de 2026. El tiempo mediano de resolución baja de <b style="color:var(--amber)">88 a 47 minutos</b>, una mejora de 47% con 52% más volumen.</p>
+    <p class="insight reveal d1">10,794 incidentes SAP monitoreados entre enero y septiembre de 2026. El tiempo mediano de resolución baja de <b style="color:var(--amber)">88 a 46 minutos</b>, una mejora de 48% con 49% más volumen.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="incmttr"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>El tiempo mediano de resolución descendió <em>47% entre enero y septiembre de 2026</em>, de 88 a 47 minutos, mientras el volumen mensual creció 52%. La capacidad de restablecimiento mejoró con una carga sustancialmente mayor.</span></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>El tiempo mediano de resolución descendió <em>48% entre enero y septiembre de 2026</em>, de 88 a 46 minutos, mientras el volumen mensual creció 49%. La capacidad de restablecimiento mejoró con una carga sustancialmente mayor.</span></div>
   </div>
 </section>
 
@@ -390,9 +390,9 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <div class="wrap">
     <div class="eyebrow reveal">Demanda de servicio</div>
     <h2 class="title reveal">Requerimientos — Volumen y Atención</h2>
-    <p class="insight reveal d1">3,333 requerimientos atendidos en trece meses. Septiembre cierra en 198, con una duración mediana de 3.7 horas: el nivel más bajo desde diciembre y una caída de 93% frente al pico de agosto.</p>
+    <p class="insight reveal d1">3,354 requerimientos atendidos en trece meses. Septiembre cierra en 203, con una duración hábil mediana de 1.8 horas: una caída de 92% frente al pico de agosto.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="reqmttr"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>El servicio absorbió <em>3,333 solicitudes en trece meses</em> —altas de acceso, pases de transporte y ajustes de configuración—. Tras el máximo de agosto, septiembre normalizó tanto el volumen como el tiempo de atención.</span></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>El servicio absorbió <em>3,354 solicitudes en trece meses</em> —altas de acceso, pases de transporte y ajustes de configuración—. Tras el máximo de agosto, septiembre normalizó tanto el volumen como el tiempo de atención.</span></div>
   </div>
 </section>
 
@@ -405,9 +405,9 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <div class="wrap">
     <div class="eyebrow reveal">Calidad de cambio</div>
     <h2 class="title reveal">RFC — Tasa de Éxito</h2>
-    <p class="insight reveal d1">Tasa de éxito de RFC del 99.6% en trece meses — 1,416 exitosos de 1,421 cerrados. Septiembre cierra 143 de 143 con resultado exitoso.</p>
+    <p class="insight reveal d1">Tasa de éxito de RFC del 99.7% en trece meses — 1,494 exitosos de 1,499 cerrados. Septiembre cierra 151 RFC, todos con resultado exitoso.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="rfcok"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span><em>1,416 cambios se incorporaron a producción con resultado exitoso</em> y sólo 5 no alcanzaron el resultado previsto en trece meses. La tasa de 99.6% acredita que la evolución del ecosistema no compromete la disponibilidad de la plataforma.</span></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span><em>1,494 cambios se incorporaron a producción con resultado exitoso</em> y sólo 5 no alcanzaron el resultado previsto en trece meses. La tasa de 99.7% acredita que la evolución del ecosistema no compromete la disponibilidad de la plataforma.</span></div>
   </div>
 </section>
 
@@ -417,9 +417,9 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <div class="wrap">
     <div class="eyebrow reveal">Composición del esfuerzo</div>
     <h2 class="title reveal">RFC — Clasificación por Tipo</h2>
-    <p class="insight reveal d1">La remediación de vulnerabilidades domina el esfuerzo en los cinco trimestres y crece de 153 a 340 RFC. Con septiembre cerrado, 2026-Q3 es el trimestre de mayor actividad del periodo.</p>
+    <p class="insight reveal d1">La remediación de vulnerabilidades domina el esfuerzo en los cinco trimestres y crece de 153 a 372 RFC. Con septiembre cerrado, 2026-Q3 es el trimestre de mayor actividad del periodo.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="rfcclass"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>La remediación de vulnerabilidades concentra la mayor proporción del esfuerzo de cambio, con un crecimiento de <em>153 a 340 RFC por trimestre</em>. La composición evidencia una orientación preventiva y no exclusivamente correctiva del servicio.</span></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>La remediación de vulnerabilidades concentra la mayor proporción del esfuerzo de cambio, con un crecimiento de <em>153 a 372 RFC por trimestre</em>. La composición evidencia una orientación preventiva y no exclusivamente correctiva del servicio.</span></div>
   </div>
 </section>
 
@@ -428,8 +428,8 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">12</span>
   <div class="wrap">
     <div class="eyebrow reveal">Gestión de riesgo</div>
-    <h2 class="title reveal">RFC — Criticidad y Mitigación de Riesgos<span class="stale">serie a ago-26</span></h2>
-    <p class="insight reveal d1">Predominio de cambios de bajo y moderado riesgo; los picos de alto riesgo se gestionan de forma puntual (Mar-26, Jun-26 y Ago-26, con 5 o 6 cada uno). El reporte de septiembre no incluye la clasificación de riesgo.</p>
+    <h2 class="title reveal">RFC — Criticidad y Mitigación de Riesgos</h2>
+    <p class="insight reveal d1">Predominio de cambios de bajo y moderado riesgo: 124 de los 151 RFC de septiembre son de riesgo moderado. Los seis de riesgo alto del mes se gestionan de forma puntual y supervisada.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="rfccrit"></canvas></div></div>
     <div class="value reveal d3"><b>Valor para KOF</b><span>La clasificación de riesgo se determina <em>con anterioridad a la ejecución</em>: la mayoría de los cambios se cataloga como bajo o moderado, y los de riesgo alto se ejecutan de forma acotada y supervisada. El perfil resultante es producto del gobierno del proceso de cambio.</span></div>
   </div>
@@ -549,27 +549,25 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
 <script>
 /* ===================== DATA ===================== */
 const M13=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
-// La criticidad de RFC no viene en el reporte de septiembre: conserva su ventana.
-const M13_RIESGO=['Ago-25','Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26'];
 // Ventana de las dos series que aún no se han podido actualizar: sus datos
 // cubren May-25…May-26 y no deben tomar las etiquetas de M13.
 // ZOOM arranca en enero de 2026: ocho meses es toda su cobertura.
 const M9=['Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
 const DATA={
- alertas:{l:M13,a:[1410,1200,1000,700,1075,1014,1066,977,1341,1338,1078,1207,1633],
-   i:[215,75,55,50,207,92,247,124,157,77,71,114,51],r:[313,244,188,175,312,265,301,269,207,195,256,410,198]},
- p1p2:{l:M13,v:[7,0,1,4,2,1,1,3,2,1,1,4,5]},
- res:{l:M13,v:[0.4,0,1.6,0,6.4,0.7,4.1,2.7,4.2,0.2,1.3,0.7,15.7]},
- incmttr:{l:M9,t:[1075,1014,1066,977,1341,1338,1078,1207,1633],m:[88,42,69,98,51,65,35,54,47]},
- reqmttr:{l:M13,t:[313,244,188,175,312,265,301,269,207,195,256,410,198],m:[883,261,192,121,261,382,1055,244,1231,757,2408,3240,221]},
+ alertas:{l:M13,a:[1410,1200,1000,700,1075,1014,1066,977,1341,1338,1077,1301,1605],
+   i:[215,75,55,50,207,92,247,124,157,77,71,124,79],r:[313,244,188,175,312,265,301,269,207,195,255,427,203]},
+ p1p2:{l:M13,v:[7,0,1,4,2,1,1,3,2,1,1,4,4]},
+ res:{l:M13,v:[0.4,0,1.6,0,6.4,0.7,4.1,2.7,4.2,0.2,1.3,0.7,9.1]},
+ incmttr:{l:M9,t:[1075,1014,1066,977,1341,1338,1077,1301,1605],m:[88,42,69,98,51,65,35,53,46]},
+ reqmttr:{l:M13,t:[313,244,188,175,312,265,301,269,207,195,255,427,203],m:[306,63,105,88,129,206,284,178,419,334,489,1288,106]},
  rfcok:{l:M13,v:[99.2,99.0,98.9,100,100,99.2,100,99.2,100,100,100,100,100]},
  rfcclass:{l:['2025-Q3','2025-Q4','2026-Q1','2026-Q2','2026-Q3'],
-   s:[['Remediación de vulnerabilidades',[153,178,239,275,340],'#FF7E51'],
-      ['Actualización y mant. SAP',[33,52,89,123,66],'#004AAC'],
-      ['Parchado y certificados',[15,14,10,16,30],'#4995FF'],
-      ['Upgrade y migración',[22,6,4,14,14],'#FFAE41']]},
- rfccrit:{l:M13_RIESGO,
-   low:[17,36,26,27,16,36,39,22,40,47,26,33,26],mod:[71,96,82,63,32,80,83,74,85,105,115,116,121],high:[0,1,2,1,0,1,1,5,3,0,6,0,6]},
+   s:[['Remediación de vulnerabilidades',[153,178,239,275,372],'#FF7E51'],
+      ['Actualización y mant. SAP',[33,52,89,123,64],'#004AAC'],
+      ['Parchado y certificados',[15,14,10,16,18],'#4995FF'],
+      ['Upgrade y migración',[22,6,4,14,26],'#FFAE41']]},
+ rfccrit:{l:M13,
+   low:[36,26,27,16,36,39,22,40,47,26,33,32,21],mod:[96,82,63,32,80,83,74,85,105,115,116,141,124],high:[1,2,1,0,1,1,5,3,0,6,0,6,6]},
  donut:{impl:325,pend:98},
  top10:[['High CPU Utilization · SRV-MISC-01',200,134],
    ['High CPU Utilization · SRV-MISC-03',174,110],
@@ -661,7 +659,7 @@ const BUILD={
 
  reqmttr(ctx,dark){const d=DATA.reqmttr;return new Chart(ctx,{data:{labels:d.l,datasets:[
    {type:'bar',label:'Total requerimientos',data:d.t,backgroundColor:C.peach,borderRadius:5,yAxisID:'y',order:2},
-   {type:'line',label:'Duración mediana (min)',data:d.m,borderColor:C.rust,backgroundColor:C.rust,yAxisID:'y1',tension:.35,borderWidth:3,pointRadius:3,pointHoverRadius:6,order:1}]},
+   {type:'line',label:'Duración hábil mediana (min)',data:d.m,borderColor:C.rust,backgroundColor:C.rust,yAxisID:'y1',tension:.35,borderWidth:3,pointRadius:3,pointHoverRadius:6,order:1}]},
    options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'top',align:'end'}},
    scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,position:'left',title:{display:true,text:'Requerimientos',color:dark?'#B9BCC9':C.muted}}),
    y1:{position:'right',beginAtZero:true,grid:{drawOnChartArea:false},border:{display:false},ticks:{color:C.rust},title:{display:true,text:'Mediana (min)',color:C.rust}}}}});},
