@@ -301,7 +301,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
     <p class="lead reveal">Seis señales que resumen la salud de la plataforma SAP en el periodo.</p>
     <div class="kpigrid">
       <div class="kpi reveal d1"><span class="tag warn">▲ 35%</span><div class="big num c-amber" data-count="1633">0</div><div class="lab">Alertas en Sep-26</div><div class="sub">máximo del periodo · 602 agrupadas</div></div>
-      <div class="kpi reveal d1"><span class="tag warn">24 en Sep</span><div class="big num c-amber" data-count="24">0</div><div class="lab">Incidentes P1 &amp; P2 (Sep-26)</div><div class="sub">Criticidad bajo control</div></div>
+      <div class="kpi reveal d1"><span class="tag up">5 en Sep</span><div class="big num c-amber" data-count="5">0</div><div class="lab">Incidentes P1 &amp; P2 (Sep-26)</div><div class="sub">Criticidad bajo control</div></div>
       <div class="kpi reveal d2"><span class="tag warn">⚠ 72 min</span><div class="big num c-rust" data-count="19" data-suffix=" min" data-prefix="~">0</div><div class="lab">MTTR de incidentes (típico)</div><div class="sub">Atención al repunte de May-26</div></div>
       <div class="kpi reveal d2"><span class="tag ok">13 meses</span><div class="big num c-blue" data-count="99.6" data-dec="1" data-suffix="%">0</div><div class="lab">RFC completados con éxito</div><div class="sub">Sin fallos sistémicos</div></div>
       <div class="kpi reveal d3"><span class="tag ok">9 concluidas</span><div class="big num c-rust" data-count="77" data-suffix="%">0</div><div class="lab">Focus Run — avance</div><div class="sub">19 notas · 51 sistemas · 423 remediaciones</div></div>
@@ -353,9 +353,10 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <div class="wrap">
     <div class="eyebrow reveal">Criticidad</div>
     <h2 class="title reveal">Incidentes P1 &amp; P2</h2>
-    <p class="insight reveal d1">La incidencia crítica se mantuvo entre 0 y 7 casos mensuales durante doce meses; septiembre registra 24, todos de prioridad 2 y ninguno de prioridad 1.</p>
+    <p class="insight reveal d1">Cinco incidentes críticos en septiembre, todos de prioridad 2 y ninguno de prioridad 1. La serie cuenta eventos y no tickets: los veinte avisos de una misma alerta de disco del día 10 se consolidan en uno.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="p1p2"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>La incidencia crítica se mantuvo <em>por debajo de siete casos mensuales</em> durante trece meses consecutivos, y agosto de 2026 cerró sin incidentes de prioridad 1. No se registraron eventos con capacidad de interrumpir la operación comercial.</span></div>
+    <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Criterio de conteo: los tickets que reportan una misma alerta sobre un mismo recurso dentro del mismo día se consolidan en un solo evento.</p>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>La incidencia crítica se mantuvo <em>por debajo de siete casos mensuales</em> durante los trece meses, y en ningún mes del periodo se registró un incidente de prioridad 1 sobre la plataforma. No hubo eventos con capacidad de interrumpir la operación comercial.</span></div>
   </div>
 </section>
 
@@ -365,9 +366,9 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <div class="wrap">
     <div class="eyebrow reveal">Capacidad de respuesta</div>
     <h2 class="title reveal">Incidentes — Tiempo de Resolución</h2>
-    <p class="insight reveal d1">El tiempo de resolución de P1/P2 se mantiene mayormente por debajo de 2.5 h. Septiembre promedia 5.8 h sobre 24 casos, por encima de la media del periodo.</p>
+    <p class="insight reveal d1">El tiempo de resolución de P1/P2 se mantiene mayormente por debajo de 4.5 h. Septiembre promedia 15.7 h por dos casos aislados —una instancia ADS de 46 h y un ticket de usuario de 25 h—; la mediana del mes es de 5.6 h.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="res"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>El tiempo medio de resolución de incidentes críticos se ubica <em>por debajo de una hora</em>, con un cierre de 42 minutos en agosto de 2026. El indicador mide la capacidad de restablecimiento del servicio, determinante del impacto efectivo sobre el negocio.</span></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>La mediana de resolución de incidentes críticos se sitúa en <em>5.6 horas en septiembre</em> y por debajo de 4.5 horas en la mayoría del periodo. El indicador mide la capacidad de restablecimiento del servicio, determinante del impacto efectivo sobre el negocio.</span></div>
   </div>
 </section>
 
@@ -557,8 +558,8 @@ const M9=['Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26
 const DATA={
  alertas:{l:M13,a:[1410,1200,1000,700,1075,1014,1066,977,1341,1338,1078,1207,1633],
    i:[215,75,55,50,207,92,247,124,157,77,71,114,51],r:[313,244,188,175,312,265,301,269,207,195,256,410,198]},
- p1p2:{l:M13,v:[7,0,1,4,2,1,1,3,7,1,1,4,24]},
- res:{l:M13,v:[0.4,0,1.6,0,6.4,0.7,4.1,2.7,2.0,0.2,1.3,0.7,5.8]},
+ p1p2:{l:M13,v:[7,0,1,4,2,1,1,3,2,1,1,4,5]},
+ res:{l:M13,v:[0.4,0,1.6,0,6.4,0.7,4.1,2.7,4.2,0.2,1.3,0.7,15.7]},
  incmttr:{l:M9,t:[1075,1014,1066,977,1341,1338,1078,1207,1633],m:[88,42,69,98,51,65,35,54,47]},
  reqmttr:{l:M13,t:[313,244,188,175,312,265,301,269,207,195,256,410,198],m:[883,261,192,121,261,382,1055,244,1231,757,2408,3240,221]},
  rfcok:{l:M13,v:[99.2,99.0,98.9,100,100,99.2,100,99.2,100,100,100,100,100]},
