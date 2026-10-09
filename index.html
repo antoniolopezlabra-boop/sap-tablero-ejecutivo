@@ -305,7 +305,7 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
       <div class="kpi reveal d1"><span class="tag up">4 en Sep</span><div class="big num c-amber" data-count="4">0</div><div class="lab">Incidentes P1 &amp; P2 (Sep-26)</div><div class="sub">Criticidad bajo control</div></div>
       <div class="kpi reveal d2"><span class="tag warn">⚠ 72 min</span><div class="big num c-rust" data-count="19" data-suffix=" min" data-prefix="~">0</div><div class="lab">MTTR de incidentes (típico)</div><div class="sub">Atención al repunte de May-26</div></div>
       <div class="kpi reveal d2"><span class="tag ok">13 meses</span><div class="big num c-blue" data-count="99.7" data-dec="1" data-suffix="%">0</div><div class="lab">RFC completados con éxito</div><div class="sub">Sin fallos sistémicos</div></div>
-      <div class="kpi reveal d3"><span class="tag ok">9 concluidas</span><div class="big num c-rust" data-count="77" data-suffix="%">0</div><div class="lab">Focus Run — avance</div><div class="sub">19 notas · 51 sistemas · 423 remediaciones</div></div>
+      <div class="kpi reveal d3"><span class="tag ok">8 concluidas</span><div class="big num c-rust" data-count="60" data-suffix="%">0</div><div class="lab">Focus Run — avance</div><div class="sub">22 notas · 47 sistemas · 348 remediaciones</div></div>
       <div class="kpi reveal d3"><span class="tag ok">12 meses</span><div class="big num c-navy" data-count="2427">0</div><div class="lab">Transportes ejecutados</div><div class="sub">RLP, RAP y BCP lideran</div></div>
     </div>
     <div class="value reveal d3"><b>Valor para KOF</b><span>El conjunto de indicadores documenta el objetivo central del servicio: sostener la continuidad de los procesos de manufactura, distribución y comercialización de KOF sobre la plataforma SAP. Los resultados corresponden a <em>trece meses de operación</em>.</span></div>
@@ -461,19 +461,19 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">14</span>
   <div class="wrap">
     <div class="eyebrow reveal">Remediación de vulnerabilidades · Focus Run</div>
-    <h2 class="title reveal">Tres de cada cuatro vulnerabilidades, cerradas</h2>
-    <p class="insight reveal d1">Nueve de las diecinueve notas en alcance están concluidas en la totalidad de sus sistemas.</p>
+    <h2 class="title reveal">Seis de cada diez vulnerabilidades, cerradas</h2>
+    <p class="insight reveal d1">Ocho de las veintidós notas en alcance están concluidas en la totalidad de sus sistemas, y el alcance sigue creciendo.</p>
     <div class="fr-strip c3 reveal d2">
-      <div class="c"><div class="n num c-amber" data-count="77" data-suffix="%">0</div><div class="l">Avance global</div></div>
-      <div class="c"><div class="n num" style="color:#fff" data-count="51">0</div><div class="l">Sistemas SAP</div></div>
-      <div class="c"><div class="n num" style="color:#4FD18B" data-count="9">0</div><div class="l">Notas concluidas</div></div>
+      <div class="c"><div class="n num c-amber" data-count="60" data-suffix="%">0</div><div class="l">Avance global</div></div>
+      <div class="c"><div class="n num" style="color:#fff" data-count="47">0</div><div class="l">Sistemas SAP</div></div>
+      <div class="c"><div class="n num" style="color:#4FD18B" data-count="8">0</div><div class="l">Notas concluidas</div></div>
     </div>
     <div class="two rev" style="margin-top:14px">
       <div class="chartcard reveal d3" style="padding:8px 8px 4px"><div style="max-height:38vh;overflow:auto"><table class="tbl" id="frtbl"><thead><tr><th>Estado de avance</th><th style="text-align:right">Notas</th><th style="text-align:right">Remed.</th><th style="text-align:right">Impl.</th><th style="text-align:right">Avance</th></tr></thead><tbody></tbody></table></div></div>
       <div class="chartcard reveal d3"><div class="chartbox" style="height:clamp(240px,34vh,320px)"><canvas data-chart="donut"></canvas></div>
-      <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Fuente: SAP Notes Control Center · 19 notas SAP sobre 51 sistemas monitoreados.</p></div>
+      <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Fuente: SAP Notes Control Center · 22 notas SAP sobre 47 sistemas · corte 9 de octubre de 2026.</p></div>
     </div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>El programa de remediación registra <em>325 implementaciones concluidas sobre 423 requeridas</em> y reduce las pendientes de 114 a 98 respecto del corte anterior. La medición por combinación de nota y sistema otorga trazabilidad verificable del nivel de protección alcanzado en la plataforma.</span></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>El programa de remediación registra <em>208 implementaciones concluidas sobre 348 requeridas</em>. La medición se toma directamente del SAP Notes Control Center, donde cada administrador documenta su avance por nota y por sistema: una trazabilidad verificable del nivel de protección alcanzado en la plataforma.</span></div>
   </div>
 </section>
 
@@ -561,7 +561,7 @@ const DATA={
       ['Upgrade y migración',[22,6,4,14,26],'#FFAE41']]},
  rfccrit:{l:M13,
    low:[36,26,27,16,36,39,22,40,47,26,33,32,21],mod:[96,82,63,32,80,83,74,85,105,115,116,141,124],high:[1,2,1,0,1,1,5,3,0,6,0,6,6]},
- donut:{impl:325,pend:98},
+ donut:{impl:208,pend:140},
  top10:[['High CPU Utilization · SRV-MISC-01',200,134],
    ['High CPU Utilization · SRV-MISC-03',174,110],
    ['High CPU Utilization · SRV-MISC-02',139,94],
@@ -594,8 +594,7 @@ const DATA={
  qualys:{l:['Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26'],
    nuevas:[1369,1842,3485,2394,3155,2568],cerradas:[1081,1685,2053,1791,4285,1841]},
  qrows:[['Crítica',11,0.8],['Alta',157,11.7],['Media',342,25.5],['Baja',833,62.0]],
- avarows:[['Concluidas',9,129,129,100],['Fase final · 90% o más',3,104,98,94],
-   ['En ejecución · 50–89%',5,133,81,61],['Fase inicial · menos de 50%',2,57,17,30]]
+ avarows:[['Concluidas',8,91,91,100],['Fase final · 90% o más',1,15,14,93],['En ejecución · 50–89%',6,126,75,60],['Fase inicial · menos de 50%',7,116,28,24]]
 };
 const C={navy:'#0E1020',amber:'#FFAE41',peach:'#FFC982',coral:'#FF7E51',rust:'#D14600',blue:'#004AAC',lblue:'#4995FF',cyan:'#A1E6FF',muted:'#6B6F7B',line:'#E7E7EC',navyln:'rgba(255,255,255,.10)'};
 const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
@@ -690,7 +689,7 @@ const BUILD={
    options:{maintainAspectRatio:false,cutout:'70%',plugins:{legend:{position:'bottom',labels:{color:'#cfd2dd'}},
    datalabels:{display:true,color:'#fff',font:{weight:'700',size:13},formatter:(v,c)=>Math.round(v/(d.impl+d.pend)*100)+'%'}}},
    plugins:[{id:'ctr',afterDraw(ch){const{ctx,chartArea:{left,right,top,bottom}}=ch;const x=(left+right)/2,y=(top+bottom)/2;
-     ctx.save();ctx.textAlign='center';ctx.fillStyle='#fff';ctx.font='700 38px Space Grotesk, sans-serif';ctx.fillText('77%',x,y-2);
+     ctx.save();ctx.textAlign='center';ctx.fillStyle='#fff';ctx.font='700 38px Space Grotesk, sans-serif';ctx.fillText(Math.round(d.impl/(d.impl+d.pend)*100)+'%',x,y-2);
      ctx.fillStyle='#9DA1B2';ctx.font='400 13px Inter, sans-serif';ctx.fillText('avance',x,y+22);ctx.restore();}}]});}
 };
 
@@ -700,7 +699,8 @@ function fillTables(){
   document.querySelector('#offtbl tbody').innerHTML=h;
   h='';DATA.avarows.forEach(r=>{const pleno=r[4]>=100;
     h+=`<tr><td><b>${r[0]}</b></td><td class="r">${r[1]}</td><td class="r">${r[2]}</td><td class="r">${r[3]}</td><td class="r" style="color:${pleno?'#4FD18B':'#FFC982'}">${r[4]}%</td></tr>`;});
-  h+=`<tr class="tot"><td>TOTAL</td><td class="r">19</td><td class="r">423</td><td class="r">325</td><td class="r">77%</td></tr>`;
+  const t=DATA.avarows.reduce((a,r)=>[a[0]+r[1],a[1]+r[2],a[2]+r[3]],[0,0,0]);
+  h+=`<tr class="tot"><td>TOTAL</td><td class="r">${t[0]}</td><td class="r">${t[1]}</td><td class="r">${t[2]}</td><td class="r">${Math.round(t[2]/t[1]*100)}%</td></tr>`;
   document.querySelector('#frtbl tbody').innerHTML=h;
   h='';DATA.drprows.forEach(r=>{h+=`<tr><td><b>${r[0]}</b></td><td style="color:var(--soft)">${r[1]}</td><td class="r">${r[2]}</td></tr>`;});
   h+=`<tr class="tot"><td>TOTAL</td><td></td><td class="r">55</td></tr>`;
