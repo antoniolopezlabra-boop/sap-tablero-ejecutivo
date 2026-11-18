@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SAP — Estabilidad y Transformación · Tablero Ejecutivo DXC</title>
-<meta name="description" content="Tablero ejecutivo de operación SAP gestionada por DXC para Coca-Cola FEMSA — incidentes, MTTR, RFC, transportes y remediación de vulnerabilidades. Corte septiembre 2026.">
-<meta property="og:title" content="SAP — Estabilidad y Transformación · DXC">
-<meta property="og:description" content="Tablero ejecutivo de operación SAP gestionada por DXC. Corte septiembre 2026.">
+<title>SAP — Estabilidad y Continuidad Operativa · Tablero Ejecutivo DXC</title>
+<meta name="description" content="Tablero ejecutivo de operación SAP gestionada por DXC para Coca-Cola FEMSA — alertas, incidentes, tiempos de resolución, RFC, requerimientos, recuperación ante desastres y remediación de vulnerabilidades. Corte octubre 2026.">
+<meta property="og:title" content="SAP — Estabilidad y Continuidad Operativa · DXC">
+<meta property="og:description" content="Tablero ejecutivo de operación SAP gestionada por DXC. Corte octubre 2026.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +15,10 @@
 /* ============ DXC DESIGN TOKENS ============ */
 :root{
   --navy:#0E1020; --navy2:#15182E; --navy3:#1E2240;
-  --amber:#FFAE41; --peach:#FFC982; --coral:#FF7E51; --rust:#D14600;
-  --blue:#004AAC; --lblue:#4995FF; --cyan:#A1E6FF;
+  --amber:#3B82F6; --peach:#93C5FD; --coral:#6366F1; --rust:#1D4ED8;
+  --blue:#1D4ED8; --lblue:#38BDF8; --cyan:#A5F3FC;
   --ink:#0E1020; --muted:#6B6F7B; --soft:#9A9DA8;
-  --line:#E7E7EC; --bg:#FFFFFF; --bg2:#F6F3F0;
+  --line:#E7E7EC; --bg:#FFFFFF; --bg2:#F3F5FA;
   --maxw:1180px;
   --font:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
   --disp:'Space Grotesk','Inter',system-ui,sans-serif;
@@ -50,19 +50,19 @@ h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.05;letter-spacing
 .brandbar svg{height:20px;width:auto}
 .brandbar span{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#fff;mix-blend-mode:difference}
 
-.stale{display:inline-block;margin-left:10px;padding:2px 9px;border-radius:99px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;vertical-align:middle;background:rgba(209,70,0,.12);color:var(--rust);border:1px solid rgba(209,70,0,.32)}
-section.dark .stale{background:rgba(255,174,65,.14);color:var(--amber);border-color:rgba(255,174,65,.34)}
+.stale{display:inline-block;margin-left:10px;padding:2px 9px;border-radius:99px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;vertical-align:middle;background:rgba(29,78,216,.12);color:var(--rust);border:1px solid rgba(29,78,216,.32)}
+section.dark .stale{background:rgba(59,130,246,.14);color:var(--amber);border-color:rgba(59,130,246,.34)}
 
 .value{margin-top:20px;padding:15px 20px;border-radius:12px;max-width:96ch;
-  background:linear-gradient(90deg,rgba(255,174,65,.11),rgba(255,174,65,0) 78%);
-  border:1px solid rgba(255,174,65,.30);border-left:3px solid var(--amber)}
+  background:linear-gradient(90deg,rgba(59,130,246,.11),rgba(59,130,246,0) 78%);
+  border:1px solid rgba(59,130,246,.30);border-left:3px solid var(--amber)}
 .value b{display:block;font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;
   color:var(--rust);font-weight:800;margin-bottom:6px}
 .value span{display:block;font-size:clamp(13px,1.22vw,15.5px);font-weight:500;
   color:var(--muted);line-height:1.55}
 .value em{font-style:normal;font-weight:700;color:var(--ink)}
-section.dark .value{background:linear-gradient(90deg,rgba(255,174,65,.10),rgba(255,174,65,0) 78%);
-  border-color:rgba(255,174,65,.24)}
+section.dark .value{background:linear-gradient(90deg,rgba(59,130,246,.10),rgba(59,130,246,0) 78%);
+  border-color:rgba(59,130,246,.24)}
 section.dark .value b{color:var(--amber)}
 section.dark .value span{color:#B9BCC9}
 section.dark .value em{color:#fff}
@@ -86,7 +86,7 @@ section.dark .idx{color:#fff;opacity:.05}
 .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:700;
   letter-spacing:.18em;text-transform:uppercase;color:var(--rust);margin-bottom:16px}
 .eyebrow::before{content:"";width:22px;height:22px;border-radius:6px;background:var(--amber);
-  box-shadow:0 4px 14px rgba(255,174,65,.5)}
+  box-shadow:0 4px 14px rgba(59,130,246,.5)}
 section.dark .eyebrow{color:var(--amber)}
 h2.title{font-size:clamp(28px,4.4vw,52px);margin-bottom:10px}
 .lead{font-size:clamp(15px,1.5vw,18px);color:var(--muted);max-width:62ch;margin-bottom:6px}
@@ -113,10 +113,10 @@ section.dark .chartcard{background:var(--navy2);border-color:rgba(255,255,255,.0
 #hero{background:var(--navy);color:#fff;justify-content:safe center;text-align:left}
 .heroglow{position:absolute;inset:0;z-index:0;overflow:hidden}
 .blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.55;animation:drift 18s var(--ease) infinite alternate}
-.blob.a{width:46vw;height:46vw;background:radial-gradient(circle,#FF7E51,transparent 65%);top:-12vh;right:-6vw}
-.blob.b{width:40vw;height:40vw;background:radial-gradient(circle,#004AAC,transparent 65%);bottom:-16vh;left:-8vw;animation-duration:22s}
-.blob.c{width:30vw;height:30vw;background:radial-gradient(circle,#FFAE41,transparent 60%);top:30vh;left:34vw;opacity:.35;animation-duration:26s}
-@keyframes drift{to{transform:translate3d(6vw,5vh,0) scale(1.18)}}
+.blob.a{width:46vw;height:46vw;background:radial-gradient(circle,#6366F1,transparent 65%);top:-12vh;right:-6vw}
+.blob.b{width:40vw;height:40vw;background:radial-gradient(circle,#1D4ED8,transparent 65%);bottom:-16vh;left:-8vw;animation-duration:22s}
+.blob.c{width:30vw;height:30vw;background:radial-gradient(circle,#3B82F6,transparent 60%);top:30vh;left:34vw;opacity:.35;animation-duration:26s}
+@keyframes drift{to{transform:SRV-INFRA-21(6vw,5vh,0) scale(1.18)}}
 .heromesh{position:absolute;inset:0;z-index:0;opacity:.5;
   background:
    radial-gradient(1px 1px at 20% 30%,rgba(255,255,255,.5),transparent),
@@ -129,7 +129,7 @@ section.dark .chartcard{background:var(--navy2);border-color:rgba(255,255,255,.0
   border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);backdrop-filter:blur(8px);
   font-size:13px;font-weight:600;letter-spacing:.04em;margin-bottom:30px;
   animation:pulseGlow 4s ease-in-out infinite}
-@keyframes pulseGlow{0%,100%{box-shadow:0 0 0 0 rgba(255,174,65,.0)}50%{box-shadow:0 0 30px -4px rgba(255,174,65,.45)}}
+@keyframes pulseGlow{0%,100%{box-shadow:0 0 0 0 rgba(59,130,246,.0)}50%{box-shadow:0 0 30px -4px rgba(59,130,246,.45)}}
 .partner b{background:linear-gradient(90deg,var(--amber),var(--coral));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .partner .x{opacity:.5;font-weight:400}
 .hero-title{font-size:clamp(40px,8vw,104px);font-weight:700;letter-spacing:-.03em;line-height:.96;margin-bottom:8px}
@@ -154,7 +154,7 @@ section.dark .chartcard{background:var(--navy2);border-color:rgba(255,255,255,.0
 .kpigrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
 .kpi{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 24px;
   overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
-.kpi::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 100% 0,rgba(255,174,65,.10),transparent 60%);opacity:0;transition:opacity .4s}
+.kpi::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 100% 0,rgba(59,130,246,.10),transparent 60%);opacity:0;transition:opacity .4s}
 .kpi:hover{transform:translateY(-6px);box-shadow:0 30px 50px -30px rgba(14,16,32,.45)}
 .kpi:hover::before{opacity:1}
 .kpi .big{font-family:var(--disp);font-size:clamp(38px,5vw,58px);font-weight:700;line-height:1;letter-spacing:-.02em}
@@ -162,8 +162,8 @@ section.dark .chartcard{background:var(--navy2);border-color:rgba(255,255,255,.0
 .kpi .sub{color:var(--muted);font-size:13px;margin-top:3px}
 .kpi .tag{position:absolute;top:18px;right:18px;font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px}
 .tag.up{background:rgba(45,106,79,.12);color:#1f7a4d}
-.tag.warn{background:rgba(209,70,0,.12);color:var(--rust)}
-.tag.ok{background:rgba(0,74,172,.10);color:var(--blue)}
+.tag.warn{background:rgba(29,78,216,.12);color:var(--rust)}
+.tag.ok{background:rgba(29,78,216,.10);color:var(--blue)}
 .c-amber{color:var(--amber)}.c-rust{color:var(--rust)}.c-blue{color:var(--blue)}.c-navy{color:var(--navy)}
 
 /* chips */
@@ -185,7 +185,7 @@ section.dark .chartcard{background:var(--navy2);border-color:rgba(255,255,255,.0
 .tbl td{padding:9px 14px;border-bottom:1px solid var(--line)}
 .tbl tbody tr:nth-child(even){background:var(--bg2)}
 .tbl tbody tr{transition:background .2s}
-.tbl tbody tr:hover{background:#FFF3E2}
+.tbl tbody tr:hover{background:#EAF1FE}
 .tbl td.r{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
 .tbl tr.tot td{background:var(--navy);color:#fff;font-weight:700;border:0}
 .tbl .bar{display:inline-block;height:7px;border-radius:4px;background:var(--amber);vertical-align:middle;margin-right:8px}
@@ -195,13 +195,14 @@ section.dark .tbl th{background:#080A16;color:#fff}
 section.dark .tbl td{color:#EAEBF1;border-bottom-color:rgba(255,255,255,.08)}
 section.dark .tbl tbody tr:nth-child(odd){background:rgba(255,255,255,.02)}
 section.dark .tbl tbody tr:nth-child(even){background:rgba(255,255,255,.06)}
-section.dark .tbl tbody tr:hover{background:rgba(255,174,65,.16)}
+section.dark .tbl tbody tr:hover{background:rgba(59,130,246,.16)}
 section.dark .tbl tr.tot td{background:#080A16;color:#fff}
 
 /* focused-run kpi strip */
 .fr-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin:6px 0 8px}
 .fr-strip.c5{grid-template-columns:repeat(5,1fr)}
 .fr-strip.c3{grid-template-columns:repeat(3,1fr)}
+.fr-strip.c2{grid-template-columns:repeat(2,1fr)}
 .fr-strip .c{padding:6px 0}
 .fr-strip .n{font-family:var(--disp);font-size:clamp(26px,3.4vw,42px);font-weight:700;line-height:1}
 .fr-strip .l{font-size:12px;color:#B9BCC9;margin-top:4px}
@@ -248,6 +249,68 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none}
 }
+
+/* impacto RFC */
+.imp-ctrl{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0 4px}
+.imp-ctrl .grp{display:flex;gap:6px;background:rgba(255,255,255,.06);padding:4px;border-radius:99px}
+.imp-ctrl button{border:0;background:transparent;color:#B9BCC9;border-radius:99px;padding:8px 15px;font:600 12.5px var(--font);cursor:pointer;transition:all .25s}
+.imp-ctrl button:hover{color:#fff}
+.imp-ctrl button.on{background:var(--amber);color:#0E1020}
+.imp-ctrl .lbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8C90A2;margin:0 4px 0 10px}
+.imp-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0 0}
+.imp-kpi{background:var(--navy2);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px 16px}
+.imp-kpi .n{font-family:var(--disp);font-size:clamp(22px,2.6vw,32px);font-weight:700;line-height:1.05;color:#fff}
+.imp-kpi .n small{font-size:.5em;font-weight:600;color:#2DD4BF;margin-left:6px}
+.imp-kpi .l{font-size:11.5px;color:#B9BCC9;margin-top:5px;line-height:1.35}
+@media(max-width:900px){.imp-kpis{grid-template-columns:1fr 1fr}}
+#imptbl td.up{color:#2DD4BF;font-weight:700}
+.chtt{font-size:12.5px;font-weight:600;color:#EAEAF0;margin:0 0 6px}
+
+/* ===== direccion visual v11 · pantone ===== */
+:root{--bg2:#F3F5FA;--line:#E2E8F1}
+.eyebrow{color:#4A63A0}
+section.dark .eyebrow{color:#9FB2DA}
+.eyebrow::before{width:20px;height:3px;border-radius:3px;background:#9AABCB;box-shadow:none}
+section.dark .eyebrow::before{background:#5F77A6}
+.tag.up{background:rgba(20,184,166,.12);color:#0F766E}
+.tag.warn{background:rgba(30,58,138,.10);color:#1E3A8A}
+.tag.ok{background:rgba(37,99,235,.10);color:#1D4ED8}
+.tbl tbody tr:hover{background:#EAF1FE}
+section.dark .tbl tbody tr:hover{background:rgba(59,130,246,.16)}
+.chartcard{box-shadow:0 22px 50px -34px rgba(15,23,42,.38)}
+#progress{background:linear-gradient(90deg,#3B82F6,#22D3EE,#8B7CF6)}
+.hero-title .g{background-image:linear-gradient(100deg,#1D5DB5 0%,#1480D2 20%,#35A9EA 40%,#FFFFFF 50%,#35A9EA 60%,#1480D2 80%,#1D5DB5 100%);background-size:200% auto;animation:shine 6s linear infinite}
+.closetag{background-image:linear-gradient(90deg,#FFFFFF,#E3EAF7,#B9C8E4)}
+.partner b{background-image:linear-gradient(90deg,#E3EAF7,#B9C8E4)}
+.blob.a{background:radial-gradient(circle,#3F4F8F,transparent 65%)}
+.blob.b{background:radial-gradient(circle,#27457F,transparent 65%)}
+.blob.c{background:radial-gradient(circle,#3F5F9C,transparent 60%)}
+.blob{opacity:.42}
+.sap-mark{position:absolute;right:clamp(20px,5vw,64px);top:clamp(64px,11vh,104px);width:clamp(84px,9.5vw,142px);opacity:.7;z-index:2;pointer-events:none;animation:sapfade 2.2s ease .8s both}
+.sap-mark svg{display:block;width:100%;height:auto}
+@keyframes sapfade{from{opacity:0;transform:translateY(-6px)}to{opacity:.7;transform:none}}
+@media(max-width:560px){.sap-mark{width:70px;top:70px}}
+
+/* ===== sellos de estado para el corte de octubre ===== */
+.stamp-wrap{position:relative}
+.stamp{position:absolute;top:clamp(10px,2vh,26px);right:clamp(16px,4vw,48px);z-index:30;
+  font-family:var(--disp);font-weight:800;font-size:clamp(15px,2vw,22px);letter-spacing:.06em;
+  text-transform:uppercase;color:#D6273C;border:4px solid #D6273C;border-radius:10px;
+  padding:8px 18px;transform:rotate(6deg);background:rgba(255,255,255,.88);
+  box-shadow:0 10px 30px -10px rgba(214,39,60,.6);pointer-events:none}
+.stamp.review{color:#B45309;border-color:#B45309;box-shadow:0 10px 30px -10px rgba(180,83,9,.55)}
+.tag.gap{background:rgba(214,39,60,.12);color:#D6273C;border:1px solid rgba(214,39,60,.35)}
+.tag.gap.review{background:rgba(180,83,9,.12);color:#B45309;border-color:rgba(180,83,9,.35)}
+section.dark .tag.gap{background:rgba(214,39,60,.2);color:#FF8E99}
+section.dark .tag.gap.review{background:rgba(180,83,9,.2);color:#FBBF77}
+section.dark .stamp{background:rgba(14,16,32,.82)}
+.stamp small{display:block;font-size:.5em;font-weight:700;letter-spacing:.1em;margin-top:2px;text-transform:none}
+.gap-note{margin-top:14px;padding:13px 18px;border-radius:12px;font-size:13px;font-weight:600;
+  background:rgba(214,39,60,.09);border:1px solid rgba(214,39,60,.35);color:#9A1C2B}
+.gap-note.review{background:rgba(180,83,9,.09);border-color:rgba(180,83,9,.35);color:#7C3D06}
+section.dark .gap-note{background:rgba(214,39,60,.14);border-color:rgba(214,39,60,.4);color:#FF9EA8}
+section.dark .gap-note.review{background:rgba(180,83,9,.14);border-color:rgba(180,83,9,.4);color:#FBBF77}
+@media(max-width:560px){.stamp{font-size:13px;padding:6px 12px;top:8px;right:12px}}
 </style>
 </head>
 <body>
@@ -278,19 +341,19 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
 <!-- ============ 01 HERO ============ -->
 <section id="hero" data-idx="0">
   <div class="heroglow"><div class="blob a"></div><div class="blob b"></div><div class="blob c"></div></div>
-  <div class="heromesh"></div>
+  <div class="heromesh"></div><div class="sap-mark" aria-hidden="true"><svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sapg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#00B7F0"/><stop offset="1" stop-color="#1C64BE"/></linearGradient></defs><polygon points="0,0 200,0 106,100 0,100" fill="url(#sapg)"/><text x="16" y="72" font-family="Inter,Arial,Helvetica,sans-serif" font-weight="800" font-size="60" fill="#FFFFFF" textLength="108" lengthAdjust="spacingAndGlyphs">SAP</text></svg></div>
   <div class="hero-inner">
     <svg class="dxc-logo reveal" viewBox="0 0 470 76" style="margin-bottom:30px"><use href="#dxcmark"/></svg>
-    <h1 class="hero-title reveal d1">SAP <span class="g">Estabilidad<br>y Transformación</span></h1>
-    <p class="hero-sub reveal d2">Tablero ejecutivo de la operación SAP gestionada por DXC para Coca-Cola FEMSA (KOF). Un recorrido vivo por los indicadores clave — desplázate para explorar.</p>
+    <h1 class="hero-title reveal d1">SAP <span class="g">Estabilidad<br>y Continuidad Operativa</span></h1>
+    <p class="hero-sub reveal d2">Tablero ejecutivo de la operación continua de SAP gestionada por DXC para Coca-Cola FEMSA (KOF). Presentación de los indicadores clave del servicio; desplácese para recorrer las secciones.</p>
     <div class="hero-meta reveal d3">
       <span>Cliente · <b>Coca-Cola FEMSA</b></span>
       <span>Servicios · <b>DXC Technology</b></span>
-      <span>Corte · <b>Septiembre 2026</b></span>
+      <span>Corte · <b>Octubre 2026</b></span>
       <span><b>51</b> sistemas SAP monitoreados</span>
     </div>
   </div>
-  <div class="scrollcue"><div class="m"></div>scroll</div>
+  <div class="scrollcue"><div class="m"></div>Desplazar</div>
 </section>
 
 <!-- ============ 02 RESUMEN EJECUTIVO ============ -->
@@ -298,15 +361,15 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">02</span>
   <div class="wrap">
     <div class="eyebrow reveal">Panorama general</div>
-    <h2 class="title reveal">Más de una década sosteniendo la operación de KOF</h2>
-    <p class="lead reveal">Seis señales que resumen la salud de la plataforma SAP en los últimos trece meses.</p>
+    <h2 class="title reveal">Continuidad de la operación SAP de KOF: indicadores clave</h2>
+    <p class="lead reveal">Seis indicadores que sintetizan el estado de la plataforma SAP durante los últimos trece meses.</p>
     <div class="kpigrid">
-      <div class="kpi reveal d1"><span class="tag warn">▲ 23%</span><div class="big num c-amber" data-count="1605">0</div><div class="lab">Alertas en Sep-26</div><div class="sub">máximo del periodo · vs 1,301 en Ago-26</div></div>
-      <div class="kpi reveal d1"><span class="tag up">4 en Sep</span><div class="big num c-amber" data-count="4">0</div><div class="lab">Incidentes P1 &amp; P2 (Sep-26)</div><div class="sub">Criticidad bajo control</div></div>
-      <div class="kpi reveal d2"><span class="tag warn">⚠ 72 min</span><div class="big num c-rust" data-count="19" data-suffix=" min" data-prefix="~">0</div><div class="lab">MTTR de incidentes (típico)</div><div class="sub">Atención al repunte de May-26</div></div>
-      <div class="kpi reveal d2"><span class="tag ok">13 meses</span><div class="big num c-blue" data-count="99.7" data-dec="1" data-suffix="%">0</div><div class="lab">RFC completados con éxito</div><div class="sub">Sin fallos sistémicos</div></div>
-      <div class="kpi reveal d3"><span class="tag ok">8 concluidas</span><div class="big num c-rust" data-count="60" data-suffix="%">0</div><div class="lab">Focus Run — avance</div><div class="sub">22 notas · 47 sistemas · 348 remediaciones</div></div>
-      <div class="kpi reveal d3"><span class="tag ok">12 meses</span><div class="big num c-navy" data-count="2427">0</div><div class="lab">Transportes ejecutados</div><div class="sub">RLP, RAP y BCP lideran</div></div>
+      <div class="kpi reveal d1"><span class="tag ok">▲ 2% vs Sep-26</span><div class="big num c-amber" data-count="1633">0</div><div class="lab">Alertas de monitoreo en Oct-26</div><div class="sub">134 (8.2%) escalaron a incidente de usuario</div></div>
+      <div class="kpi reveal d1"><span class="tag up">2 en Oct</span><div class="big num c-amber" data-count="2">0</div><div class="lab">Eventos P1 &amp; P2 (Oct-26)</div><div class="sub">Sin incidentes P1 desde may-26</div></div>
+      <div class="kpi reveal d2"><span class="tag ok">▼ 43% vs Ene-26</span><div class="big num c-blue" data-count="50" data-suffix=" min">0</div><div class="lab">Tiempo mediano de resolución</div><div class="sub">Alertas de monitoreo SAP · 88 min en Ene-26</div></div>
+      <div class="kpi reveal d2"><span class="tag ok">13 meses</span><div class="big num c-blue" data-count="99.7" data-dec="1" data-suffix="%">0</div><div class="lab">RFC concluidos con éxito</div><div class="sub">1,488 de 1,493 cambios con cierre registrado</div></div>
+      <div class="kpi reveal d3"><span class="tag warn">▲ Inventario +126% en oct</span><div class="big num c-blue" data-count="22696">0</div><div class="lab">Vulnerabilidades cerradas, mar–oct</div><div class="sub">23,710 nuevas detectadas · 3,841 de los cierres sin evidencia · abiertas: de 1,083 (sep) a 2,443 (oct) por pico de avisos Red Hat</div></div>
+      <div class="kpi reveal d3"><span class="tag ok">13 meses</span><div class="big num c-navy" data-count="3262">0</div><div class="lab">Requerimientos atendidos</div><div class="sub">98.4% cerrado como completado</div></div>
     </div>
     <div class="value reveal d3"><b>Valor para KOF</b><span>El conjunto de indicadores documenta el objetivo central del servicio: sostener la continuidad de los procesos de manufactura, distribución y comercialización de KOF sobre la plataforma SAP. Las cifras de este tablero corresponden al periodo medido: los <em>últimos trece meses</em> de una relación de servicio que lleva más de una década.</span></div>
   </div>
@@ -317,10 +380,11 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">03</span>
   <div class="wrap">
     <div class="eyebrow reveal">Alertas, incidentes y requerimientos</div>
-    <h2 class="title reveal">Lo que nunca llega a su operación</h2>
-    <p class="insight reveal d1">De cada veinte señales que el monitoreo procesa, apenas una se convierte en un incidente para el usuario.</p>
+    <h2 class="title reveal">Contención de eventos en la capa de monitoreo</h2>
+    <p class="insight reveal d1">En octubre, aproximadamente una de cada doce alertas procesadas escaló a incidente reportado por el usuario (8.2%, frente a 4.9% en septiembre).</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="alertas"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>La capa de monitoreo procesó <em>1,605 eventos en septiembre</em>, de los cuales sólo 79 escalaron como incidente de usuario. La contención en el nivel automatizado evita la transferencia de carga operativa a las áreas usuarias de KOF.</span></div>
+    <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Alertas: tickets de monitoreo (FRUN y Dynatrace) de tecnología SAP. Incidentes de usuario: tickets reportados por el usuario. Requerimientos: solicitudes de servicio.</p>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>La capa de monitoreo procesó <em>1,633 alertas en octubre</em>, de las cuales 134 escalaron como incidente de usuario (8.2%, frente a 4.9% en septiembre). La contención en el nivel automatizado evita la transferencia de carga operativa a las áreas usuarias de KOF.</span></div>
   </div>
 </section>
 
@@ -329,10 +393,11 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">04</span>
   <div class="wrap">
     <div class="eyebrow reveal">Incidentes · alertas recurrentes</div>
-    <h2 class="title reveal">Atacamos el origen, no el síntoma</h2>
-    <p class="insight reveal d1">El volumen se concentra en catorce firmas recurrentes, y casi la mitad se resuelve sin que nadie intervenga.</p>
+    <h2 class="title reveal">Concentración del volumen en alertas recurrentes</h2>
+    <p class="insight reveal d1">El volumen se concentra en catorce combinaciones recurrentes de alerta y servidor, y 46% se resuelve sin intervención humana.</p>
     <div class="chartcard reveal d2" style="padding:8px 8px 4px"><div style="max-height:46vh;overflow:auto"><table class="tbl" id="offtbl"><thead><tr><th>Alerta recurrente</th><th style="text-align:right">Incidentes</th><th style="text-align:right">Auto-resueltos</th></tr></thead><tbody></tbody></table></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>De los 1,099 incidentes generados por las catorce firmas principales, <em>522 se resolvieron sin intervención humana</em>. La automatización convierte el volumen recurrente en capacidad liberada para actividades de mayor valor.</span></div>
+    <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Periodo ene–oct 2026 · tecnologías SAP y Plataforma · una combinación = alerta normalizada + servidor · «Auto-resueltos» = tickets cerrados por automatización.</p>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>De los 1,340 incidentes generados por las catorce combinaciones principales, <em>616 (46%) se resolvieron sin intervención humana</em>. La automatización convierte el volumen recurrente en capacidad liberada para actividades de mayor valor.</span></div>
   </div>
 </section>
 
@@ -341,10 +406,10 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">05</span>
   <div class="wrap">
     <div class="eyebrow reveal">Top 10 de alertas</div>
-    <h2 class="title reveal">La automatización ya hace el trabajo pesado</h2>
-    <p class="insight reveal d1">En las tres alertas de mayor volumen, dos de cada tres casos se cierran sin intervención humana.</p>
+    <h2 class="title reveal">Tasa de resolución automatizada en las alertas de mayor volumen</h2>
+    <p class="insight reveal d1">En las tres alertas de mayor volumen, el 66% de los casos se resuelve sin intervención humana.</p>
     <div class="chartcard reveal d2"><div class="chartbox tall"><canvas data-chart="top10"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>La tasa de automatización por firma identifica <em>dónde la inversión ya rinde y dónde queda margen</em>. Las firmas que aún requieren atención manual en su totalidad constituyen el siguiente objetivo de reducción de carga operativa.</span></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>La tasa de automatización por alerta permite identificar <em>dónde la automatización ya genera resultados y dónde existe margen de mejora</em>. Las alertas que todavía se atienden de forma totalmente manual constituyen el siguiente objetivo para reducir la carga operativa.</span></div>
   </div>
 </section>
 
@@ -353,11 +418,11 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">06</span>
   <div class="wrap">
     <div class="eyebrow reveal">Incidentes P1 y P2</div>
-    <h2 class="title reveal">La curva de criticidad lleva un año plana</h2>
-    <p class="insight reveal d1">Doce meses con dos eventos de alta prioridad al mes en promedio y un techo de cuatro, frente al pico de siete con que abrió el periodo.</p>
+    <h2 class="title reveal">Estabilidad de los eventos de alta prioridad (P1 y P2)</h2>
+    <p class="insight reveal d1">En los últimos trece meses el promedio fue de dos eventos de alta prioridad por mes; octubre cerró en dos tras depurar los tickets duplicados y los falsos positivos.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="p1p2"></canvas></div></div>
-    <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Criterio de conteo: los tickets que reportan una misma alerta sobre un mismo recurso dentro del mismo día se consolidan en un solo evento.</p>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>Desde octubre de 2025 los eventos de alta prioridad —degradación o indisponibilidad de un componente— se mantienen en <em>dos al mes en promedio, sin superar los cuatro</em> en ningún mes. El pico de siete con que abrió el periodo no se ha repetido. De los 31 eventos registrados, ninguno escaló a un incidente de prioridad 1.</span></div>
+    <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Criterio de conteo: los tickets P1 y P2 que reportan una misma alerta dentro del mismo día se consolidan en un solo evento. Ene–oct 2026: 47 tickets equivalen a 21 eventos. Octubre se verificó ticket por ticket en ServiceNow (detalle al pasar el cursor sobre la barra).</p>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>Desde octubre de 2025 los eventos de alta prioridad —degradación o indisponibilidad de un componente— se mantienen en <em>dos al mes en promedio, sin superar los cuatro</em> en ningún mes. El pico de siete con que abrió el periodo no se ha repetido. En 2026 se registraron cuatro incidentes de prioridad 1 (enero a mayo); desde el 4 de mayo, y durante cinco meses completos (junio a octubre), no se han presentado incidentes P1 genuinos.</span></div>
   </div>
 </section>
 
@@ -366,10 +431,11 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
   <span class="idx">07</span>
   <div class="wrap">
     <div class="eyebrow reveal">Tiempo de resolución</div>
-    <h2 class="title reveal">Cuando algo falla, se resuelve el mismo día</h2>
-    <p class="insight reveal d1">El tiempo de atención de los casos críticos se mantiene en la mayoría de los meses por debajo de cuatro horas y media.</p>
+    <h2 class="title reveal">Tiempo de resolución de eventos P1 y P2 (alta prioridad)</h2>
+    <p class="insight reveal d1">La mediana de resolución de los eventos P1 y P2 se mantuvo por debajo de 4.5 horas en diez de los trece meses.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="res"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>La mediana de resolución de incidentes críticos se sitúa en <em>5.0 horas en septiembre</em> y por debajo de 4.5 horas en la mayoría del periodo. El indicador mide la capacidad de restablecimiento del servicio, determinante del impacto efectivo sobre el negocio.</span></div>
+    <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">P1 = prioridad crítica; P2 = prioridad alta. Cada mes agrupa entre 0 y 7 eventos (lámina anterior); con pocos casos, la mediana mensual depende de uno o dos eventos.</p>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>La mediana de resolución de los eventos P1 y P2 se sitúa en <em>4.8 horas en octubre</em> y por debajo de 4.5 horas en 10 de los 13 meses. El indicador mide la capacidad de restablecimiento del servicio, determinante del impacto efectivo sobre el negocio.</span></div>
   </div>
 </section>
 
@@ -377,23 +443,43 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
 <section class="dark" data-idx="7">
   <span class="idx">08</span>
   <div class="wrap">
-    <div class="eyebrow reveal">Incidentes · volumen y respuesta</div>
-    <h2 class="title reveal">Más carga, resuelta en la mitad del tiempo</h2>
-    <p class="insight reveal d1">El volumen creció cerca de la mitad durante el año y aun así el tiempo de resolución se redujo a la mitad.</p>
+    <div class="eyebrow reveal">Alertas · volumen y respuesta</div>
+    <h2 class="title reveal">Mayor volumen de alertas con 43% menos tiempo mediano de resolución</h2>
+    <p class="insight reveal d1">El volumen mensual de alertas aumentó 52% entre enero y octubre de 2026, mientras el tiempo mediano de resolución disminuyó 43%.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="incmttr"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>El tiempo mediano de resolución descendió <em>48% entre enero y septiembre de 2026</em>, de 88 a 46 minutos, mientras el volumen mensual creció 49%. La capacidad de restablecimiento mejoró con una carga sustancialmente mayor.</span></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>El tiempo mediano de resolución de las alertas de monitoreo SAP descendió <em>43% entre enero y octubre de 2026</em>, de 88 a 50 minutos, mientras el volumen mensual creció 52%. Adicionalmente, <em>~99.6% de los tickets SAP del periodo cumplió el objetivo de tiempo de resolución (TTR)</em>. La capacidad de restablecimiento mejoró con una carga sustancialmente mayor.</span></div>
   </div>
 </section>
 
-<!-- ============ 09 REQUESTS MTTR ============ -->
-<section class="light" data-idx="8">
+<!-- ============ 09 PROACTIVIDAD ============ -->
+<section class="alt" data-idx="8">
   <span class="idx">09</span>
   <div class="wrap">
+    <div class="eyebrow reveal">Monitoreo proactivo · Octubre 2026</div>
+    <h2 class="title reveal">Prevención proactiva: riesgos contenidos antes de impactar el negocio</h2>
+    <p class="insight reveal d1">130 riesgos de capacidad y operación identificados y resueltos en octubre por el esfuerzo conjunto de la Guardia Basis y la Guardia ME — ninguno se convirtió en una caída de sistema.</p>
+    <div class="reveal d2" style="margin:6px 0 8px">
+      <div class="n num c-amber" data-count="130" style="font-family:var(--disp);font-size:clamp(40px,6vw,64px);font-weight:700;line-height:1">0</div>
+      <div class="l" style="font-size:13px;color:#B9BCC9;margin-top:4px">Riesgos contenidos entre la Guardia Basis y la Guardia ME, antes de afectar producción</div>
+    </div>
+    <div class="two rev" style="margin-top:14px">
+      <div class="chartcard reveal d3" style="padding:8px 8px 4px"><div style="max-height:38vh;overflow:auto"><table class="tbl" id="proatbl"><thead><tr><th>Fecha</th><th>Sistema</th><th>Guardia</th><th>Qué se detectó</th><th>Acción</th></tr></thead><tbody></tbody></table></div></div>
+      <div class="chartcard reveal d3"><p class="chtt">Riesgos contenidos por sistema</p><div class="chartbox" style="height:clamp(240px,34vh,320px)"><canvas data-chart="proa"></canvas></div></div>
+    </div>
+    <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Fuente: 130 riesgos contenidos en octubre 2026 (1–31 oct) por el trabajo conjunto de la Guardia Basis (112, vía ServiceNow — alertas de capacidad filesystem/tablespace, verificadas ticket por ticket) y la Guardia ME (18, documentadas directamente por el equipo). Ambas guardias cubren el mismo objetivo con procesos de registro distintos; cada uno de los 130 casos es un riesgo real que, sin atención oportuna, habría podido escalar a incidente.</p>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>Este nivel de vigilancia es el que mantiene la plataforma SAP operando sin interrupciones críticas: la <em>Guardia Basis</em> y la <em>Guardia ME</em> identificaron y resolvieron <em>130 riesgos de capacidad y operación</em> en octubre antes de afectar producción — desde espacio en disco hasta licencias por expirar, tablas de base de datos al límite y procesos bloqueados. En ningún caso fue necesario esperar a que el riesgo se convirtiera en una caída de sistema.</span></div>
+  </div>
+</section>
+
+<!-- ============ 10 REQUESTS MTTR ============ -->
+<section class="light" data-idx="9">
+  <span class="idx">10</span>
+  <div class="wrap">
     <div class="eyebrow reveal">Requerimientos</div>
-    <h2 class="title reveal">La operación diaria, nunca detenida</h2>
-    <p class="insight reveal d1">Más de tres mil solicitudes atendidas en trece meses —accesos, transportes y ajustes— sin acumular rezago.</p>
+    <h2 class="title reveal">Atención sostenida de requerimientos de servicio</h2>
+    <p class="insight reveal d1">Más de tres mil requerimientos atendidos en trece meses —accesos, transportes y ajustes—, con 98.4% cerrado como completado y veinte casos pendientes al corte.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="reqmttr"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>El servicio absorbió <em>3,354 solicitudes en trece meses</em> —altas de acceso, pases de transporte y ajustes de configuración—. Tras el máximo de agosto, septiembre normalizó tanto el volumen como el tiempo de atención.</span></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>El servicio absorbió <em>3,262 solicitudes en trece meses</em> —altas de acceso, pases de transporte y ajustes de configuración—. Octubre mantuvo un volumen similar a septiembre (221 vs 203) pero con una duración hábil mediana notablemente mayor (771 minutos frente a 135); 19 de los 221 requerimientos de octubre seguían pendientes al corte (6-nov-26), lo que probablemente alarga la mediana observada.</span></div>
   </div>
 </section>
 
@@ -401,110 +487,130 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
 
 
 <!-- ============ 12 RFC EXITO ============ -->
-<section class="alt" data-idx="9">
-  <span class="idx">10</span>
+<section class="alt" data-idx="10">
+  <span class="idx">11</span>
   <div class="wrap">
     <div class="eyebrow reveal">RFC · tasa de éxito</div>
-    <h2 class="title reveal">Evolucionar la plataforma sin apagarla</h2>
-    <p class="insight reveal d1">Prácticamente la totalidad de los cambios entró a producción con resultado exitoso.</p>
+    <h2 class="title reveal">Tasa de éxito de los cambios (RFC)</h2>
+    <p class="insight reveal d1">Todos los cambios con cierre registrado en mayo, junio, julio, agosto y octubre de 2026 concluyeron con resultado exitoso; septiembre, ya con más cierres incorporados, registra 99.3%.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="rfcok"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span><em>1,494 cambios se incorporaron a producción con resultado exitoso</em> y sólo 5 no alcanzaron el resultado previsto en trece meses. La tasa de 99.7% acredita que la evolución del ecosistema no compromete la disponibilidad de la plataforma.</span></div>
+    <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Criterio: resultado exitoso = códigos de cierre «Successful» y «Successful with issues» sobre cambios con cierre registrado; con criterio estricto (solo «Successful») la tasa de los trece meses es 98.3%. Octubre 2026: solo 69 de 152 cambios con código de cierre al corte (4-nov-26); el resto se encuentra en proceso de cierre, por lo que su 100% es una muestra parcial y puede cambiar. Fuente: ServiceNow.</p>
+    <div class="value reveal d3"><b>Valor para KOF</b><span><em>1,488 de 1,493 cambios con cierre registrado concluyeron con resultado exitoso</em>; sólo 5 no alcanzaron el resultado previsto en los últimos trece meses. La tasa de 99.7% indica que la evolución del ecosistema se ejecuta con riesgo operativo acotado.</span></div>
   </div>
 </section>
 
 <!-- ============ 13 RFC CLASIFICACION ============ -->
-<section class="light" data-idx="10">
-  <span class="idx">11</span>
+<section class="light" data-idx="11">
+  <span class="idx">12</span>
   <div class="wrap">
     <div class="eyebrow reveal">RFC · composición del esfuerzo</div>
-    <h2 class="title reveal">Su inversión se va en prevención</h2>
-    <p class="insight reveal d1">La remediación de vulnerabilidades domina el esfuerzo de cambio y crece trimestre a trimestre.</p>
+    <h2 class="title reveal">Composición del esfuerzo de cambio: predominio de la remediación preventiva</h2>
+    <p class="insight reveal d1">La remediación de vulnerabilidades representa 71.0% de los cambios del periodo y se duplicó entre el cuarto trimestre de 2025 y el tercero de 2026.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="rfcclass"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>La remediación de vulnerabilidades concentra la mayor proporción del esfuerzo de cambio, con un crecimiento de <em>153 a 372 RFC por trimestre</em>. La composición evidencia una orientación preventiva y no exclusivamente correctiva del servicio.</span></div>
+    <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Clasificación por reglas sobre la descripción del cambio (precisión validada de 94% contra clasificación manual). El trimestre 2025-Q3 comprende solo agosto y septiembre; 2026-Q4 está en curso (solo octubre; se completa con noviembre y diciembre). Fuente: ServiceNow.</p>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>La remediación de vulnerabilidades concentra la mayor proporción del esfuerzo de cambio, con un crecimiento de <em>178 a 372 RFC por trimestre</em> entre el cuarto trimestre de 2025 y el tercero de 2026. Octubre arranca el cuarto trimestre de 2026 con 114 RFC de vulnerabilidades (75% del mes), en línea con la tendencia. La composición evidencia una orientación preventiva y no exclusivamente correctiva del servicio.</span></div>
   </div>
 </section>
 
 <!-- ============ 14 RFC CRITICIDAD ============ -->
-<section class="alt" data-idx="11">
-  <span class="idx">12</span>
+<section class="alt" data-idx="12">
+  <span class="idx">13</span>
   <div class="wrap">
     <div class="eyebrow reveal">RFC · gestión de riesgo</div>
-    <h2 class="title reveal">El riesgo se decide antes, no después</h2>
-    <p class="insight reveal d1">La gran mayoría de los cambios llega clasificada como de bajo o moderado riesgo antes de ejecutarse.</p>
+    <h2 class="title reveal">Clasificación de riesgo previa a la ejecución del cambio</h2>
+    <p class="insight reveal d1">El 98% de los cambios se clasificó como de riesgo bajo o moderado antes de su ejecución.</p>
     <div class="chartcard reveal d2"><div class="chartbox"><canvas data-chart="rfccrit"></canvas></div></div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>La clasificación de riesgo se determina <em>con anterioridad a la ejecución</em>: la mayoría de los cambios se cataloga como bajo o moderado, y los de riesgo alto se ejecutan de forma acotada y supervisada. El perfil resultante es producto del gobierno del proceso de cambio.</span></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>La clasificación de riesgo se determina <em>con anterioridad a la ejecución</em>: la mayoría de los cambios se cataloga como bajo o moderado, y los 33 de riesgo alto (trece meses) contaron con recomendación de CAB; los 27 con cierre registrado concluyeron con resultado exitoso. El perfil resultante es producto del gobierno del proceso de cambio.</span></div>
   </div>
 </section>
 
 <!-- ============ 15 FOCUSED RUN (DARK) ============ -->
-<section class="light" data-idx="12">
-  <span class="idx">13</span>
+<section class="light" data-idx="13">
+  <span class="idx">14</span>
   <div class="wrap">
     <div class="eyebrow reveal">Plan de recuperación ante desastres</div>
-    <h2 class="title reveal">La recuperación está probada, no prometida</h2>
-    <p class="insight reveal d1">Cuatro frentes de recuperación medidos todos los días; las únicas ventanas de indisponibilidad del mes fueron parcheo planificado.</p>
+    <h2 class="title reveal">Verificación continua de la capacidad de recuperación ante desastres</h2>
+    <p class="insight reveal d1">Los cuatro frentes de recuperación operaron sin ventanas de indisponibilidad en octubre; los cinco eventos registrados fueron cortos, justificados y sin pérdida de datos.</p>
     <div class="fr-strip c3 reveal d2">
-      <div class="c"><div class="n num c-amber" data-count="99.0" data-dec="1" data-suffix="%">0</div><div class="l">Disponibilidad de réplica</div></div>
-      <div class="c"><div class="n num" style="color:#4FD18B" data-count="3">0</div><div class="l">Sistemas HANA replicados</div></div>
-      <div class="c"><div class="n num" style="color:var(--ink)" data-count="8">0</div><div class="l">Ventanas justificadas con RFC</div></div>
+      <div class="c"><div class="n num c-amber" data-count="100" data-suffix="%">0</div><div class="l">Disponibilidad de réplica HANA (HSR)</div></div>
+      <div class="c"><div class="n num" style="color:#2DD4BF" data-count="3">0</div><div class="l">Sistemas HANA replicados</div></div>
+      <div class="c"><div class="n num" style="color:var(--ink)" data-count="0">0</div><div class="l">Ventanas de indisponibilidad (HSR)</div></div>
     </div>
     <div class="two rev" style="margin-top:14px">
       <div class="chartcard reveal d3" style="padding:8px 8px 4px"><table class="tbl" id="drptbl"><thead><tr><th>Frente de recuperación</th><th>Recursos alertados</th><th style="text-align:right">Eventos</th></tr></thead><tbody></tbody></table></div>
       <div class="chartcard reveal d3"><div class="chartbox" style="height:clamp(240px,34vh,320px)"><canvas data-chart="drp"></canvas></div>
-      <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Fuente: correos de monitoreo HANA y Azure y carpetas de SQL AlwaysOn · septiembre 2026 · zona horaria CDMX.</p></div>
+      <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Fuente: DRP_Reporte_Ejecutivo_Octubre_2026 — correos de monitoreo HANA y Azure y carpetas de SQL AlwaysOn · octubre 2026 (1–30 oct) · zona horaria CDMX.</p></div>
     </div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>Los cuatro frentes de recuperación sostuvieron <em>99.0% de disponibilidad de réplica</em> y las veintidós horas de indisponibilidad del mes se explican en su totalidad por ventanas de parcheo del nodo de recuperación, cada una con su RFC. La capacidad de recuperación ante un desastre está verificada y medida de forma continua, no supuesta.</span></div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>La réplica HANA (HSR) de los tres sistemas (SHP, MHP, THP) registró <em>100% de disponibilidad en octubre, sin ventanas de indisponibilidad</em> — una mejora clara frente a septiembre (99.0%, ocho ventanas de mantenimiento). Azure Site Recovery tuvo un evento (11-oct, failover de la BD RLP) justificado con el RFC CHG-01 de actualización de kernel. SQL AlwaysOn tuvo un evento (18-oct, reinicio del nodo N1 por degradación de hardware) sin pérdida de datos. CRR (Azure NetApp Files) tuvo tres eventos cortos (1, 5 y 7-oct, ~1–7 min, autorresueltos) sobre el volumen MulesoftPRD-cobranza. La capacidad de recuperación ante un desastre se verifica y mide de forma continua.</span></div>
   </div>
 </section>
 
-<section class="dark" data-idx="13">
-  <span class="idx">14</span>
-  <div class="wrap">
-    <div class="eyebrow reveal">Remediación de vulnerabilidades · Focus Run</div>
-    <h2 class="title reveal">Seis de cada diez vulnerabilidades, cerradas</h2>
-    <p class="insight reveal d1">Ocho de las veintidós notas en alcance están concluidas en la totalidad de sus sistemas, y el alcance sigue creciendo.</p>
-    <div class="fr-strip c3 reveal d2">
-      <div class="c"><div class="n num c-amber" data-count="60" data-suffix="%">0</div><div class="l">Avance global</div></div>
-      <div class="c"><div class="n num" style="color:#fff" data-count="47">0</div><div class="l">Sistemas SAP</div></div>
-      <div class="c"><div class="n num" style="color:#4FD18B" data-count="8">0</div><div class="l">Notas concluidas</div></div>
-    </div>
-    <div class="two rev" style="margin-top:14px">
-      <div class="chartcard reveal d3" style="padding:8px 8px 4px"><div style="max-height:38vh;overflow:auto"><table class="tbl" id="frtbl"><thead><tr><th>Estado de avance</th><th style="text-align:right">Notas</th><th style="text-align:right">Remed.</th><th style="text-align:right">Impl.</th><th style="text-align:right">Avance</th></tr></thead><tbody></tbody></table></div></div>
-      <div class="chartcard reveal d3"><div class="chartbox" style="height:clamp(240px,34vh,320px)"><canvas data-chart="donut"></canvas></div>
-      <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Fuente: SAP Notes Control Center · 22 notas SAP sobre 47 sistemas · corte 9 de octubre de 2026.</p></div>
-    </div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>El programa de remediación registra <em>208 implementaciones concluidas sobre 348 requeridas</em>. La medición se toma directamente del SAP Notes Control Center, donde cada administrador documenta su avance por nota y por sistema: una trazabilidad verificable del nivel de protección alcanzado en la plataforma.</span></div>
-  </div>
-</section>
-
-<section class="alt" data-idx="14">
+<section class="dark" data-idx="14">
   <span class="idx">15</span>
   <div class="wrap">
-    <div class="eyebrow reveal">Vulnerabilidades de infraestructura · Qualys</div>
-    <h2 class="title reveal">La remediación dejó de ser un proyecto<span class="stale">datos a agosto 2026</span></h2>
-    <p class="insight reveal d1">Las ventanas de parcheo por ambiente convirtieron el cierre de vulnerabilidades en un proceso continuo y rutinario.</p>
-    <div class="fr-strip c3 reveal d2">
-      <div class="c"><div class="n num c-amber" data-count="12736">0</div><div class="l">Remediadas · Mar–Ago</div></div>
-      <div class="c"><div class="n num" style="color:var(--ink)" data-count="333">0</div><div class="l">Servidores en alcance</div></div>
-      <div class="c"><div class="n num" style="color:#4FD18B" data-count="38">0</div><div class="l">Servidores al 100%</div></div>
+    <div class="eyebrow reveal">Remediación de vulnerabilidades · notas de seguridad SAP</div>
+    <h2 class="title reveal">Remediación de notas de seguridad SAP<span class="stale">corte 6-nov-2026</span></h2>
+    <p class="insight reveal d1">68% de cobertura general (234 de 344 sistemas) sobre las 25 notas de seguridad en seguimiento; el alcance Basis/Solman, más rezagado, está en 48%.</p>
+    <div class="fr-strip c2 reveal d2">
+      <div class="c"><div class="n num c-amber" data-count="68" data-suffix="%">0</div><div class="l">Cobertura general (234 de 344 sistemas)</div></div>
+      <div class="c"><div class="n num" style="color:#fff" data-count="25">0</div><div class="l">Notas de seguridad en seguimiento</div></div>
     </div>
     <div class="two rev" style="margin-top:14px">
-      <div class="chartcard reveal d3" style="padding:8px 8px 4px"><table class="tbl" id="qtbl"><thead><tr><th>Criticidad</th><th style="text-align:right">Abiertas</th><th style="text-align:right">Del total</th></tr></thead><tbody></tbody></table></div>
-      <div class="chartcard reveal d3"><div class="chartbox" style="height:clamp(240px,34vh,320px)"><canvas data-chart="qualys"></canvas></div>
-      <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Fuente: Qualys · 333 servidores · ventanas de parcheo por ambiente desde junio de 2026.</p></div>
+      <div class="chartcard reveal d3" style="padding:8px 8px 4px"><div style="max-height:38vh;overflow:auto"><table class="tbl" id="frtbl"><thead><tr><th>Definición de alcance</th><th style="text-align:right">Notas</th><th style="text-align:right">Requeridas</th><th style="text-align:right">Remediadas</th><th style="text-align:right">Avance</th></tr></thead><tbody></tbody></table></div></div>
+      <div class="chartcard reveal d3"><p class="chtt">Avance por nota (notas con pendientes)</p><div class="chartbox" style="height:clamp(240px,34vh,320px)"><canvas data-chart="frnotes"></canvas></div></div>
     </div>
-    <div class="value reveal d3"><b>Valor para KOF</b><span>El establecimiento de ventanas de parcheo por ambiente convirtió la remediación en un proceso rutinario: <em>12,736 vulnerabilidades cerradas en seis meses</em> y 38 servidores llevados a cero. Las vulnerabilidades críticas representan hoy el 0.8% del inventario abierto.</span></div>
+    <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Fuente: SAP Notes Control Center, pestaña Cobertura · corte 2026-11-06 · unidad de conteo: sistema individual (SID + ambiente) · alcance Basis/Solman: componente SAP con prefijo BC-* o SV-*, clasificado nota por nota contra me.sap.com · 15 de las 25 notas ya están 100% remediadas o no aplican en ningún sistema; 10 tienen sistemas pendientes.</p>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>La cobertura general de remediación de notas de seguridad SAP es de <em>68% (234 de 344 sistemas)</em> sobre las 25 notas en seguimiento. El alcance Basis/Solman, la capa de infraestructura que administra DXC, está en <em>48% (89 de 186)</em>. Una parte relevante de las remediaciones pendientes depende de una aprobación de KOF (SAROX u otro visto bueno), no de trabajo técnico de DXC — esa distinción se está documentando con mayor detalle para el próximo corte.</span></div>
   </div>
 </section>
 
-<!-- ============ 16 CLOSING ============ -->
-<section id="closing" data-idx="15">
+<section class="alt" data-idx="15">
+  <span class="idx">16</span>
+  <div class="wrap">
+    <div class="eyebrow reveal">Vulnerabilidades de infraestructura · Qualys (4 Torres)</div>
+    <h2 class="title reveal">Octubre: ingreso atípico de avisos Red Hat duplica el inventario abierto</h2>
+    <p class="insight reveal d1">El inventario cerró octubre en 2,443 vulnerabilidades abiertas (vs 1,083 en septiembre), explicado por un ingreso atípico de avisos Red Hat — no por una caída en el ritmo de remediación.</p>
+    <div class="fr-strip c3 reveal d2">
+      <div class="c"><div class="n num c-amber" data-count="22696">0</div><div class="l">Cerradas · Mar–Oct (18,855 con evidencia + 3,841 sin evidencia)</div></div>
+      <div class="c"><div class="n num" style="color:var(--ink)" data-count="237">0</div><div class="l">Servidores con vulnerabilidades abiertas (Sem 44)</div></div>
+      <div class="c"><div class="n num" style="color:#6CB4FF" data-count="96" data-suffix="%">0</div><div class="l">Cierres frente a nuevas, mar–oct (22,696 vs 23,710)</div></div>
+    </div>
+    <div class="two rev" style="margin-top:14px">
+      <div class="chartcard reveal d3" style="padding:8px 8px 4px"><table class="tbl" id="qtbl"><thead><tr><th>Críticas + Altas fuera de SLA (Sem 44) — quién retiene</th><th style="text-align:right">Vulns</th><th style="text-align:right">% del total</th></tr></thead><tbody></tbody></table></div>
+      <div class="chartcard reveal d3"><div class="chartbox" style="height:clamp(240px,34vh,320px)"><canvas data-chart="qualys"></canvas></div>
+      <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Fuente: Reporte Vulnerabilidades SAP — 4 Torres — Sem 44 (corte 29-oct-2026) y CAMBIOS_vs_Sem40.md (Moisés Moreno) · alcance: S.O. Linux/Unix India, S.O. Wintel India, SAP y Base de datos Oracle · excluye el cierre masivo sin evidencia de la Sem 24 (falla de Qualys); los demás cierres sin evidencia (salidas del reporte sin estatus "Cerrada") se cuentan como cerrados · identidad mensual: remanentes + nuevas − cerradas (con y sin evidencia) = abiertas al cierre · metodología validada (202 de 215 valores de referencia exactos, resto ≤1%).</p></div>
+    </div>
+    <div class="value reveal d3"><b>Valor para KOF</b><span>Octubre recibió <em>4,368 vulnerabilidades nuevas</em> (prom. mar–sep: 2,763), de las cuales 1,826 llegaron en una sola semana (Sem 44, 2.8× el promedio) por un pico de avisos Red Hat — 193 de ellas son reclasificaciones de Oracle Java SE, no detecciones nuevas. El RFC de remediación se mantuvo estable (3,008 cerradas en octubre, 2,337 con evidencia y 671 sin evidencia; tasa de cierre mensual 55.2% vs 65.4% promedio mar–sep), por lo que el salto del inventario abierto (1,083 → 2,443) refleja el ingreso atípico, no una caída del esfuerzo de remediación. Las críticas y altas fuera de SLA (170 de 344, 49.4%) quedan retenidas principalmente por DXC (117, kernel Red Hat en ventana de parchado) y el fabricante (53, Oracle Java SE); KOF no retiene ninguna.</span></div>
+  </div>
+</section>
+
+<!-- ============ 16 IMPACTO RFC REMEDIACION ============ -->
+<section class="dark" data-idx="16">
+  <span class="idx">17</span>
+  <div class="wrap">
+    <div class="eyebrow reveal">Remediación de vulnerabilidades · efecto del incremento en RFC</div>
+    <h2 class="title reveal">Escenario con y sin el incremento en RFC de remediación</h2>
+    <p class="insight reveal d1" id="impInsight"></p>
+    <div class="imp-kpis reveal d2" id="impKpis"></div>
+    <div class="imp-ctrl reveal d2" role="group" aria-label="Controles del escenario">
+      <span class="lbl">Horizonte</span>
+      <div class="grp" id="impHor"><button type="button" data-h="sep" class="on">Real a octubre</button><button type="button" data-h="dic">Proyección a diciembre</button></div>
+    </div>
+    <div class="chartcard reveal d3" style="margin-top:12px"><p class="chtt">Vulnerabilidades abiertas al cierre de cada mes <span id="impProjNote" style="font-weight:400;text-transform:none;letter-spacing:normal;color:#8C90A2;font-size:11px;display:none">— proyección acorde a promedio</span></p><div class="chartbox tall" style="height:clamp(280px,44vh,430px)"><canvas data-chart="impInv"></canvas></div></div>
+    <div class="chartcard reveal d3" style="padding:8px 8px 4px;margin-top:14px"><table class="tbl" id="imptbl"><thead><tr><th>Indicador</th><th style="text-align:right">Sin incremento<br><span style="font-weight:400;opacity:.75">ritmo previo (mar–may)</span></th><th style="text-align:right">Con incremento<br><span style="font-weight:400;opacity:.75">ritmo actual</span></th><th style="text-align:right">Diferencia</th></tr></thead><tbody></tbody></table></div>
+    <p style="margin:10px 2px 0;font-size:11.5px;color:var(--soft)">Escenario ilustrativo: conserva el ingreso real de vulnerabilidades nuevas y sustituye el cierre mensual por el promedio previo al incremento (mar–may: 1,996 por mes; 85 RFC por mes). Proyección nov–dic: ingreso promedio mar–oct (2,964 por mes, incluye el pico de octubre); cierre con incremento = promedio mar–oct (2,837 por mes); cierre sin incremento = 1,996. Nuevas/cerradas mar–oct con metodología única (CAMBIOS_vs_Sem40.md, validado); cerradas incluye los cierres sin evidencia (3,841 en mar–oct), salvo el cierre masivo de la Sem 24. RFC: ServiceNow; vulnerabilidades: Qualys/4 Torres (excluye el cierre masivo no válido de la Sem 24). La relación es temporal y no aísla otros factores, como el pico de avisos Red Hat de octubre, la reclasificación de Oracle Java SE o la liberación de parches.</p>
+    <div class="value reveal d3"><b>Valor para KOF</b><span id="impValor"></span></div>
+  </div>
+</section>
+
+<!-- ============ 17 CLOSING ============ -->
+<section id="closing" data-idx="17">
   <div class="heroglow"><div class="blob a" style="opacity:.4"></div><div class="blob b" style="opacity:.4"></div></div>
   <div class="wrap" style="display:flex;flex-direction:column;align-items:center">
     <svg class="dxc-logo reveal" viewBox="0 0 470 76"><use href="#dxcmark"/></svg>
     <div class="closetag reveal d2">IMPOSSIBLE. DELIVERED.</div>
-    <p class="closemeta reveal d3">SAP · Estabilidad y Transformación · Coca-Cola FEMSA (KOF)<br>Servicios gestionados por DXC Technology · Corte de información: septiembre 2026</p>
-    <p class="closemeta reveal d3" style="opacity:.55;font-size:.78em;margin-top:10px">Versión pública: los nombres de servidor se sustituyeron por identificadores genéricos.<br>Las cifras de operación no se alteraron.</p>
+    <p class="closemeta reveal d3">SAP · Estabilidad y Continuidad Operativa · Coca-Cola FEMSA (KOF)<br>Servicios gestionados por DXC Technology · Corte de información: octubre 2026</p>
+    <p class="closemeta reveal d3" style="opacity:.55;font-size:.78em;margin-top:10px">Versión pública: los nombres de servidor, los folios de nota SAP y los folios de cambio se sustituyeron por identificadores genéricos.<br>Las cifras de operación no se alteraron.</p>
   </div>
 </section>
 
@@ -541,62 +647,207 @@ section.dark .tbl tr.tot td{background:#080A16;color:#fff}
 </script>
 <script>
 /* ===================== DATA ===================== */
-const M13=['Sep-25','Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
+const M13=['Oct-25','Nov-25','Dic-25','Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
 // Ventana de las dos series que aún no se han podido actualizar: sus datos
 // cubren May-25…May-26 y no deben tomar las etiquetas de M13.
-// ZOOM arranca en enero de 2026: ocho meses es toda su cobertura.
-const M9=['Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26'];
+// ZOOM arranca en enero de 2026: diez meses es toda su cobertura a oct-26.
+const M9=['Ene-26','Feb-26','Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'];
 const DATA={
- alertas:{l:M13,a:[1410,1200,1000,700,1075,1014,1066,977,1341,1338,1077,1301,1605],
-   i:[215,75,55,50,207,92,247,124,157,77,71,124,79],r:[313,244,188,175,312,265,301,269,207,195,255,427,203]},
- p1p2:{l:M13,v:[7,0,1,4,2,1,1,3,2,1,1,4,4]},
- res:{l:M13,v:[0.4,0,1.6,0,6.4,0.7,4.1,2.7,4.2,0.2,1.3,0.7,9.1]},
- incmttr:{l:M9,t:[1075,1014,1066,977,1341,1338,1077,1301,1605],m:[88,42,69,98,51,65,35,53,46]},
- reqmttr:{l:M13,t:[313,244,188,175,312,265,301,269,207,195,255,427,203],m:[306,63,105,88,129,206,284,178,419,334,489,1288,106]},
- rfcok:{l:M13,v:[99.2,99.0,98.9,100,100,99.2,100,99.2,100,100,100,100,100]},
- rfcclass:{l:['2025-Q3','2025-Q4','2026-Q1','2026-Q2','2026-Q3'],
-   s:[['Remediación de vulnerabilidades',[153,178,239,275,372],'#FF7E51'],
-      ['Actualización y mant. SAP',[33,52,89,123,64],'#004AAC'],
-      ['Parchado y certificados',[15,14,10,16,18],'#4995FF'],
-      ['Upgrade y migración',[22,6,4,14,26],'#FFAE41']]},
+ alertas:{l:M13,a:[1200,1000,700,1075,1014,1066,977,1341,1338,1077,1301,1605,1633],
+   i:[75,55,50,207,92,247,124,157,77,71,124,79,134],r:[244,188,175,312,265,301,269,207,195,255,427,203,221]},
+ p1p2:{l:M13,v:[0,1,4,2,1,1,3,2,1,1,4,4,2],
+   notas:{
+    'Ene-26':['Eventos reales: 2','•  Sistema RAP no disponible (ABAP) — INC41376313','•  Reporte de usuario — incidencia SAP — INC41534409'],
+    'Feb-26':['Eventos reales: 1','•  Instancia Java no disponible (CA4) — INC41919622'],
+    'Mar-26':['Eventos reales: 1','•  Servicio de base de datos no disponible (SHP) — INC42062742'],
+    'Abr-26':['Eventos reales: 3','•  Proceso no disponible — adaptador BODS — INC42753263','•  Reporte de usuario — incidencia Azure — INC42875036','•  Reporte de usuario — incidencia SAP — INC42915716'],
+    'May-26':['Eventos reales: 2','•  Reporte de usuario — incidencia SAP — INC42972568','•  Alerta múltiple de infraestructura (18-may) — 6 avisos en 5 componentes consolidados en 1 — INC43164826…'],
+    'Jun-26':['Eventos reales: 1','•  Enqueue Replication Server no disponible — INC43692917'],
+    'Jul-26':['Eventos reales: 1','•  Reporte de usuario — incidencia SAP — INC44193932'],
+    'Ago-26':['Eventos reales: 4','•  Reporte de usuario — incidencia SAP (6-ago) — INC44362910','•  Reporte de usuario — incidencia SAP (10-ago) — INC44408790','•  Falla en Job Servers de BODS (11-ago) — INC44421999','•  Sin acceso a Tomcat jobserver DS PRD (25-ago) — INC44621405'],
+    'Sep-26':['Eventos reales: 4','•  Alerta repetida de espacio en disco (10-sep) — 20 avisos consolidados en 1 — INC44828127…','•  Reporte de usuario — incidencia SAP (3-sep) — INC44743431','•  Reporte de usuario — incidencia SAP (14-sep) — INC44890118','•  Reporte de usuario — incidencia SAP (23-sep) — INC45036804'],
+    'Oct-26':['Eventos reales: 2','•  Falla de servidor en RLP (failover) — INC45317593','•  Lentitud reportada en sistema RAP — INC45381149','Excluidos: 2','•  Reporte duplicado del mismo failover de RLP','•  Falsa alarma — coincidió con un mantenimiento programado']}},
+ res:{l:M13,v:[0,1.6,0,6.4,0.7,4.1,0.1,4.2,0.2,1.3,0.7,5.0,4.8]},
+ incmttr:{l:M9,t:[1075,1014,1066,977,1341,1338,1077,1301,1605,1633],m:[88,42,69,98,51,65,35,53,46,50]},
+ reqmttr:{l:M13,t:[244,188,175,312,265,301,269,207,195,255,427,203,221],m:[63,105,88,129,206,284,178,419,334,489,1288,135,771]},
+ rfcok:{l:M13,v:[99.0,98.9,100,100,99.2,100,99.2,100,100,100,100,99.3,100]},
+ rfcclass:{l:['2025-Q3 (ago–sep)','2025-Q4','2026-Q1','2026-Q2','2026-Q3','2026-Q4 (en curso · oct)'],
+   s:[['Remediación de vulnerabilidades',[153,178,239,275,372,114],'#2563EB'],
+      ['Actualización y mant. SAP',[33,52,89,123,64,23],'#0E9CB5'],
+      ['Parchado y certificados',[15,14,10,16,18,15],'#7C5CD6'],
+      ['Upgrade y migración',[22,6,4,14,26,0],'#64748B']]},
  rfccrit:{l:M13,
-   low:[36,26,27,16,36,39,22,40,47,26,33,32,21],mod:[96,82,63,32,80,83,74,85,105,115,116,141,124],high:[1,2,1,0,1,1,5,3,0,6,0,6,6]},
- donut:{impl:208,pend:140},
- top10:[['High CPU Utilization · SRV-MISC-01',200,134],
-   ['High CPU Utilization · SRV-MISC-03',174,110],
-   ['High CPU Utilization · SRV-MISC-02',139,94],
-   ['Oracle tablespace lleno · SRV-DB-01',90,34],
-   ['High CPU Utilization · SRV-ERP-02',81,18],
-   ['Not Enough Dialog Resources · SRV-ERP-04',53,34],
-   ['Enqueue Processing · SRV-ERP-05',51,24],
-   ['File System sin SID lleno · SRV-SOLMAN-01',49,14],
-   ['UX_FCSWITCH MAJOR · SRV-INFRA-01',48,0],
-   ['Not Enough Dialog Resources · SRV-ERP-01',45,13]],
- offenders:[['High CPU Utilization · SRV-MISC-01',200,134],
-   ['High CPU Utilization · SRV-MISC-03',174,110],
-   ['High CPU Utilization · SRV-MISC-02',139,94],
-   ['Oracle tablespace lleno · SRV-DB-01',90,34],
-   ['High CPU Utilization · SRV-ERP-02',81,18],
-   ['Not Enough Dialog Resources · SRV-ERP-04',53,34],
-   ['Enqueue Processing · SRV-ERP-05',51,24],
-   ['File System sin SID lleno · SRV-SOLMAN-01',49,14],
-   ['UX_FCSWITCH MAJOR · SRV-INFRA-01',48,0],
-   ['Not Enough Dialog Resources · SRV-ERP-01',45,13],
-   ['Not Enough Update Resources · SRV-ERP-01',44,22],
-   ['UX_FCSWITCH MAJOR · SRV-INFRA-02',43,0],
-   ['File System /usr/sap > umbral · SRV-APP-01',42,8],
-   ['File System /oracle/oraarch lleno · SRV-ERP-02',40,17]],
- drp:{l:['SHP','MHP','THP'],v:[99.2,98.6,99.2]},
- drprows:[['HANA · HSR','3 sistemas · SHP/MHP/THP',8],
-   ['Azure Site Recovery','VMs de S/4HANA',45],
-   ['SQL AlwaysOn','9 sistemas MII',1],
-   ['CRR · Azure NetApp Files','1 volumen · MulesoftPRD',1]],
- qualys:{l:['Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26'],
-   nuevas:[1369,1842,3485,2394,3155,2568],cerradas:[1081,1685,2053,1791,4285,1841]},
- qrows:[['Crítica',11,0.8],['Alta',157,11.7],['Media',342,25.5],['Baja',833,62.0]],
- avarows:[['Concluidas',8,91,91,100],['Fase final · 90% o más',1,15,14,93],['En ejecución · 50–89%',6,126,75,60],['Fase inicial · menos de 50%',7,116,28,24]]
+   low:[26,27,16,36,39,22,40,47,26,33,32,21,26],mod:[82,63,32,80,83,74,85,105,115,116,141,124,124],high:[2,1,0,1,1,5,3,0,6,0,6,6,2]},
+ donut:{impl:234,pend:110},
+ proa:[['RLP',32],['Otros',27],['CLP',22],['RAP',18],['BCP',15],['CAP',5],['RRQ',5],['PKS',3],['S4P',2],['UCP',1]],
+ proarows:[
+   ['01-oct','RAP','Basis','Alerta por consumo de espacio en fs Oracle/RAP/oraarch al 53%','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['01-oct','RAP','Basis','Se recibe alerta de File System /oracle/RAP/oraarch al 50% de uso en el servidor SRV-ERP-02.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['01-oct','BCP','Basis','Se recibe alerta de File System /usr/sap/BCP al 90% de uso en el servidor SRV-BW-05.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['01-oct','CAP','Basis','Se recibe alerta de File System /oracle/CAP al 90% de uso en el servidor SRV-MISC-05.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['01-oct','RLP','Basis','Se recibe alerta de File System /archiving/RLP/MM al 96% de uso en el servidor SRV-INFRA-03.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['01-oct','RLP','Basis','Se recibe alerta de File System /archiving/RLP/MM al 96% de uso en el servidor SRV-INFRA-09.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['01-oct','SRV-INFRA-06','Basis','Se recibe alerta de File System /sap_script al 100% de uso en el servidor SRV-INFRA-06.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['01-oct','RA4','Basis','Se recibe alerta de File System /sapmnt/RA4 al 100% de uso en el servidor SRV-ERP-10.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['01-oct','RLP','Basis','Se recibe alerta de File System /archiving/RLP/SD al 96% de uso en el servidor SRV-INFRA-17.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['01-oct','RLP','ME','File System de Archiving (FI) al 97% de uso','Se gestionó la asignación de 3TB de espacio a nivel SO para no detener el archivado'],
+   ['02-oct','BCP','Basis','Se recibe alerta de File System /usr/sap/BCP al 97% de uso en el servidor SRV-BW-05.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['02-oct','CAP','Basis','Se recibe alerta de File System /oracle/CAP al 90% de uso en el servidor SRV-MISC-05.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['02-oct','RLP','Basis','Se recibe alerta de File System /archiving/RLP/SD al 96% de uso en el servidor SRV-INFRA-14.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['02-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-07.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['02-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-08.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['02-oct','RAP','Basis','Se recibe alerta de File System /archiving/RAP/FI al 100% de uso en el servidor SRV-ERP-06.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['02-oct','RAP','Basis','Se recibe alerta de File System /archiving/RAP/FI al 100% de uso en el servidor SRV-ERP-07.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['02-oct','RLP','Basis','Se recibe alerta de File System /archiving/RLP/SD al 96% de uso en el servidor SRV-INFRA-09.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['02-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-01.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['02-oct','ECP','Basis','Se recibe alerta de File System /usr/sap/ECP/D00 al 100% de uso en el servidor SRV-EP-02.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['03-oct','RAP','Basis','Se recibe alerta de table space en sistema RAP al 98% en PSAPSR70I','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['03-oct','RAP','Basis','Se recibe alerta de table space en sistema RAP al 99.39 % en PSAPSR40I','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['03-oct','CAP','Basis','Se recibe alerta de File System /oracle/CAP al 90% de uso en el servidor SRV-MISC-05.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['03-oct','SRV-MISC-07','Basis','Se recibe alerta de espacio en disco D:\\ con menos del 15% libre en el servidor SRV-MISC-07.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['04-oct','RAP','Basis','Se recibe alerta de table space en sistema RAP al 98% en PSAPSR70I','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['04-oct','BCP','Basis','Se recibe alerta de File System /usr/sap/BCP al 92% de uso en el servidor SRV-BW-05.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['04-oct','SRV-INFRA-16','Basis','Se recibe alerta de File System /sap_script al 100% de uso en el servidor SRV-INFRA-16.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['04-oct','RAP','Basis','Se recibe alerta de File System /archiving/RAP/CO al 100% de uso en el servidor SRV-ERP-08.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['05-oct','CAP','Basis','Alerta por consumo de espacio en fs =/oracle/CAP   al 90%','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['05-oct','RRQ','Basis','Se recibe alerta de File System /usr/sap/RRQ al 90% de uso en el servidor SRV-ERP-17.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['05-oct','CAP','Basis','Se recibe alerta de File System /oracle/CAP al 90% de uso en el servidor SRV-MISC-05.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['05-oct','RLP','Basis','Se recibe alerta de File System /usr/sap/RLP al 96% de uso en el servidor SRV-INFRA-19.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['05-oct','RAP','Basis','Se recibe alerta de File System /archiving/RAP/FI al 100% de uso en el servidor SRV-ERP-09.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['05-oct','RLP','Basis','Se recibe alerta de File System /archiving/RLP/MM al 96% de uso en el servidor SRV-INFRA-18.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['05-oct','RLP','Basis','Se recibe alerta de File System /archiving/RLP/SD al 96% de uso en el servidor SRV-INFRA-04.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['05-oct','RLP','Basis','Se recibe alerta de File System /archiving/RLP/SD al 96% de uso en el servidor SRV-INFRA-17.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['05-oct','RLP','Basis','Se recibe alerta de File System /archiving/RLP/SD al 96% de uso en el servidor SRV-INFRA-03.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['05-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-01.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['06-oct','RLP','Basis','Se recibe alerta de File System /usr/sap/RLP al 96% de uso en el servidor SRV-INFRA-19.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['06-oct','RRQ','Basis','Se recibe alerta de File System /usr/sap/RRQ al 90% de uso en el servidor SRV-ERP-17.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['06-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-01.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['06-oct','RLP','Basis','Se recibe alerta de File System /usr/sap/RLP al 90% de uso en el servidor SRV-ERP-14.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['06-oct','RLP','Basis','Se recibe alerta de File System /archiving/RLP/MM al 96% de uso en el servidor SRV-INFRA-20.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['06-oct','RLP','Basis','Se recibe alerta de File System /archiving/RLP/MM al 96% de uso en el servidor SRV-INFRA-03.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['06-oct','RLP','Basis','Se recibe alerta de File System /archiving/RLP/SD al 96% de uso en el servidor SRV-INFRA-09.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['06-oct','RLP','Basis','Se recibe alerta de File System /archiving/RLP/SD al 96% de uso en el servidor SRV-INFRA-15.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['06-oct','JC4','Basis','Se recibe alerta de File System /oracle/JC4 al 100% de uso en el servidor SRV-INFRA-13.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['07-oct','BCP','Basis','Se recibe alerta de File System /usr/sap/BCP al 95% de uso en el servidor SRV-BW-03.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['07-oct','RLP','Basis','Se recibe alerta de File System /archiving/RLP/SD al 96% de uso en el servidor SRV-INFRA-09.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['07-oct','RAP','Basis','Se recibe alerta de File System /oracle/RAP/19.27.0 al 90% de uso en el servidor SRV-ERP-02.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['07-oct','RAP','Basis','Se recibe alerta de File System /oracle/RAP/oraarch al 51% de uso en el servidor SRV-ERP-02.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['07-oct','RAP','Basis','Se recibe alerta de File System /oracle/RAP/oraarch al 50% de uso en el servidor SRV-ERP-02.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['07/08-oct','RAP','ME','Restauración de tablas archivadas (auditoría 2013/2017)','Monitoreo de TBS Oracle; se evitó saturación y posible caída de la BD'],
+   ['08-oct','BCP','Basis','Se recibe alerta de File System /usr/sap/BCP al 96% de uso en el servidor SRV-BW-03.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['08-oct','BCW','Basis','Se recibe alerta de File System /sapmnt/BCW al 100% de uso en el servidor SRV-BW-06.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['08-oct','BCW','Basis','Se recibe alerta de File System /sapmnt/BCW al 100% de uso en el servidor SRV-BW-01.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['08-oct','RLP','Basis','Se recibe alerta de File System /usr/sap/RLP al 90% de uso en el servidor SRV-ERP-13.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['08-oct','RAP','ME','WP con más de 10,000 ms y bloqueos sin procesos activos','Cancelación de proceso con aprobación de KOF, evitando saturación/caída'],
+   ['08-oct','RLP','ME','Checklist detecta bloqueos del día anterior sin procesos activos','Cancelación de proceso con aprobación de KOF'],
+   ['09-oct','GC1','Basis','Se recibe alerta de File System /usr/sap/GC1/SCS01 al 86% de uso en el servidor SRV-EP-01.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['09-oct','RLT','Basis','Se recibe alerta de 9 File System /oracle/RLT/sapdataXX entre 97% y 99% de uso en el servidor SRV-ERP-16.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['09-oct','BCP','Basis','Se recibe alerta de File System /usr/sap al 96% de uso en el servidor SRV-INFRA-12.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['09-oct','SRV-INFRA-12','Basis','Se recibe alerta de File System /usr/sap al 96% de uso en el servidor SRV-INFRA-12.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['09-oct','RLP','Basis','Se recibe alerta de File System /oracle/RLP/oraarch al 70% de uso en el servidor SRV-ERP-15.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['09-oct','GCD','Basis','Se recibe alerta de File System /oracle/GCD/oraarch al 63% de uso en el servidor SRV-INFRA-10.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['09-oct','UCD','Basis','Se recibe alerta de File System /usr/sap al 99% de uso en el servidor kofmxqrcasdev.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['09-oct','RLP','ME','WP con más de 10,000 ms del usuario FKO_PWC_BTCH','Cancelación de proceso con aprobación de KOF'],
+   ['09-oct','PKS','ME','Adapter 1 de BODS (JSG_INT_PRD1) caído','Se corrige y levanta el Adapter; se informa a KOF'],
+   ['09/13-oct','S4P','ME','File System /intContabilidad (Mulesoft) arriba de 95%','Depuración autorizada de 2024, recuperando 5%; sigue en monitoreo'],
+   ['10-oct','SRV-INFRA-16','Basis','Se recibe alerta de File System /usr/sap/trans al 100% de uso en el servidor SRV-INFRA-16.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['10-oct','UCD','Basis','Se recibe alerta de los File System /oracle/UCD/origlogB, /oracle/UCD/origlogA al 91% de uso en el servidor kofmxqrcasdev.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['10-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-01.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['10-oct','DAA','Basis','Se recibe alerta de File System /usr/sap/DAA al 90% de uso en el servidor SRV-APP-02.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['10-oct','PKS','ME','Adapter 3 de BODS (JSG_INT_PRD03) caído','Se corrige y levanta el Adapter; se informa a KOF'],
+   ['11-oct','RLP','Basis','Se recibe alerta de File System /oracle/RLP al 90% de uso en el servidor SRV-ERP-15.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['11-oct','RLP','Basis','Se recibe alerta de File System /oracle/RLP al 95% de uso en el servidor SRV-ERP-15.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['11-oct','RLP','Basis','Se recibe alerta de File System /oracle/RLP al 96% de uso en el servidor SRV-ERP-15.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['11-oct','RLP','Basis','Se recibe alerta de File System /oracle/RLP al 100% de uso en el servidor SRV-ERP-15.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['11-oct','RRQ','Basis','Se recibe alerta de File System /usr/sap/RRQ al 90% de uso en el servidor SRV-ERP-17.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['11-oct','RRQ','Basis','Se recibe alerta de File System /usr/sap/RRQ al 93% de uso en el servidor SRV-ERP-17.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['12-oct','RLP','ME','WP con más de 18,000 ms en status stopped','Cancelación de bloqueos con aprobación de KOF'],
+   ['13-oct','UCP','ME','Licencia NetWeaver por expirar (27-oct) tras un failover','Se generó licencia con nuevo Hardware Key antes de expirar'],
+   ['13-oct','RAP','ME','Bloqueos del día anterior sin procesos activos','Cancelación de procesos con aprobación de KOF'],
+   ['13-oct','RLP','ME','Bloqueos del día anterior sin procesos activos','Cancelación de procesos con aprobación de KOF'],
+   ['14-oct','BCP','Basis','Se recibe alerta de File System /usr/sap/BCP al 94% de uso en el servidor SRV-BW-02.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['14-oct','RA4','Basis','Se recibe alerta de File System /sapmnt/RA4 al 100% de uso en el servidor SRV-ERP-10.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['14-oct','RLP','ME','WP con más de 18,000 ms en estatus Stopped PRIV','Cancelación de bloqueos; datos de usuarios entregados a KOF'],
+   ['14-oct','PKS','ME','Adapter 1 de BODS caído','Se informa a KOF; se mantiene en monitoreo'],
+   ['14-oct','RAP','ME','Table space PSAPSR46I al 98%','Asignación de espacio con aprobación de KOF, evitando bloqueo de la BD'],
+   ['15-oct','RRQ','Basis','Se recibe alerta de File System /usr/sap/RRQ al 90% de uso en el servidor SRV-ERP-17.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['15-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-01.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['15-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-07.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['15-oct','GC1','Basis','Se recibe alerta de File System /usr/sap/GC1/SCS01 al 86% de uso en el servidor SRV-EP-01.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['16-oct','BCP','Basis','Se recibe alerta de File System /usr/sap/BCP al 90% de uso en el servidor SRV-BW-02.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['16-oct','SRV-INFRA-12','Basis','Se recibe alerta de File System /usr/sap al 96% de uso en el servidor SRV-INFRA-12.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['17-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-01.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['18-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 91% de uso en el servidor SRV-APP-08.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['18-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-08.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['18-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 92% de uso en el servidor SRV-APP-01.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['19-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-07.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['19-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-01.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['19-oct','RAP','ME','Alerta EWA Very High: tabla DDLOG al 90% (1,800 M de registros)','Se reporta a KOF; se solicita truncado de la tabla'],
+   ['20-oct','RLP','Basis','Se recibe alerta de File System /usr/sap/trans al 100% de uso en el servidor SRV-INFRA-05.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['21-oct','BCP','Basis','Se recibe alerta de File System /usr/sap/BCP al 94% de uso en el servidor SRV-BW-02.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['21-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-01.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['22-oct','BCP','Basis','Se recibe alerta de File System /usr/sap/BCP al 91% de uso en el servidor SRV-BW-04.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['22-oct','BCP','Basis','Se recibe alerta de File System /usr/sap/BCP al 90% de uso en el servidor SRV-BW-03.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['22-oct','SRV-MISC-06','Basis','Se recibe alerta de espacio en disco D:\\ con menos del 15% libre en el servidor SRV-MISC-06.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['22-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-01.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['23-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-01.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['23-oct','SRV-MISC-06','Basis','Se recibe alerta de espacio en disco D:\\ con menos del 15% libre en el servidor SRV-MISC-06.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['24-oct','BCP','Basis','Se recibe alerta de File System /usr/sap/BCP al 100% de uso en el servidor SRV-BW-04.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['24-oct','BCP','Basis','Se recibe alerta de File System /usr/sap/BCP al 90% de uso en el servidor SRV-BW-02.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['26-oct','CLP','Basis','Se recibe alerta de File System /oracle/CLP/saptrace al 90% de uso en el servidor SRV-MISC-04.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['26-oct','RAT','Basis','Se recibe alerta de File System /usr/sap/RAT al 96% de uso en el servidor SRV-ERP-11.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['26-oct','S4P','ME','Alerta Dynatrace: consumo alto de CPU en HANA','Se identifica consulta de alto costo; se notifica a KOF para remediación'],
+   ['27-oct','BCP','Basis','Se recibe alerta de File System /usr/sap/BCP al 92% de uso en el servidor SRV-BW-04.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['27-oct','BCP','Basis','Se recibe alerta de File System /usr/sap/BCP al 96% de uso en el servidor SRV-BW-02.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['27-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-01.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['27-oct','RAP','ME','Alto consumo de CPU en 3 aplicativos por Jobs Z (06:00–07:00)','Se reporta a KOF; se sugiere reajuste/redistribución de los Jobs'],
+   ['28-oct','RL4','Basis','Se recibe alerta de File System /sapmnt/RL4 al 100% de uso en el servidor SRV-ERP-12.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['28-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-01.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['28-oct','RLP','Basis','Se recibe alerta de File System /usr/sap/RLP al 90% de uso en el servidor SRV-ERP-13.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['28-oct','SRV-INFRA-17','Basis','Se recibe alerta de File System /sap_script al 100% de uso en el servidor SRV-INFRA-17.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['29-oct','JC2','Basis','Se recibe alerta de File System /oracle/JC2/oraarch al 75% de uso en el servidor SRV-INFRA-07.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['30-oct','RLP','Basis','Se recibe alerta de File System /usr/sap/RLP al 90% de uso en el servidor SRV-ERP-14.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['30-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-07.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['31-oct','SRV-INFRA-08','Basis','Se recibe alerta de File System /usr/sap/trans al 100% de uso en el servidor SRV-INFRA-08.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['31-oct','CLP','Basis','Se recibe alerta de File System /usr/sap/CLP al 90% de uso en el servidor SRV-APP-08.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+   ['31-oct','SRV-INFRA-11','Basis','Se recibe alerta de File System /sap_script al 100% de uso en el servidor SRV-INFRA-11.','Depuración de File System / espacio en disco, ticket en ServiceNow'],
+ ],
+ top10:[['High CPU Utilization · SRV-MISC-01',213,143],
+   ['High CPU Utilization · SRV-MISC-03',186,119],
+   ['High CPU Utilization · SRV-MISC-02',152,102],
+   ['Enqueue Processing · SRV-ERP-05',120,53],
+   ['High CPU Utilization · SRV-ERP-02',96,25],
+   ['Oracle tablespace $SID$ is full · SRV-DB-01',90,34],
+   ['Not Enough Dialog Resources · SRV-ERP-04',84,52],
+   ['Oracle Enqueue active session waits · SRV-ERP-15',79,55],
+   ['Non SID related File System is full · SRV-SOLMAN-01',66,23],
+   ['Portal Instance Availability · SRV-APP-06',54,0]],
+ offenders:[['High CPU Utilization · SRV-MISC-01',213,143],
+   ['High CPU Utilization · SRV-MISC-03',186,119],
+   ['High CPU Utilization · SRV-MISC-02',152,102],
+   ['Enqueue Processing · SRV-ERP-05',120,53],
+   ['High CPU Utilization · SRV-ERP-02',96,25],
+   ['Oracle tablespace $SID$ is full · SRV-DB-01',90,34],
+   ['Not Enough Dialog Resources · SRV-ERP-04',84,52],
+   ['Oracle Enqueue active session waits · SRV-ERP-15',79,55],
+   ['Non SID related File System is full · SRV-SOLMAN-01',66,23],
+   ['Portal Instance Availability · SRV-APP-06',54,0],
+   ['Oracle tablespace $SID$ is full · SRV-ERP-15',54,10],
+   ['SWAPMON: Swap space usage exceeded configured threshold · SRV-BW-07',51,0],
+   ['UX_FCSWITCH:MAJOR · SRV-INFRA-01',48,0],
+   ['Portal Instance Availability · SRV-APP-05',47,0]],
+ drp:{l:['SHP','MHP','THP'],v:[100,100,100]},
+ drprows:[['HANA · HSR','3 sistemas · SHP/MHP/THP',0],
+   ['Azure Site Recovery','VMs de S/4HANA (RLP)',1],
+   ['SQL AlwaysOn','9 AG · M4A…M7C',1],
+   ['CRR · Azure NetApp Files','1 volumen · MulesoftPRD-cobranza',3]],
+ qualys:{l:['Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26'],
+   nuevas:[1380,1839,3598,2673,3273,2573,4006,4368],cerradas:[1372,2042,2575,2295,5127,2346,3931,3008]},
+ qrows:[['Dentro de SLA',174,50.6],['Fuera de SLA · retiene DXC',117,34.0],['Fuera de SLA · retiene fabricante',53,15.4],['Fuera de SLA · retiene KOF',0,0.0]],
+ avarows:[['Todas las notas en seguimiento (vigente)',25,344,234,68,'#93C5FD'],['Alcance Basis/Solman',13,186,89,48,'#3B82F6'],['Alcance Aplicación',12,158,145,92,'#2DD4BF']],
+ frnotes:[['Nota 01',8,0],['Nota 02',29,2],['Nota 03',17,4],['Nota 04',15,5],['Nota 05',27,9],['Nota 06',23,13],['Nota 07',23,13],['Nota 08',23,14],['Nota 09',17,13],['Nota 10',23,22]]
 };
-const C={navy:'#0E1020',amber:'#FFAE41',peach:'#FFC982',coral:'#FF7E51',rust:'#D14600',blue:'#004AAC',lblue:'#4995FF',cyan:'#A1E6FF',muted:'#6B6F7B',line:'#E7E7EC',navyln:'rgba(255,255,255,.10)'};
+const C={navy:'#0E1020',amber:'#3B82F6',peach:'#93C5FD',coral:'#6366F1',rust:'#1D4ED8',blue:'#1D4ED8',lblue:'#38BDF8',cyan:'#A5F3FC',muted:'#6B6F7B',line:'#E7E7EC',navyln:'rgba(255,255,255,.10)'};
 const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
 
 /* ===================== CHART THEME ===================== */
@@ -612,104 +863,236 @@ if(window.Chart){
   Chart.defaults.animation.duration=RM?0:1200;
   Chart.defaults.animation.easing='easeOutQuart';
 }
+const PAL={light:{blue:'#2563EB',cyan:'#0E9CB5',indigo:'#7C5CD6',rose:'#C95F5F',slate:'#64748B',navy:'#1E3A8A'},
+ dark:{blue:'#3B78E8',cyan:'#19A3B8',indigo:'#8B7CF6',rose:'#D97B7B',slate:'#8FA0B8',navy:'#A9BEF2'}};
+const K=dark=>dark?PAL.dark:PAL.light;
+const hexA=(h,a)=>{const n=parseInt(h.slice(1),16);return 'rgba('+(n>>16&255)+','+(n>>8&255)+','+(n&255)+','+a+')';};
+const GB=c=>ctx=>{const a=ctx.chart&&ctx.chart.chartArea;if(!a)return c;const g=ctx.chart.ctx.createLinearGradient(0,a.top,0,a.bottom);g.addColorStop(0,c);g.addColorStop(1,hexA(c,.6));return g;};
+const GH=c=>ctx=>{const a=ctx.chart&&ctx.chart.chartArea;if(!a)return c;const g=ctx.chart.ctx.createLinearGradient(a.left,0,a.right,0);g.addColorStop(0,hexA(c,.55));g.addColorStop(1,c);return g;};
+const GAr=ctx=>{const a=ctx.chart&&ctx.chart.chartArea;if(!a)return 'rgba(59,120,232,.16)';const g=ctx.chart.ctx.createLinearGradient(0,a.top,0,a.bottom);g.addColorStop(0,'rgba(59,120,232,.34)');g.addColorStop(1,'rgba(59,120,232,.05)');return g;};
+const GA=c=>ctx=>{const a=ctx.chart&&ctx.chart.chartArea;if(!a)return hexA(c,.2);const g=ctx.chart.ctx.createLinearGradient(0,a.top,0,a.bottom);g.addColorStop(0,hexA(c,.30));g.addColorStop(1,hexA(c,0));return g;};
+if(window.Chart){
+  Chart.defaults.animation.duration=RM?0:1000;
+  Chart.defaults.animation.easing='easeOutCubic';
+  Chart.defaults.animation.delay=c=>RM?0:(c.type==='data'&&c.mode==='default'?c.dataIndex*45+c.datasetIndex*90:0);
+  Chart.defaults.elements.point.hoverRadius=8;Chart.defaults.elements.point.hitRadius=14;
+  Chart.defaults.plugins.tooltip.backgroundColor='rgba(10,16,34,.96)';Chart.defaults.plugins.tooltip.titleColor='#fff';Chart.defaults.plugins.tooltip.bodyColor='#D6DCEA';
+  Chart.defaults.plugins.tooltip.padding=12;Chart.defaults.plugins.tooltip.cornerRadius=10;Chart.defaults.plugins.tooltip.borderColor='rgba(255,255,255,.12)';Chart.defaults.plugins.tooltip.borderWidth=1;
+  Chart.defaults.plugins.tooltip.boxPadding=5;Chart.defaults.plugins.tooltip.usePointStyle=true;
+}
+
+const WD={incmttr:1450,reqmttr:1750};
+function wipeLoop(ch){if(ch._wraf||RM)return;const step=()=>{ch._wraf=0;if(!ch._wipeOn)return;ch.draw();ch._wraf=requestAnimationFrame(step);};ch._wraf=requestAnimationFrame(step);}
+function wipeStart(ch){const nm=ch.canvas&&ch.canvas.dataset?ch.canvas.dataset.chart:'';ch._wD=WD[nm]||0;ch._wL=WD[nm]?1500:1200;ch._wt0=performance.now();ch._wipeOn=true;clearTimeout(ch._wto);ch._wto=setTimeout(()=>{ch._wipeOn=false;try{ch.draw();}catch(e){}},ch._wD+ch._wL+500);wipeLoop(ch);}
+const WIPE={id:'wipe',
+ afterInit(ch){wipeStart(ch);},
+ beforeDatasetDraw(ch,args){const m=ch.getDatasetMeta(args.index);if(m.type!=='line')return;const c=ch.ctx;c.save();ch._wclip=true;
+   if(ch._wipeOn&&!RM){const p=Math.max(0,Math.min(1,(performance.now()-ch._wt0-ch._wD)/ch._wL));if(p>=1){ch._wipeOn=false;}else{const e=.5-.5*Math.cos(Math.PI*p),a=ch.chartArea;c.beginPath();c.rect(a.left-14,0,(a.right-a.left+28)*e,ch.height);c.clip();}}
+   const ds=ch.data.datasets[args.index];if(ds&&ds.casing){const el=m.dataset;if(el&&el.options){const o=el.options,sw=o.borderWidth,sc=o.borderColor;o.borderWidth=sw+5;o.borderColor=ds.casing;try{el.draw(c,ch.chartArea);}catch(e){}o.borderWidth=sw;o.borderColor=sc;}}},
+ afterDatasetDraw(ch){if(ch._wclip){ch.ctx.restore();ch._wclip=false;}}};
+const isLn=c=>{try{return c.datasetIndex!==undefined&&c.chart.getDatasetMeta(c.datasetIndex).type==='line';}catch(e){return false;}};
+const dl=f=>c=>RM?0:(c.type==='data'&&c.mode==='default'?f(c):0);
+const ANIM={
+ p1p2:{easing:'easeOutBack',duration:1100,delay:dl(c=>c.dataIndex*70)},
+ res:{easing:'easeOutBack',duration:1100,delay:dl(c=>c.dataIndex*55)},
+ drp:{easing:'easeOutCubic',duration:1000,delay:dl(c=>c.dataIndex*140)},
+ rfcok:{easing:'easeInOutCubic',duration:1000,delay:dl(c=>c.dataIndex*90)},
+ top10:{easing:'easeOutQuart',duration:900,delay:dl(c=>c.dataIndex*75)},
+ frnotes:{easing:'easeOutCubic',duration:900,delay:dl(c=>c.dataIndex*100)},
+ reqmttr:{easing:'easeOutQuart',duration:c=>isLn(c)?0:1000,delay:dl(c=>c.datasetIndex===0?(((c.chart&&c.chart.data.labels.length)||13)-1-c.dataIndex)*55:c.dataIndex*55)},
+ incmttr:{easing:'easeOutQuart',duration:c=>isLn(c)?0:1000,delay:dl(c=>isLn(c)?0:c.dataIndex*45)},
+ rfcclass:{easing:'easeOutQuart',duration:900,delay:dl(c=>c.datasetIndex*240+c.dataIndex*40)},
+ rfccrit:{easing:'easeOutCubic',duration:800,delay:dl(c=>c.datasetIndex*380+c.dataIndex*30)},
+ qualys:{easing:'easeOutQuart',duration:900,delay:dl(c=>c.datasetIndex*420+c.dataIndex*60)}
+};
+function augmentCfg(cfg,ctx0){const ts=new Set([cfg.type].concat((cfg.data.datasets||[]).map(d=>d.type)).filter(Boolean));const barsOnly=ts.has('bar')&&!ts.has('line');
+  cfg.options=cfg.options||{};cfg.options.animation=Object.assign({easing:'easeOutQuart'},cfg.options.animation||{});const nm=ctx0&&ctx0.canvas&&ctx0.canvas.dataset?ctx0.canvas.dataset.chart:null;if(nm&&ANIM[nm])Object.assign(cfg.options.animation,ANIM[nm]);
+  cfg.plugins=(cfg.plugins||[]).concat([WIPE]);return cfg;}
+if(window.Chart&&!window.Chart.__w){const _C=window.Chart;const W=function(ctx,cfg){return new _C(ctx,augmentCfg(cfg,ctx));};Object.setPrototypeOf(W,_C);W.prototype=_C.prototype;W.__w=1;window.Chart=W;}
+const RPO=new IntersectionObserver(es=>es.forEach(e=>{const cv=e.target;if(e.isIntersecting){if(cv._left&&!RM){const ch=Chart.getChart(cv);if(ch){wipeStart(ch);ch.reset();ch.update();}}cv._left=false;}else{cv._left=true;}}),{threshold:.6});
+function replayObserve(cv){RPO.observe(cv);}
 const grid=(dark)=>({color:dark?C.navyln:C.line,drawTicks:false});
 const ax=(dark,opts={})=>Object.assign({grid:grid(dark),border:{display:false},ticks:{color:dark?'#B9BCC9':C.muted,padding:8}},opts);
 function lbl(color,dark,fmt){return{display:true,color:color,font:{weight:'700',size:11.5},anchor:'end',align:'end',offset:2,formatter:fmt||(v=>v)};}
 
 const BUILD={
  alertas(ctx,dark){const d=DATA.alertas;return new Chart(ctx,{type:'line',data:{labels:d.l,datasets:[
-   {label:'Alertas',data:d.a,borderColor:dark?'#fff':C.navy,backgroundColor:dark?'#fff':C.navy,tension:.35,borderWidth:3,pointRadius:3,pointHoverRadius:6},
-   {label:'Requerimientos',data:d.r,borderColor:C.lblue,backgroundColor:C.lblue,tension:.35,borderWidth:2.5,pointRadius:2.5},
-   {label:'Incidentes de usuario',data:d.i,borderColor:C.amber,backgroundColor:C.amber,tension:.35,borderWidth:2.5,pointRadius:2.5}]},
+   {label:'Alertas',data:d.a,borderColor:K(dark).blue,backgroundColor:GA(K(dark).blue),pointBackgroundColor:K(dark).blue,pointStyle:'circle',fill:true,tension:.35,borderWidth:3,pointRadius:3,pointHoverRadius:6},
+   {label:'Requerimientos',data:d.r,borderColor:K(dark).cyan,backgroundColor:GA(K(dark).cyan),pointBackgroundColor:K(dark).cyan,pointStyle:'rectRot',fill:true,tension:.35,borderWidth:2.5,pointRadius:2.5},
+   {label:'Incidentes de usuario',data:d.i,borderColor:K(dark).navy,backgroundColor:GA(K(dark).navy),pointBackgroundColor:K(dark).navy,pointStyle:'triangle',fill:true,tension:.35,borderWidth:2.5,pointRadius:2.5}]},
    options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
    plugins:{legend:{position:'top',align:'end'}},scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,suggestedMax:2300})}}});},
 
+ proa(ctx,dark){const r=DATA.proa;return new Chart(ctx,{type:'bar',data:{labels:r.map(x=>x[0]),datasets:[
+   {label:'Riesgos contenidos',data:r.map(x=>x[1]),backgroundColor:GH(K(dark).blue),borderRadius:5,barPercentage:.8,
+    datalabels:{display:true,color:dark?'#fff':C.navy,anchor:'end',align:'end',offset:2,font:{weight:'700',size:11}}}]},
+   options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false}},
+   scales:{x:ax(dark,{beginAtZero:true}),y:Object.assign(ax(dark),{ticks:{color:dark?'#cfd2dd':C.muted,font:{size:11.5},autoSkip:false}})}}});},
  top10(ctx,dark){const r=DATA.top10;return new Chart(ctx,{type:'bar',data:{labels:r.map(x=>x[0]),datasets:[
-   {label:'Incidentes',data:r.map(x=>x[1]),backgroundColor:dark?'#3A3F5C':C.navy,borderRadius:5,barPercentage:.86,categoryPercentage:.8},
-   {label:'Resueltos automáticamente',data:r.map(x=>x[2]),backgroundColor:C.amber,borderRadius:5,barPercentage:.86,categoryPercentage:.8}]},
+   {label:'Incidentes',data:r.map(x=>x[1]),backgroundColor:GH(K(dark).slate),borderRadius:5,barPercentage:.86,categoryPercentage:.8},
+   {label:'Resueltos automáticamente',data:r.map(x=>x[2]),backgroundColor:GH(K(dark).cyan),borderRadius:5,barPercentage:.86,categoryPercentage:.8}]},
    options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{position:'top',align:'end'}},
    scales:{x:ax(dark,{beginAtZero:true,stacked:false}),y:Object.assign(ax(dark),{ticks:{color:dark?'#cfd2dd':C.muted,font:{size:11.5},autoSkip:false}})}}});},
 
  p1p2(ctx,dark){const d=DATA.p1p2;return new Chart(ctx,{type:'bar',data:{labels:d.l,datasets:[
-   {data:d.v,backgroundColor:d.v.map((v,i)=>i===d.v.length-1?'#C9CBD4':C.amber),borderRadius:6,
+   {data:d.v,backgroundColor:GB(K(dark).blue),borderRadius:6,
     datalabels:lbl(dark?'#fff':C.navy,dark)}]},
-   options:{maintainAspectRatio:false,plugins:{legend:{display:false}},
+   options:{maintainAspectRatio:false,plugins:{legend:{display:false},
+   tooltip:{callbacks:{afterBody:items=>{const n=d.notas&&d.notas[items[0].label];return n||[];}}}},
    scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,suggestedMax:8,ticks:{stepSize:2,color:dark?'#B9BCC9':C.muted}})}}});},
 
  res(ctx,dark){const d=DATA.res;return new Chart(ctx,{type:'bar',data:{labels:d.l,datasets:[
-   {data:d.v,backgroundColor:d.v.map(v=>v>=4?C.rust:C.blue),borderRadius:6,
+   {data:d.v,backgroundColor:ctx=>GB(d.v[ctx.dataIndex]>=4?K(dark).navy:K(dark).blue)(ctx),borderRadius:6,
     datalabels:Object.assign(lbl(dark?'#fff':C.navy,dark,v=>v>0?v:''),{})}]},
    options:{maintainAspectRatio:false,plugins:{legend:{display:false}},
-   scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,suggestedMax:4.7,title:{display:true,text:'Horas (promedio)',color:C.muted}})}}});},
+   scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,suggestedMax:4.7,title:{display:true,text:'Horas (mediana por evento)',color:C.muted}})}}});},
 
  incmttr(ctx,dark){const d=DATA.incmttr;return new Chart(ctx,{data:{labels:d.l,datasets:[
-   {type:'bar',label:'Total incidentes',data:d.t,backgroundColor:C.amber,borderRadius:5,yAxisID:'y',order:2},
-   {type:'line',label:'Resolución mediana (min)',data:d.m,borderColor:C.rust,backgroundColor:C.rust,yAxisID:'y1',tension:.35,borderWidth:3,pointRadius:3,pointHoverRadius:6,order:1}]},
+   {type:'bar',label:'Alertas de monitoreo (tickets)',data:d.t,backgroundColor:GB(K(dark).blue),borderRadius:5,yAxisID:'y',order:2},
+   {type:'line',label:'Resolución mediana (min)',data:d.m,borderColor:(dark?'#9CC3F0':'#1E3A8A'),backgroundColor:(dark?'#9CC3F0':'#1E3A8A'),tension:0,pointBackgroundColor:(dark?'#9CC3F0':'#1E3A8A'),pointBorderColor:(dark?'#12162B':'#FFFFFF'),pointBorderWidth:1.5,pointStyle:'circle',yAxisID:'y1',tension:.35,borderWidth:2,pointRadius:4,pointHoverRadius:6,order:1}]},
    options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'top',align:'end'}},
-   scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,position:'left',title:{display:true,text:'Incidentes',color:dark?'#B9BCC9':C.muted}}),
-   y1:{position:'right',beginAtZero:true,grid:{drawOnChartArea:false},border:{display:false},ticks:{color:C.rust},title:{display:true,text:'Mediana (min)',color:C.rust}}}}});},
+   scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,position:'left',title:{display:true,text:'Alertas',color:dark?'#B9BCC9':C.muted}}),
+   y1:{position:'right',beginAtZero:true,grid:{drawOnChartArea:false},border:{display:false},ticks:{color:(dark?'#9CC3F0':'#1E3A8A')},title:{display:true,text:'Mediana (min)',color:(dark?'#9CC3F0':'#1E3A8A')}}}}});},
 
  reqmttr(ctx,dark){const d=DATA.reqmttr;return new Chart(ctx,{data:{labels:d.l,datasets:[
-   {type:'bar',label:'Total requerimientos',data:d.t,backgroundColor:C.peach,borderRadius:5,yAxisID:'y',order:2},
-   {type:'line',label:'Duración hábil mediana (min)',data:d.m,borderColor:C.rust,backgroundColor:C.rust,yAxisID:'y1',tension:.35,borderWidth:3,pointRadius:3,pointHoverRadius:6,order:1}]},
+   {type:'bar',label:'Total requerimientos',data:d.t,backgroundColor:GB(K(dark).blue),borderRadius:5,yAxisID:'y',order:2},
+   {type:'line',label:'Duración hábil mediana (min)',data:d.m,borderColor:(dark?'#9CC3F0':'#1E3A8A'),backgroundColor:(dark?'#9CC3F0':'#1E3A8A'),tension:0,pointBackgroundColor:(dark?'#9CC3F0':'#1E3A8A'),pointBorderColor:(dark?'#12162B':'#FFFFFF'),pointBorderWidth:1.5,pointStyle:'circle',yAxisID:'y1',tension:.35,borderWidth:2,pointRadius:4,pointHoverRadius:6,order:1}]},
    options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'top',align:'end'}},
    scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,position:'left',title:{display:true,text:'Requerimientos',color:dark?'#B9BCC9':C.muted}}),
-   y1:{position:'right',beginAtZero:true,grid:{drawOnChartArea:false},border:{display:false},ticks:{color:C.rust},title:{display:true,text:'Mediana (min)',color:C.rust}}}}});},
+   y1:{position:'right',beginAtZero:true,grid:{drawOnChartArea:false},border:{display:false},ticks:{color:(dark?'#9CC3F0':'#1E3A8A')},title:{display:true,text:'Mediana (min)',color:(dark?'#9CC3F0':'#1E3A8A')}}}}});},
 
  drp(ctx,dark){const d=DATA.drp;return new Chart(ctx,{type:'bar',data:{labels:d.l,datasets:[
-   {data:d.v,backgroundColor:C.amber,borderRadius:6,barPercentage:.62,datalabels:lbl(dark?'#fff':C.navy,dark,v=>v+'%')}]},
+   {data:d.v,backgroundColor:GB(K(dark).blue),borderRadius:6,barPercentage:.62,datalabels:lbl(dark?'#fff':C.navy,dark,v=>v+'%')}]},
    options:{maintainAspectRatio:false,plugins:{legend:{display:false}},
    scales:{x:ax(dark),y:ax(dark,{min:95,max:100,ticks:{color:dark?'#B9BCC9':C.muted,padding:8,callback:v=>v+'%'},title:{display:true,text:'Disponibilidad de réplica',color:dark?'#B9BCC9':C.muted}})}}});},
 
  qualys(ctx,dark){const d=DATA.qualys;return new Chart(ctx,{type:'bar',data:{labels:d.l,datasets:[
-   {label:'Nuevas',data:d.nuevas,backgroundColor:dark?'#3A3F5C':C.navy,borderRadius:5},
-   {label:'Remediadas',data:d.cerradas,backgroundColor:C.amber,borderRadius:5}]},
+   {label:'Nuevas',data:d.nuevas,backgroundColor:GB(K(dark).slate),borderRadius:5},
+   {label:'Cerradas (con y sin evidencia)',data:d.cerradas,backgroundColor:GB(K(dark).cyan),borderRadius:5}]},
    options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
    plugins:{legend:{position:'top',align:'end'}},
    scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,title:{display:true,text:'Vulnerabilidades',color:dark?'#B9BCC9':C.muted}})}}});},
  rfcok(ctx,dark){const d=DATA.rfcok;return new Chart(ctx,{type:'bar',data:{labels:d.l,datasets:[
-   {data:d.v,backgroundColor:C.amber,borderRadius:6,datalabels:lbl(dark?'#fff':C.navy,dark,v=>v+'%')}]},
+   {data:d.v,backgroundColor:GB(K(dark).blue),borderRadius:6,datalabels:lbl(dark?'#fff':C.navy,dark,v=>v+'%')}]},
    options:{maintainAspectRatio:false,plugins:{legend:{display:false},
    annotation:false},scales:{x:ax(dark),y:ax(dark,{min:80,max:102,ticks:{callback:v=>v+'%',color:dark?'#B9BCC9':C.muted}})}}});},
 
  rfcclass(ctx,dark){const d=DATA.rfcclass;return new Chart(ctx,{type:'bar',data:{labels:d.l,datasets:
-   d.s.map(s=>({label:s[0],data:s[1],backgroundColor:s[2],borderRadius:4}))},
+   d.s.map(s=>({label:s[0],data:s[1],backgroundColor:GB(s[2]),borderRadius:4}))},
    options:{maintainAspectRatio:false,plugins:{legend:{position:'top',align:'center'}},
    scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,suggestedMax:72})}}});},
 
  rfccrit(ctx,dark){const d=DATA.rfccrit;return new Chart(ctx,{type:'bar',data:{labels:d.l,datasets:[
-   {label:'Bajo',data:d.low,backgroundColor:C.lblue,borderRadius:{topLeft:0,topRight:0},stack:'s'},
-   {label:'Moderado',data:d.mod,backgroundColor:C.amber,stack:'s'},
-   {label:'Alto',data:d.high,backgroundColor:C.rust,borderRadius:4,stack:'s'}]},
+   {label:'Bajo',data:d.low,backgroundColor:GB(K(dark).cyan),borderRadius:{topLeft:0,topRight:0},stack:'s'},
+   {label:'Moderado',data:d.mod,backgroundColor:GB(K(dark).blue),stack:'s'},
+   {label:'Alto',data:d.high,backgroundColor:GB(K(dark).rose),borderRadius:4,stack:'s'}]},
    options:{maintainAspectRatio:false,plugins:{legend:{position:'top',align:'center'}},
    scales:{x:Object.assign(ax(dark),{stacked:true}),y:Object.assign(ax(dark,{beginAtZero:true}),{stacked:true})}}});},
 
- donut(ctx,dark){const d=DATA.donut;return new Chart(ctx,{type:'doughnut',data:{labels:['Implementadas','Pendientes'],
+ frnotes(ctx,dark){const r=DATA.frnotes;return new Chart(ctx,{type:'bar',data:{labels:r.map(x=>x[0]),datasets:[
+   {label:'Avance',data:r.map(x=>Math.round(x[2]/x[1]*1000)/10),backgroundColor:ctx=>GH(r[ctx.dataIndex][2]>=r[ctx.dataIndex][1]?K(dark).cyan:K(dark).blue)(ctx),borderRadius:5,barPercentage:.8,
+    datalabels:{display:true,color:'#fff',anchor:'end',align:'end',offset:2,font:{weight:'700',size:11},formatter:(v,c)=>r[c.dataIndex][2]+'/'+r[c.dataIndex][1]}}]},
+   options:{indexAxis:'y',maintainAspectRatio:false,layout:{padding:{right:46}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x+'% ('+r[c.dataIndex][2]+' de '+r[c.dataIndex][1]+')'}}},
+   scales:{x:ax(dark,{min:0,max:100,ticks:{callback:v=>v+'%',color:'#B9BCC9'}}),y:Object.assign(ax(dark),{ticks:{color:'#cfd2dd',font:{size:10.5},autoSkip:false}})}}});},
+ donut(ctx,dark){const d=DATA.donut;return new Chart(ctx,{type:'doughnut',data:{labels:['Remediadas','Pendientes'],
    datasets:[{data:[d.impl,d.pend],backgroundColor:[C.amber,'#3A3F5C'],borderColor:C.navy,borderWidth:3,hoverOffset:8}]},
    options:{maintainAspectRatio:false,cutout:'70%',plugins:{legend:{position:'bottom',labels:{color:'#cfd2dd'}},
    datalabels:{display:true,color:'#fff',font:{weight:'700',size:13},formatter:(v,c)=>Math.round(v/(d.impl+d.pend)*100)+'%'}}},
    plugins:[{id:'ctr',afterDraw(ch){const{ctx,chartArea:{left,right,top,bottom}}=ch;const x=(left+right)/2,y=(top+bottom)/2;
      ctx.save();ctx.textAlign='center';ctx.fillStyle='#fff';ctx.font='700 38px Space Grotesk, sans-serif';ctx.fillText(Math.round(d.impl/(d.impl+d.pend)*100)+'%',x,y-2);
-     ctx.fillStyle='#9DA1B2';ctx.font='400 13px Inter, sans-serif';ctx.fillText('avance',x,y+22);ctx.restore();}}]});}
+     ctx.fillStyle='#9DA1B2';ctx.font='400 13px Inter, sans-serif';ctx.fillText('avance',x,y+22);ctx.restore();}}]});},
+ impInv(ctx,dark){const d=IMP;const c=new Chart(ctx,{type:'line',data:{labels:d.L.slice(0,8),datasets:[
+   {label:'Sin incremento (escenario)',data:d.cf.slice(0,8),borderColor:'#8FA0B8',backgroundColor:GAr,borderWidth:2.5,pointRadius:6,pointStyle:'rectRot',pointBackgroundColor:'#8FA0B8',pointBorderColor:'#8FA0B8',tension:.25,spanGaps:false,
+     segment:{borderDash:x=>x.p1DataIndex>7?[7,6]:undefined},order:2},
+   {label:'Con incremento (real y proyección)',data:d.ac.slice(0,8),borderColor:'#3B78E8',backgroundColor:GAr,borderWidth:3.5,pointRadius:5,pointStyle:'circle',pointBackgroundColor:'#3B78E8',pointBorderColor:'#3B78E8',tension:.25,spanGaps:false,fill:'-1',
+     segment:{borderDash:x=>x.p1DataIndex>7?[7,6]:undefined},order:1}]},
+   options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+   plugins:{legend:{position:'top',align:'end'},tooltip:{callbacks:{afterBody:items=>{const i=items[0].dataIndex;const a=d.ac[i],b=d.cf[i];return(a!=null&&b!=null&&IMP.esc==='comp'&&i>=4)?'Diferencia: '+Math.round(b-a).toLocaleString('en-US')+' vulnerabilidades':'';}}}},
+   scales:{x:ax(dark),y:ax(dark,{beginAtZero:true,suggestedMax:7000,title:{display:true,text:'Vulnerabilidades abiertas',color:'#B9BCC9'},ticks:{color:'#B9BCC9',padding:8,callback:v=>v.toLocaleString('en-US')}})}},
+   plugins:[{id:'impNote',afterDraw(ch){
+     const x=ch.scales.x,y=ch.scales.y,g=ch.ctx,n=ch.data.labels.length;if(!ch.isDatasetVisible(0)&&!ch.isDatasetVisible(1))return;
+     g.save();
+     if(n>8){const xs=x.getPixelForValue(7.5);g.strokeStyle='rgba(255,255,255,.28)';g.setLineDash([4,5]);g.beginPath();g.moveTo(xs,y.top);g.lineTo(xs,y.bottom);g.stroke();g.setLineDash([]);
+       g.fillStyle='#8C90A2';g.font='600 11px Inter,sans-serif';g.textAlign='left';g.fillText('Proyección →',xs+8,y.top+14);g.textAlign='right';g.fillText('← Real',xs-8,y.top+14);}
+     const i=n-1,a=d.ac[i],b=d.cf[i];
+     if(IMP.esc==='comp'&&a!=null&&b!=null){const xp=x.getPixelForValue(i)+14,ya=y.getPixelForValue(a),yb=y.getPixelForValue(b);
+       g.strokeStyle='#EAEAF0';g.lineWidth=2;g.beginPath();g.moveTo(xp,ya);g.lineTo(xp,yb);g.stroke();
+       g.beginPath();g.moveTo(xp-4,ya);g.lineTo(xp+4,ya);g.moveTo(xp-4,yb);g.lineTo(xp+4,yb);g.stroke();
+       g.fillStyle='#EAEAF0';g.font='700 12px Inter,sans-serif';g.textAlign='right';const ym=(ya+yb)/2;
+       g.fillText('−'+Math.round(b-a).toLocaleString('en-US'),xp-8,ym+4);
+       g.font='700 12px Inter,sans-serif';g.textAlign='right';const xe=x.getPixelForValue(i)-12;
+       g.fillStyle='#8FA0B8';g.fillText('Sin incremento',xe,yb-12);
+       g.fillStyle='#3B78E8';g.fillText('Con incremento',xe,ya+22);
+       const xm=(x.getPixelForValue(4)+x.getPixelForValue(6))/2,yt=y.getPixelForValue(330);g.fillStyle='#B9BCC9';g.font='600 11.5px Inter,sans-serif';g.textAlign='center';g.fillText('Desde julio: estable entre 781 y 1,083',xm,yt);}
+     g.restore();}}]});
+   IMP.ch2=c;return c;},
 };
 
 /* ===================== TABLES ===================== */
 function fillTables(){
-  let h='';DATA.offenders.forEach(r=>{h+=`<tr><td>${r[0]}</td><td class="r">${r[1]}</td><td class="r" style="color:var(--muted)">${r[2]}</td></tr>`;});
+  let h='';DATA.proarows.forEach(r=>{h+=`<tr><td style="white-space:nowrap">${r[0]}</td><td><b>${r[1]}</b></td><td style="color:var(--muted)">${r[2]}</td><td>${r[3]}</td><td style="color:var(--soft)">${r[4]}</td></tr>`;});
+  document.querySelector('#proatbl tbody').innerHTML=h;
+  h='';DATA.offenders.forEach(r=>{h+=`<tr><td>${r[0]}</td><td class="r">${r[1]}</td><td class="r" style="color:var(--muted)">${r[2]}</td></tr>`;});
   document.querySelector('#offtbl tbody').innerHTML=h;
-  h='';DATA.avarows.forEach(r=>{const pleno=r[4]>=100;
-    h+=`<tr><td><b>${r[0]}</b></td><td class="r">${r[1]}</td><td class="r">${r[2]}</td><td class="r">${r[3]}</td><td class="r" style="color:${pleno?'#4FD18B':'#FFC982'}">${r[4]}%</td></tr>`;});
-  const t=DATA.avarows.reduce((a,r)=>[a[0]+r[1],a[1]+r[2],a[2]+r[3]],[0,0,0]);
-  h+=`<tr class="tot"><td>TOTAL</td><td class="r">${t[0]}</td><td class="r">${t[1]}</td><td class="r">${t[2]}</td><td class="r">${Math.round(t[2]/t[1]*100)}%</td></tr>`;
+  h='';DATA.avarows.forEach((r,i)=>{h+=`<tr><td><b>${r[0]}</b></td><td class="r">${r[1]}</td><td class="r">${r[2]}</td><td class="r">${r[3]}</td><td class="r" style="color:${r[5]};${i===1?'font-size:1.1em':''}">${r[4]}%</td></tr>`;});
   document.querySelector('#frtbl tbody').innerHTML=h;
   h='';DATA.drprows.forEach(r=>{h+=`<tr><td><b>${r[0]}</b></td><td style="color:var(--soft)">${r[1]}</td><td class="r">${r[2]}</td></tr>`;});
-  h+=`<tr class="tot"><td>TOTAL</td><td></td><td class="r">55</td></tr>`;
+  h+=`<tr class="tot"><td>TOTAL</td><td></td><td class="r">5</td></tr>`;
   document.querySelector('#drptbl tbody').innerHTML=h;
-  h='';DATA.qrows.forEach(r=>{const alta=r[0]==='Crítica'||r[0]==='Alta';
+  h='';DATA.qrows.forEach(r=>{const alta=false;
     h+=`<tr><td><b>${r[0]}</b></td><td class="r">${r[1]}</td><td class="r" style="color:${alta?'#FF8A51':'var(--soft)'}">${r[2]}%</td></tr>`;});
-  h+=`<tr class="tot"><td>TOTAL</td><td class="r">1,343</td><td class="r">100%</td></tr>`;
+  h+=`<tr class="tot"><td>TOTAL críticas + altas</td><td class="r">344</td><td class="r">100%</td></tr>`;
   document.querySelector('#qtbl tbody').innerHTML=h;
 }
+
+
+/* ===================== IMPACTO RFC (escenarios) ===================== */
+const IMP=(function(){
+  // Mar-Oct: metodologia unica (CAMBIOS_vs_Sem40.md S4.1, Reporte 4 Torres Sem 44, validado
+  // 202/215 valores exactos). Nuevas/cerradas ya no mezclan el metodo viejo con el nuevo. Cerradas = con evidencia + sin evidencia (salidas del reporte); solo se excluye la falla de Qualys de la Sem 24.
+  const nue=[1380,1839,3598,2673,3273,2573,4006,4368],cer=[1372,2042,2575,2295,5127,2346,3931,3008],abi=[1437,1233,2257,2635,781,1008,1083,2443],rfc=[83,86,85,104,118,137,117,114];
+  const avg=a=>a.reduce((x,y)=>x+y,0)/a.length;
+  const cBase=avg(cer.slice(0,3)),rBase=avg(rfc.slice(0,3)),inflow=avg(nue),cAct=avg(cer);
+  const L=['Mar-26','Abr-26','May-26','Jun-26','Jul-26','Ago-26','Sep-26','Oct-26','Nov-26','Dic-26'];
+  const cf=[null,null,abi[2]],ac=abi.slice();
+  for(let i=3;i<8;i++)cf.push(cf[i-1]+nue[i]-cBase);
+  for(let i=8;i<10;i++){cf.push(cf[i-1]+inflow-cBase);ac.push(ac[i-1]+inflow-cAct);}
+  return {L,cf,ac,nue,cer,abi,rfc,cBase,rBase,inflow,cAct,esc:'comp',hor:'sep',ch2:null};
+})();
+const impF=n=>Math.round(n).toLocaleString('en-US');
+function impStats(){
+  const s=IMP,cA=s.cer.slice(3,8).reduce((x,y)=>x+y,0),cB=s.cBase*5,rA=s.rfc.slice(3,8).reduce((x,y)=>x+y,0),rB=s.rBase*5;
+  const sepA=s.ac[7],sepB=s.cf[7],dicA=s.ac[9],dicB=s.cf[9];
+  return {cA,cB,rA,rB,sepA,sepB,dicA,dicB,extra:cA-cB,pRfc:Math.round((rA/rB-1)*100),pCer:Math.round((cA/cB-1)*100),pSep:Math.round((1-sepA/sepB)*100),pDic:Math.round((1-dicA/dicB)*100),netB:(s.inflow-s.cBase)};
+}
+function impText(){
+  const k=impStats();
+  document.getElementById('impInsight').textContent='Sin el incremento en RFC de remediación, el inventario abierto habría alcanzado '+impF(k.sepB)+' vulnerabilidades al 31 de octubre; el valor real fue '+impF(k.sepA)+' ('+(k.pSep>=0?k.pSep+'% menos':Math.abs(k.pSep)+'% más, por el ingreso atípico de avisos Red Hat')+').';
+  document.getElementById('impKpis').innerHTML=[
+    [impF(k.sepA)+' <small>vs '+impF(k.sepB)+'</small>','Vulnerabilidades abiertas al 31-oct: real frente a escenario sin incremento'],
+    ['+'+impF(k.extra)+' <small>+'+k.pCer+'%</small>','Cierres adicionales entre junio y octubre frente al ritmo previo'],
+    ['+'+k.pRfc+'%','RFC de remediación entre junio y octubre ('+impF(k.rA)+' frente a '+impF(k.rB)+' al ritmo previo)'],
+    [impF(k.dicA)+' <small>vs '+impF(k.dicB)+'</small>','Proyección a diciembre: con incremento frente a sin incremento']
+  ].map(r=>'<div class="imp-kpi"><div class="n num">'+r[0]+'</div><div class="l">'+r[1]+'</div></div>').join('');
+  document.querySelector('#imptbl tbody').innerHTML=[
+    ['RFC de remediación por mes (promedio jun–oct)',impF(k.rB/5),impF(k.rA/5),'+'+k.pRfc+'%'],
+    ['Vulnerabilidades cerradas por mes (promedio jun–oct)',impF(k.cB/5),impF(k.cA/5),'+'+k.pCer+'%'],
+    ['Vulnerabilidades abiertas al 31-oct',impF(k.sepB),impF(k.sepA),(k.sepA<=k.sepB?'−'+impF(k.sepB-k.sepA)+' (−'+k.pSep+'%)':'+'+impF(k.sepA-k.sepB)+' (+'+Math.abs(k.pSep)+'%, ingreso atípico Red Hat)')],
+    ['Proyección de abiertas a diciembre',impF(k.dicB),impF(k.dicA),(k.dicA<=k.dicB?'−'+impF(k.dicB-k.dicA)+' (−'+k.pDic+'%)':'+'+impF(k.dicA-k.dicB)+' (+'+Math.abs(k.pDic)+'%)')],
+    ['Tendencia mensual del inventario (proyección)','+'+impF(k.netB),(IMP.inflow-IMP.cAct>=0?'+':'−')+impF(Math.abs(IMP.inflow-IMP.cAct)),'ver nota de octubre abajo']
+  ].map(r=>'<tr><td><b>'+r[0]+'</b></td><td class="r">'+r[1]+'</td><td class="r">'+r[2]+'</td><td class="r up">'+r[3]+'</td></tr>').join('');
+  document.getElementById('impValor').innerHTML='El RFC de remediación se mantuvo estable entre junio y octubre (<em>'+impF(k.rA)+' RFC, '+(k.pRfc>=0?'+':'')+k.pRfc+'% frente al ritmo de mar–may</em>), y las vulnerabilidades cerradas (con y sin evidencia) también crecieron ('+(k.pCer>=0?'+':'')+k.pCer+'%). Pese a eso, el inventario abierto subió de 1,083 (sep) a 2,443 (oct) porque octubre recibió un <em>ingreso atípico de 4,368 vulnerabilidades nuevas</em> (1,826 solo en la semana 44, por avisos Red Hat) — un fenómeno de demanda, no de capacidad de remediación. La proyección a diciembre asume que ese pico no se repite; si vuelve a haber un ingreso extraordinario, el inventario de diciembre sería mayor al proyectado aquí.';
+}
+function impRefresh(){
+  const note=document.getElementById('impProjNote');if(note)note.style.display=IMP.hor==='sep'?'none':'inline';
+  const c=IMP.ch2;if(!c)return;const n=IMP.hor==='sep'?8:10;
+  c.data.labels=IMP.L.slice(0,n);
+  c.data.datasets[0].data=IMP.cf.slice(0,n);c.data.datasets[1].data=IMP.ac.slice(0,n);
+  c.data.datasets[1].fill=IMP.esc==='comp'?'-1':false;
+  c.update();
+}
+document.querySelectorAll('#impHor [data-h]').forEach(b=>b.onclick=()=>{IMP.hor=b.dataset.h;document.querySelectorAll('#impHor button').forEach(x=>x.classList.toggle('on',x===b));impRefresh();});
+impText();
 
 /* ===================== COUNT-UP ===================== */
 function countUp(el){
@@ -726,7 +1109,7 @@ function countUp(el){
 const made={};
 function makeChart(name,canvas){if(made[name])return;made[name]=true;
   const dark=!!canvas.closest('section.dark');
-  try{BUILD[name](canvas.getContext('2d'),dark);}catch(e){console.error('chart',name,e);}}
+  try{BUILD[name](canvas.getContext('2d'),dark);replayObserve(canvas);}catch(e){console.error('chart',name,e);}}
 
 function fire(t){t.classList.add('in');
   t.querySelectorAll('canvas[data-chart]').forEach(c=>makeChart(c.dataset.chart,c));
